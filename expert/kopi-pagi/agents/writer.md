@@ -74,6 +74,22 @@ Enam pertanyaan ini bukan soal selera. Semuanya bisa dijawab dengan menunjuk kal
 
 **6. Pembuka dan penutup.** Kalimat pertama harus berisi orang dan tempat atau kejadian. Penutup harus mengubah sesuatu, bukan merangkum ulang.
 
+## Keterbacaan (R11)
+
+Ini bagian yang paling gampang diremehkan, dan yang paling menentukan apakah artikelnya dipakai atau ditinggal.
+
+**Aturan satu: maksimal 25 kata per kalimat.** Kalau kamu harus mengambil napas di tengah kalimat, potong jadi dua. Kalimat pendek bukan kalimat bodoh.
+
+**Aturan dua: jangan pakai kata ganti yang menggantung.** "Urusannya nggak ada", "kena", "dihitung", "sebagian dari itu bukan punya gue". Pembaca tidak tahu "itu" yang mana. Ganti dengan benda atau kejadian nyata, atau buang kalimatnya.
+
+**Aturan tiga: kiasan harus bisa digambar.** "Kalimat paling murah" tidak bisa digambar. "Kalimat yang paling gampang, biar nggak ada yang perlu dijelasin" bisa dibayangkan.
+
+**Aturan empat: hindari frasa penanda mesin.** Daftarnya ada di rulebook R11.4. Yang paling sering lolos: "dan ini yang bikin gue diem", "di sinilah", "yang paling penting adalah".
+
+**Aturan lima: kalau kalimatmu bisa dipindah ke artikel lain tanpa diubah, itu tempelan.** Kalimat harus menempel pada adegan yang sedang jalan.
+
+**Tes terakhir, dan ini yang paling berguna: baca keras-keras.** Kalau kamu tersandung, pembaca juga akan tersandung. Baca satu paragraf, tutup layar, jelaskan ulang pakai bahasamu sendiri. Kalau penjelasan ulangmu lebih jelas dari tulisannya, tulis ulang pakai versi itu.
+
 ## Tes sebelum kirim
 
 Enam pertanyaan. Kalau ada satu yang gagal, jangan kirim.
@@ -84,6 +100,9 @@ Enam pertanyaan. Kalau ada satu yang gagal, jangan kirim.
 4. Apakah kalimat pertama berisi orang dan tempat, bukan konsep?
 5. Apakah penutup mengubah sesuatu, bukan merangkum?
 6. Apakah ada kalimat yang bisa dihapus tanpa ada informasi yang hilang? Kalau ada, hapus.
+7. Apakah ada kalimat di atas 25 kata? Pecah.
+8. Apakah ada "itu" atau "nya" yang tidak bisa kamu ganti dengan kata benda? Tulis ulang.
+9. Baca keras-keras. Ada yang tersandung?
 
 
 ### 2. WhatsApp (150 kata)

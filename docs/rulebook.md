@@ -1,6 +1,6 @@
 # Rulebook — Kopi Pagi
 
-Versi 1.2 · 4 November 2026
+Versi 1.3 · 4 November 2026
 
 Reviewer hanya boleh menolak sebuah draft dengan **menyebut ID aturan** di dokumen ini. Kalau tidak ada ID yang dilanggar, draft harus diloloskan. Aturan tanpa ID bukan aturan, cuma selera.
 
@@ -124,7 +124,36 @@ Kalau R9 bertanya "apakah materinya nyambung ke cerita", R10 bertanya "apakah ce
 | R10.6 · Tokoh | Setiap tokoh yang muncul harus punya keinginan di adegan itu. Tokoh yang cuma hadir untuk dijelaskan dilarang; ganti jadi tanpa nama atau buang. | WARNING | Untuk tiap tokoh, tulis satu baris "dia mau apa di adegan ini" |
 | R10.7 · Pembuka | Kalimat pertama harus berisi orang dan tempat atau kejadian. Kalimat pertama yang isinya konsep, perasaan umum, atau pertanyaan retoris dilarang. | BLOCKER | Baca kalimat pertama; ada orang dan tempat/kejadian? |
 | R10.8 · Penutup | Penutup harus mengubah sesuatu: pemahaman, keputusan, atau pertanyaan yang belum dijawab. Penutup yang merangkum ulang isi artikel dilarang. | BLOCKER | Bandingkan penutup dengan paragraf sebelumnya; ada yang berubah? |
-| R10.9 · Line editing | Dilarang kalimat lebih dari 40 kata. Dilarang dua kata bersinonim dalam satu kalimat. Dilarang kalimat yang bisa dihapus tanpa kehilangan informasi. | WARNING | Hitung kata per kalimat; hapus satu kalimat, apakah ada yang hilang |
+| R10.9 · Line editing | Dilarang dua kata bersinonim dalam satu kalimat. Dilarang kalimat yang bisa dihapus tanpa kehilangan informasi. Panjang kalimat diatur R11. | WARNING | Hapus satu kalimat, apakah ada informasi yang hilang |
+
+## R11 · Keterbacaan
+
+R9 mengatur isi, R10 mengatur bangunan. R11 mengatur satu hal yang paling sering bikin pembaca berhenti: kalimat yang harus dibaca dua kali.
+
+Aturan-aturan ini ada karena penulis berpengalaman bisa menemukan kalimat belibet dalam hitungan detik, sementara pembaca biasa cuma bisa merasakan "nggak ngerti" tanpa tahu kenapa. Kalau masalahnya cuma bisa ditangkap orang yang biasa mengedit, produk ini tidak berguna untuk orang yang tidak biasa mengedit.
+
+| ID | Aturan | Severity | Cara cek |
+|---|---|---|---|
+| R11.1 | Satu kalimat maksimal 25 kata. Kalimat yang butuh dibaca dua kali harus dipecah jadi dua. | BLOCKER | Hitung kata per kalimat |
+| R11.2 | Kata ganti harus menunjuk benda atau kejadian yang disebut di kalimat yang sama. Dilarang "itu", "nya", "urusannya", "kena", "dihitung", "dinilai" yang menggantung tanpa benda nyata. | BLOCKER | Untuk tiap "itu" dan "nya", coba ganti dengan kata bendanya. Kalau tidak ada kata bendanya, kalimatnya belum jelas |
+| R11.3 | Setiap kiasan harus bisa dibayangkan. Dilarang perbandingan yang cuma bisa dimengerti penulisnya. | BLOCKER | Setelah baca kalimatnya, sebutkan benda atau kejadian yang bisa digambar. Kalau tidak ada, tulis ulang |
+| R11.4 | Dilarang memakai frasa penanda tulisan mesin. Daftar di bawah. | BLOCKER | Cari di daftar frasa |
+| R11.5 | Setiap paragraf harus bisa dipahami tanpa balik ke paragraf sebelumnya. | WARNING | Baca paragraf secara acak, urutannya diacak |
+| R11.6 | Kalau sebuah kalimat bisa dipindah ke artikel lain tanpa diubah, kalimat itu tempelan. Kalimat harus menempel pada adegan yang sedang berjalan. | BLOCKER | Pindahkan kalimatnya ke artikel lain di kepala. Masih masuk akal? Berarti tempelan |
+
+### Daftar frasa terlarang (R11.4)
+
+Ini bukan daftar lengkap, ini daftar yang sudah terbukti muncul. Tambahkan setiap kali ada temuan baru.
+
+- "dan ini yang bikin gue diem" dan variasi "yang bikin gue ..." sebagai kalimat penggantung
+- "kalimat paling murah", "kalimat paling mahal", dan semua harga-harga kiasan untuk kata
+- "di sinilah letak", "di sinilah ...", "Nah, di sinilah ..."
+- "bukan hanya X, tetapi juga Y"
+- "yang paling penting adalah"
+- "sebuah" sebagai penyangga, "merupakan", "terdapat"
+- "kerasa kena", "kena" sebagai pengganti akibat yang tidak disebut
+- "dan itu juga yang dihitung", "yang dinilai" tanpa menyebut siapa yang menilai
+- "sebagian dari itu bukan punya gue" dan semua "punya" yang menunjuk hal abstrak
 
 ## Dua jenis penolakan
 

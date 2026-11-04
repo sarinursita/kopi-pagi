@@ -4,7 +4,7 @@
   "mata_kuliah": "Psikologi Anak",
   "sumber": "pcps-101-psikologi-anak/sesi-03/materi.md",
   "instruksi_tersisip": [],
-  "catatan_rulebook": "Rulebook v1.0 tidak punya aturan kualitas penalaran. Draft v1 lolos 34 aturan dengan 0 putaran revisi, tapi ditolak manusia. Rulebook naik ke v1.1 dengan R9 (kualitas penalaran), lalu ke v1.2 dengan R10 (kerajinan cerita: kejelasan, logika, kontinuitas, tempo, transisi, pembuka dan penutup) dan R3.6 (identitas penulis tidak diulang di artikel).",
+  "catatan_rulebook": "Rulebook v1.0 lolos draft yang tidak bisa dibaca. v1.1 menambah R9 (kualitas penalaran). v1.2 menambah R10 (kerajinan cerita) dan R3.6 (identitas penulis tidak diulang). v1.3 menambah R11 (keterbacaan): batas 25 kata per kalimat, larangan kata ganti menggantung, kiasan yang bisa digambar, daftar frasa terlarang, dan tes pindah-kalimat untuk mendeteksi tempelan.",
   "putaran": [
     {
       "putaran": 1,
@@ -58,6 +58,28 @@
         "Ada les jam sembilan, nggak mungkin ikut. ... Mba Ratna pulang jam sebelas ... \"les-nya jam sembilan\""
       ],
       "catatan": "Dek diulang di semua artikel dan muncul sebagai cuplikan di halaman depan, jadi berisik. Dihapus, diganti satu halaman About. Garis waktu juga tidak konsisten: kakak pulang jam sebelas tapi les jam sembilan. Diperbaiki jadi les jam satu. Dua subjudul tidak punya kalimat jembatan."
+    },
+    {
+      "putaran": 5,
+      "peninjau": "Sari (manusia)",
+      "vonis": "REVISI",
+      "pelanggaran": [
+        "R11.1",
+        "R11.2",
+        "R11.3",
+        "R11.4",
+        "R10.3"
+      ],
+      "kutipan": [
+        "Terus dia minta kelas berhenti di sambungan \"dan\" itu, karena dua kata itu nggak sekelas.",
+        "dan itu justru alasan gue betah di meja itu.",
+        "Dia ngitung, nunda, nyari jalan biar dapet tanpa kena.",
+        "nyari kalimat paling murah biar urusannya nggak ada.",
+        "dan ini yang bikin gue diem.",
+        "Nah, di sinilah bagian kedua kuliahnya masuk.",
+        "karena dua-duanya kerasa kena."
+      ],
+      "catatan": "Kalimat belibet dan kata ganti menggantung. Satu lubang logika juga ketemu: kakak pulang jam sebelas padahal les jam sembilan, dan alasan Nadia ditinggal tidak masuk akal karena dia justru yang diantar les. Alasan ditinggal diganti: dua adiknya tidak bisa ditinggal sendirian, Nadia bisa, dan pasar terlalu ramai untuk anak tujuh tahun. Jam les dipindah ke jam satu. Penutup diganti jadi versi langsung: 'Lo pernah nggak ngucapin sesuatu yang sampai sekarang masih kepikiran?'"
     }
   ],
   "konsep_dipakai": [

@@ -147,6 +147,7 @@ Enam hal ini yang membedakan cerita dari catatan. Semuanya bisa diperiksa dengan
 | Tempo | Hitung kalimat di adegan kunci; hitung jarak antar adegan | Adegan kunci lewat di bawah tiga kalimat, atau penjelasan lebih dari 250 kata tanpa kembali ke adegan |
 | Transisi | Baca kalimat terakhir sebelum tiap subjudul | Pindah topik tanpa alasan yang disebut |
 | Pembuka dan penutup | Baca kalimat pertama; bandingkan penutup dengan paragraf sebelumnya | Kalimat pertama isinya konsep; penutup cuma merangkum |
+| Keterbacaan | Hitung kata tiap kalimat; coba ganti tiap "itu" dengan kata bendanya | Ada kalimat di atas 25 kata, atau "itu" yang tidak punya kata benda |
 
 ## Contoh suara (acuan nada, bukan untuk disalin)
 
@@ -186,6 +187,11 @@ Enam hal ini yang membedakan cerita dari catatan. Semuanya bisa diperiksa dengan
 - [ ] Garis waktu dan benda sudah dicek, tidak ada yang muncul atau hilang tanpa sebab?
 - [ ] Tiap subjudul punya kalimat jembatan yang menyebut alasan pindah topik?
 - [ ] Tidak ada "dia" yang bisa merujuk ke dua orang dalam satu paragraf?
+- [ ] Tidak ada kalimat di atas 25 kata?
+- [ ] Tiap "itu" dan "nya" bisa diganti dengan kata benda nyata?
+- [ ] Tiap kiasan bisa digambar?
+- [ ] Nggak ada frasa di daftar R11.4?
+- [ ] Sudah dibaca keras-keras, dan nggak ada yang tersandung?
 - [ ] Nol em dash dan en dash?
 - [ ] Nggak ada nama dosen, kampus, atau kode matkul asli?
 - [ ] Tiap nama punya tag pengenal di penyebutan pertama?

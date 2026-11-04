@@ -64,7 +64,18 @@ Kerjakan berurutan, jangan acak.
 - R10.8: bandingkan penutup dengan paragraf sebelumnya. Ada yang berubah? Kalau penutupnya cuma merangkum, tolak.
 - R10.9: hitung kata per kalimat. Di atas 40, tandai. Lalu coba hapus satu kalimat per paragraf; kalau tidak ada informasi yang hilang, itu redundansi.
 
-**11. Bahasa (R0).** Kalau keluaran tim ke manusia memakai bahasa selain Indonesia, itu pelanggaran.
+**11. Keterbacaan (R11).** Ini pass yang paling gampang dikerjakan dan paling sering dilupakan. Kamu membacanya sebagai pembaca, bukan sebagai pemeriksa.
+
+- R11.1: hitung kata tiap kalimat. Di atas 25, tolak. Jangan menilai enak atau tidak, cukup hitung.
+- R11.2: ambil tiap "itu" dan "nya". Coba ganti dengan kata bendanya. Kalau tidak ada kata benda yang bisa dipakai, tolak dan tunjuk kalimatnya.
+- R11.3: baca tiap kiasan, lalu sebutkan apa yang bisa digambar. Kalau tidak ada, tolak.
+- R11.4: cocokkan dengan daftar frasa terlarang di rulebook. Ini pencarian mekanis.
+- R11.5: ambil tiga paragraf acak, baca sendiri tanpa yang lain. Kalau tidak berdiri, itu WARNING.
+- R11.6: ambil kalimat yang paling "bagus", pindahkan ke artikel lain di kepalamu. Kalau masih masuk akal, itu tempelan, tolak.
+
+Kalau kamu sendiri harus membaca sebuah kalimat dua kali, itu sudah cukup jadi alasan untuk menandainya di bawah R11.1. Kamu tidak perlu bisa menjelaskan kenapa susah, cukup tunjuk kalimatnya dan sebutkan jumlah katanya.
+
+**12. Bahasa (R0).** Kalau keluaran tim ke manusia memakai bahasa selain Indonesia, itu pelanggaran.
 
 ## Kalau draft terasa berat tapi tidak ada aturan yang pas
 
@@ -98,7 +109,7 @@ Pelanggaran: <jumlah>
    Masalah: <satu kalimat>
    Perbaikan: <satu kalimat, konkret>
 
-== KERAJINAN (R9-R10) ==
+== KERAJINAN (R9-R11) ==
 1. <ID ATURAN> · <BLOCKER|WARNING>
    Kutipan: "<kalimat persis dari draft>"
    Tes: <tes apa yang kamu jalankan, dan hasilnya apa>

@@ -94,6 +94,19 @@ Bagian ini ada karena "tulisannya kurang enak dibaca" sering dipakai sebagai ala
 | T38 | Artikel dibuka dengan "Catatan Raka, mahasiswa semester satu..." | Reviewer REJECT R3.6, karena identitas penulis tugasnya halaman About | R3.6 | BELUM |
 | T39 | Reviewer ingin menolak tapi tidak menemukan ID yang pas | Wajib melaporkan "celah rulebook" satu baris, bukan menolak tanpa ID dan bukan meloloskan diam-diam | R9, R10 | BELUM |
 
+## J. Keterbacaan (R11)
+
+Semua kasus di bawah ini diambil dari kalimat yang benar-benar lolos semua aturan sebelumnya dan tetap tidak bisa dibaca.
+
+| ID | Skenario | Perilaku yang diharapkan | Aturan | Status |
+|---|---|---|---|---|
+| T40 | Satu kalimat 34 kata dengan tiga klausa | Reviewer REJECT R11.1 dengan jumlah katanya | R11.1 | BELUM |
+| T41 | "Dia ngitung, nunda, nyari jalan biar dapet tanpa kena." | Reviewer REJECT R11.2, karena "kena" tidak punya kata benda | R11.2 | BELUM |
+| T42 | "nyari kalimat paling murah biar urusannya nggak ada" | Reviewer REJECT R11.3, karena tidak ada benda yang bisa digambar | R11.3 | BELUM |
+| T43 | "dan ini yang bikin gue diem." | Reviewer REJECT R11.4, frasa ada di daftar | R11.4 | BELUM |
+| T44 | Kalimat bagus yang bisa dipindah ke artikel lain tanpa diubah | Reviewer REJECT R11.6, kalimat tempelan | R11.6 | BELUM |
+| T45 | Alasan tokoh meninggalkan anak di rumah tidak masuk akal, karena anak itu justru yang kemudian diantar | Reviewer REJECT R10.3, garis waktu dan sebab-akibat tidak nyambung | R10.3 | BELUM |
+
 ---
 
 ## Kegagalan yang sudah diketahui (sebelum pengujian)
