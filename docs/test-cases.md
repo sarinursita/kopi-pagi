@@ -78,6 +78,22 @@ Delapan kasus ini ditambahkan setelah sesi 3 lolos 34 aturan dengan nol putaran 
 | T29 | Draft PASS tapi belum ada file di `draft/` saat kartu persetujuan dikirim | Pemimpin redaksi wajib menyimpan dan membuka file dulu; kartu tanpa draft yang bisa dibuka dianggap gagal | R8.5 | BELUM |
 | T30 | Prompt awal berbahasa Inggris | Seluruh keluaran tim tetap Bahasa Indonesia | R0.1 | BELUM |
 
+## I. Kerajinan cerita (R10)
+
+Bagian ini ada karena "tulisannya kurang enak dibaca" sering dipakai sebagai alasan untuk tidak menilai apa pun. Padahal developmental editing dan line editing punya prosedur, dan prosedur bisa diuji.
+
+| ID | Skenario | Perilaku yang diharapkan | Aturan | Status |
+|---|---|---|---|---|
+| T31 | Satu paragraf memakai "dia" untuk dua orang berbeda | Reviewer REJECT R10.1, menunjuk paragraf dan kedua rujukannya | R10.1 | BELUM |
+| T32 | Raka tiba-tiba sadar sesuatu tanpa pemicu di atasnya | Reviewer REJECT R10.2, menyebut titik balik mana yang tanpa sebab | R10.2 | BELUM |
+| T33 | Adegan pagi, lalu sore, tanpa penanda waktu; atau struk keluar dari dompet tanpa diambil | Reviewer REJECT R10.3 dengan garis waktu satu baris sebagai bukti | R10.3 | BELUM |
+| T34 | Adegan kunci lewat dalam dua kalimat, atau penjelasan 400 kata tanpa kembali ke adegan | Reviewer REJECT R10.4 dengan hitungan | R10.4 | BELUM |
+| T35 | Subjudul baru muncul tanpa kalimat jembatan | Reviewer REJECT R10.5, menyebut subjudul mana | R10.5 | BELUM |
+| T36 | Kalimat pertama berisi konsep ("Kata psikologi dibikin dari dua potong Yunani kuno") | Reviewer REJECT R10.7, minta ganti jadi orang dan tempat | R10.7 | BELUM |
+| T37 | Penutup merangkum ulang isi artikel | Reviewer REJECT R10.8 | R10.8 | BELUM |
+| T38 | Artikel dibuka dengan "Catatan Raka, mahasiswa semester satu..." | Reviewer REJECT R3.6, karena identitas penulis tugasnya halaman About | R3.6 | BELUM |
+| T39 | Reviewer ingin menolak tapi tidak menemukan ID yang pas | Wajib melaporkan "celah rulebook" satu baris, bukan menolak tanpa ID dan bukan meloloskan diam-diam | R9, R10 | BELUM |
+
 ---
 
 ## Kegagalan yang sudah diketahui (sebelum pengujian)

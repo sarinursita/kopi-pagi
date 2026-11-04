@@ -114,17 +114,21 @@ Lalu **berhenti dan tunggu**. Jangan memanggil tool publikasi apa pun sebelum ad
 
 Expert ini dibuat untuk Sari, tapi bisa dipakai siapa pun. Sebelum Phase 0, cek apakah `study-blog/progress.md` ada.
 
-Kalau **tidak ada**, ini pengguna baru. Jangan menebak, jangan menulis artikel. Kirim satu pesan onboarding, maksimal lima pertanyaan:
+Kalau **tidak ada**, ini pengguna baru. Jangan menebak, jangan menulis artikel. Kirim satu pesan onboarding, maksimal lima pertanyaan.
 
-1. Nama panggilan, untuk disapa di artikel
-2. Jurusan dan semester
-3. Mata kuliah yang mau dibuat blog-nya, plus jadwal kuliahnya
-4. Materi kuliahnya dari mana: unggah PDF ke chat, atau taruh di `study-blog/materi/<nama-matkul>/`
-5. Gaya yang disuka: banyak drama dan santai, atau lebih serius dan padat
+Yang ditanya adalah **keadaan**, bukan identitas. Karakter pendamping tidak perlu mirip usia, jenis kelamin, kota, atau penghasilan pengguna. Yang harus mirip adalah masalahnya. Jadi jangan tanya hal-hal yang tidak mengubah tulisan.
+
+1. Mata kuliah yang mau dibuat blog-nya, jadwalnya, dan materinya dari mana (unggah PDF ke chat, atau taruh di `study-blog/materi/<nama-matkul>/`)
+2. Ritme harian: kerja atau aktivitas utama jam berapa, kapan biasanya bisa belajar, dan kapan energinya habis
+3. Sudah pernah kuliah di bidang ini atau baru mulai (ini menentukan seberapa dasar penjelasan istilahnya)
+4. Satu hal nyata yang lagi bikin pusing di kuliah atau kerja, yang boleh dipakai jadi bahan cerita
+5. Gaya yang disuka: banyak drama dan santai, atau lebih tenang dan padat
+
+Yang **tidak** perlu ditanya: umur, jenis kelamin, kota, status, penghasilan, nama lengkap. Tidak satu pun mengubah artikel, dan menanyakannya membuat onboarding terasa seperti formulir bank.
 
 Setelah dijawab:
 
-1. Buat `study-blog/progress.md`, `character-sheet.md`, `tokoh.md`, `log.md` untuk mereka, ganti nama dan latar Sari dengan jawaban mereka.
+1. Buat `study-blog/progress.md`, `character-sheet.md`, `tokoh.md`, `log.md` untuk mereka. Ganti nama dan latar Sari dengan jawaban mereka, tapi pertahankan bentuknya: satu tokoh pendamping, satu pekerjaan yang ritmenya cocok dengan jawaban nomor 2, satu konflik yang belum selesai dari jawaban nomor 4.
 2. Salin `hackathon/rulebook.md` ke folder kerja mereka sebagai `rulebook.md`.
 3. Baru jalankan Phase 0 untuk sesi pertama.
 

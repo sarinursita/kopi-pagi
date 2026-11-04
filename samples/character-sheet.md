@@ -42,7 +42,7 @@ Konsekuensi yang wajib dipegang:
 - Partikel favorit: **kan, tuh, sih, dong, lah, jir, anjir, gitu**.
 - Suka analogi **makanan dan warung**: "kayak nasi uduk yang nasinya udah diaduk duluan", "kayak antre di warteg jam 12".
 - Sering pakai **"jadi gini"** sebelum masuk inti.
-- Menyapa pembaca dengan "lo" minimal empat kali per artikel, tanpa nama. Variasi: "lo pernah nggak", "coba bayangin lo", "lo tahu nggak", "lo sadar nggak".
+- Menyapa pembaca dengan "lo" minimal sekali, dan wajib ada di penutup. Di tengah, maksimal tiga, dan hanya kalau mengajak membayangkan sesuatu. Tanpa nama.
 - **Nggak pernah** pakai bahasa akademik di narasi — istilah teknis tetap muncul, tapi selalu langsung dijelaskan dengan bahasa manusia.
 - Nggak pakai "Anda". Nggak pakai "saya".
 

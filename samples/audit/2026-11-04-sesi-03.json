@@ -4,7 +4,7 @@
   "mata_kuliah": "Psikologi Anak",
   "sumber": "pcps-101-psikologi-anak/sesi-03/materi.md",
   "instruksi_tersisip": [],
-  "catatan_rulebook": "Rulebook v1.0 tidak punya aturan kualitas penalaran. Draft v1 lolos 34 aturan dengan 0 putaran revisi, tapi ditolak manusia. Rulebook dinaikkan ke v1.1 dengan R9 (delapan aturan), lalu draft ditulis ulang.",
+  "catatan_rulebook": "Rulebook v1.0 tidak punya aturan kualitas penalaran. Draft v1 lolos 34 aturan dengan 0 putaran revisi, tapi ditolak manusia. Rulebook naik ke v1.1 dengan R9 (kualitas penalaran), lalu ke v1.2 dengan R10 (kerajinan cerita: kejelasan, logika, kontinuitas, tempo, transisi, pembuka dan penutup) dan R3.6 (identitas penulis tidak diulang di artikel).",
   "putaran": [
     {
       "putaran": 1,
@@ -19,7 +19,14 @@
       "putaran": 2,
       "peninjau": "Sari (manusia)",
       "vonis": "REJECT",
-      "pelanggaran": ["R9.1", "R9.3", "R9.4", "R9.5", "R4.6", "R2.6"],
+      "pelanggaran": [
+        "R9.1",
+        "R9.3",
+        "R9.4",
+        "R9.5",
+        "R4.6",
+        "R2.6"
+      ],
       "kutipan": [
         "Kata psikologi dibikin dari dua potong Yunani kuno: psyche, yang artinya jiwa, dan logos, yang artinya pengetahuan.",
         "Struk itu perilaku. Dia bisa dicatat.",
@@ -36,6 +43,21 @@
       "aturan_diperiksa": 44,
       "pelanggaran": [],
       "catatan": "Dua konsep saja: pikiran versus perilaku, lalu bagian yang tidak bisa dicatat. Konsep lain dibuang. Sapaan 'lo' 9 kali tanpa nama. Nol em dash. 1.373 kata."
+    },
+    {
+      "putaran": 4,
+      "peninjau": "Sari (manusia)",
+      "vonis": "REVISI",
+      "pelanggaran": [
+        "R3.6",
+        "R10.3",
+        "R10.5"
+      ],
+      "kutipan": [
+        "Catatan Raka, mahasiswa semester satu yang kuliah sambil kerja.",
+        "Ada les jam sembilan, nggak mungkin ikut. ... Mba Ratna pulang jam sebelas ... \"les-nya jam sembilan\""
+      ],
+      "catatan": "Dek diulang di semua artikel dan muncul sebagai cuplikan di halaman depan, jadi berisik. Dihapus, diganti satu halaman About. Garis waktu juga tidak konsisten: kakak pulang jam sebelas tapi les jam sembilan. Diperbaiki jadi les jam satu. Dua subjudul tidak punya kalimat jembatan."
     }
   ],
   "konsep_dipakai": [

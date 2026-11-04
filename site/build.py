@@ -248,7 +248,7 @@ def main() -> int:
             "session": meta.get("sesi", ""),
             "topic": meta.get("judul_materi", ""),
             "body": body,
-            "excerpt": plain(re.sub(r"^#.*$", "", body, count=1, flags=re.M)),
+            "excerpt": plain(re.sub(r"^\s*>.*$", "", re.sub(r"^#.*$", "", body, count=1, flags=re.M), flags=re.M)),
         })
 
     posts.sort(key=lambda p: (p["date"], p["session"]), reverse=True)
@@ -272,23 +272,29 @@ def main() -> int:
         )
 
     about = """<div class="about">
-<h2>Siapa yang nulis ini</h2>
-<p>Gue Raka, 24. Kuliah Psikologi Islam semester satu sambil kerja di distributor kecil di Bandung. Belajar malem udah nggak masuk, jadi gue pindah ke pagi: baca materi hari itu, terus gue tulis ulang jadi cerita yang gue sendiri ngerti.</p>
+<h2>Panggil gue Raka</h2>
+<p>Bukan nama sebenarnya, tapi cerita gue adalah keseharian yang mungkin lo alami juga. Siangnya kerja, malamnya kuliah. Udah kebayang kan sisa-sisa energi gue kayak apa? Capek, nggak bisa mikir. Baca segepok modul kuliah kayak masuk telinga kanan, keluar telinga kiri.</p>
+<p>Tapi gue nggak mau nyerah, soalnya gue yakin ilmu Psikologi Islam yang gue dapet bakal berguna buat masa depan gue. Jadi sekarang gue belajar pagi, saat otak gue masih fresh.</p>
+<p>Ini catatan belajar gue. Materi dari kampus yang gue tulis ulang dalam bentuk cerita, supaya gue bisa lihat gimana teori abstrak di modul bisa diterapin ke kehidupan sehari-hari.</p>
+<p>Kalau lo juga mahasiswa yang struggling kayak gue, atau orang yang tertarik belajar Psikologi Islam, gue harap catatan gue sedikit banyak ngebantu lo. Baca dari mana aja bebas. Komen di blog, nanti gue bales.</p>
 
 <h2>Orang-orang yang bakal sering muncul</h2>
 <ul class="cast">
-<li><strong>Sinta</strong> &middot; rekan kerja, mejanya sebelah gue</li>
-<li><strong>Pak Yanto</strong> &middot; bos gue</li>
 <li><strong>Mba Ratna</strong> &middot; kakak gue</li>
 <li><strong>Nadia, Bima, Aya</strong> &middot; tiga keponakan gue, umur 7, 4, dan belum 2</li>
+<li><strong>Sinta</strong> &middot; rekan kerja, mejanya sebelah gue</li>
+<li><strong>Pak Yanto</strong> &middot; bos gue</li>
 <li><strong>Bu Alina</strong> &middot; dosen kelas ini</li>
 </ul>
 
-<h2>Cara baca blog ini</h2>
-<p>Episodik. Lo bisa mulai dari tulisan mana pun, nggak harus urut dari yang paling awal. Tiap tulisan berdiri sendiri.</p>
+<h2>Yang lagi gue pelajari</h2>
+<ul class="cast">
+<li><strong>Psikologi Anak</strong> &middot; dua kali seminggu, Senin dan Kamis</li>
+<li><strong>Psikologi Perkembangan Masa Hidup, Psikologi Islam, Perspektif dalam Psikologi, Studi Islam 1, Studi Bahasa Inggris</strong> &middot; nyusul kalau yang pertama udah jalan</li>
+</ul>
 
 <h2>Soal nama</h2>
-<p>Semua nama orang, kampus, dan dosen di sini gue samarkan. Isi materinya tetap sesuai modul, cuma cara nyampeinnya yang gue bikin kayak ngobrol.</p>
+<p>Semua nama di sini samaran, termasuk nama gue. Nama kampus dan nama dosen juga nggak gue tulis. Isi materinya tetap sesuai modul, cuma cara nyampeinnya yang gue bikin kayak ngobrol.</p>
 </div>"""
 
     body = f"""<header class="site">
@@ -391,6 +397,60 @@ section + section{margin-top:56px; padding-top:40px; border-top:1px solid var(--
 </html>
 """
     (DIST / "standalone.html").write_text(single, encoding="utf-8")
+
+    # ---- kartu Instagram (1080x1080) + caption yang bisa dicopy
+    ig_dir = DIST / "ig"
+    ig_dir.mkdir(exist_ok=True)
+    shorts_dir = ROOT.parent / "study-blog" / "shorts"
+    ig_count = 0
+    if shorts_dir.exists():
+        for f in sorted(shorts_dir.glob("*.md")):
+            raw = f.read_text(encoding="utf-8")
+            if "## Instagram" not in raw:
+                continue
+            block = raw.split("## Instagram", 1)[1]
+            m = re.search(r"Teks gambar:\s*(.+)", block)
+            image_text = m.group(1).strip() if m else ""
+            caption = re.sub(r"Teks gambar:.*", "", block).strip()
+            caption = re.sub(r"\n{2,}", "\n\n", caption).strip()
+            stem = f.stem.replace("-shorts", "")
+            sesi = re.search(r"sesi-(\d+)", stem)
+            label = f"Sesi {int(sesi.group(1))}" if sesi else ""
+
+            card = f"""<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kartu Instagram · {html.escape(label)}</title>
+<style>
+body{{margin:0;background:#efe9df;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#1d1a16}}
+.wrap{{max-width:760px;margin:0 auto;padding:28px 20px 60px}}
+.hint{{font-size:14px;color:#6f665c;margin:0 0 14px}}
+.card{{width:100%;aspect-ratio:1/1;background:#fbf8f3;border:1px solid #e7e0d5;border-radius:6px;
+display:flex;flex-direction:column;justify-content:space-between;padding:9%;
+box-shadow:0 8px 30px rgba(29,26,22,.10)}}
+.kicker{{font-size:2.2vmin;letter-spacing:.22em;text-transform:uppercase;color:#a8462a;font-weight:700}}
+.headline{{font-family:Georgia,"Times New Roman",serif;font-size:7.6vmin;line-height:1.16;letter-spacing:-.02em}}
+.foot{{display:flex;justify-content:space-between;align-items:baseline;font-size:2.1vmin;color:#6f665c}}
+.foot b{{color:#1d1a16}}
+.cap{{margin-top:26px;background:#fff;border:1px solid #e7e0d5;border-radius:10px;padding:18px}}
+.cap h2{{font-size:15px;margin:0 0 10px;letter-spacing:.06em;text-transform:uppercase;color:#6f665c}}
+textarea{{width:100%;min-height:260px;border:1px solid #e7e0d5;border-radius:8px;padding:12px;
+font-family:inherit;font-size:14px;line-height:1.6;background:#fbf8f3;color:#1d1a16;resize:vertical}}
+button{{margin-top:12px;padding:10px 18px;border-radius:8px;border:0;background:#a8462a;color:#fff;
+font-size:14px;font-weight:600;cursor:pointer}}
+button:hover{{background:#8f3a22}}
+</style></head><body><div class="wrap">
+<p class="hint">Screenshot bagian kartu di atas untuk diunggah ke Instagram. Caption di bawah tinggal dicopy.</p>
+<div class="card">
+<div class="kicker">Kopi Pagi · {html.escape(label)}</div>
+<div class="headline">{html.escape(image_text)}</div>
+<div class="foot"><span><b>Kopi Pagi</b> · ngopi dulu, baru kuliah</span><span>{html.escape(label)}</span></div>
+</div>
+<div class="cap"><h2>Caption</h2>
+<textarea id="c">{html.escape(caption)}</textarea>
+<button onclick="navigator.clipboard.writeText(document.getElementById('c').value);this.textContent='Tercopy'">Copy caption</button>
+</div></div></body></html>"""
+            (ig_dir / f"{stem}.html").write_text(card, encoding="utf-8")
+            ig_count += 1
 
     print(f"OK: {len(posts)} artikel -> {DIST}")
     print(f"    index.html, posts/*.html, standalone.html (satu file, bisa dikirim langsung)")

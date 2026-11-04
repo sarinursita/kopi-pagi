@@ -1,6 +1,6 @@
 # Rulebook — Kopi Pagi
 
-Versi 1.1 · 4 November 2026
+Versi 1.2 · 4 November 2026
 
 Reviewer hanya boleh menolak sebuah draft dengan **menyebut ID aturan** di dokumen ini. Kalau tidak ada ID yang dilanggar, draft harus diloloskan. Aturan tanpa ID bukan aturan, cuma selera.
 
@@ -43,8 +43,8 @@ Severity: **BLOCKER** = wajib ditolak, tidak bisa dinegosiasikan. **WARNING** = 
 | R3.2 | Dilarang memakai em dash (—) dan en dash (–). | BLOCKER | Hitung karakter |
 | R3.3 | Maksimal 3 emoji per artikel. | WARNING | Hitung emoji |
 | R3.4 | Dilarang memakai pola: "bukan hanya X tetapi juga Y", "di sinilah letak", "yang paling penting adalah", tiga frasa paralel berurutan, huruf miring di tiap paragraf. | WARNING | Baca ulang, tandai |
-| R3.5 | Pembaca disapa langsung minimal 4 kali sepanjang artikel: "lo", "lo pernah nggak", "coba bayangin lo", "lo tahu nggak". Menyapa tanpa nama. Artikel yang tidak menyapa pembaca sama sekali gagal di aturan ini. | BLOCKER | Hitung kemunculan "lo" sebagai sasaran sapaan |
-| R3.6 | Artikel wajib punya satu baris dek di bawah judul, 1 sampai 2 kalimat, yang menjelaskan siapa yang bicara dan pertanyaan apa yang dibawa hari ini. Dek ini yang menyelamatkan pembaca baru, karena artikel bisa dibaca dari mana saja. | BLOCKER | Cek ada blok dek sebelum paragraf pertama |
+| R3.5 | Pembaca wajib disapa minimal satu kali, dan sapaan di penutup wajib ada (pertanyaan atau saran). Sapaan di tengah opsional, maksimal tiga, dan harus fungsional: mengajak membayangkan, bukan menyapa basi. Menyapa tanpa nama. | BLOCKER | Cari sapaan "lo" di penutup, lalu hitung sapaan di badan artikel |
+| R3.6 | Identitas penulis dan penjelasan blog tidak diulang di dalam artikel. Itu tugas halaman About. Artikel dilarang dibuka dengan perkenalan diri, disclaimer, atau "catatan Raka, mahasiswa semester satu". | BLOCKER | Baca 60 kata pertama; ada perkenalan diri atau disclaimer? |
 
 ## R4 · Struktur
 
@@ -108,16 +108,47 @@ Delapan aturan ini ada karena satu draft pernah lolos semua aturan di atas sambi
 | R9.7 | Konsep harus dipakai di titik keputusan cerita. Kalau konsepnya dihapus dan adegan tetap selesai, konsep itu tempelan. | BLOCKER | Hapus satu konsep, apakah ending masih bisa ditulis? |
 | R9.8 | Dilarang memakai istilah yang tidak dijelaskan sama sekali, walau terasa sudah umum. Termasuk nama aliran, nama gangguan, dan nama tokoh yang perannya tidak dijelaskan dalam satu klausa. | BLOCKER | Cari istilah asing tanpa penjelas |
 
+## R10 · Kerajinan cerita
+
+R9 mengatur isi. R10 mengatur bangunan ceritanya. Semua di sini diambil dari praktik developmental editing dan line editing, bukan dari selera: setiap aturan punya tes yang bisa dijalankan orang lain dan hasilnya sama.
+
+Kalau R9 bertanya "apakah materinya nyambung ke cerita", R10 bertanya "apakah ceritanya berdiri".
+
+| ID | Aturan | Severity | Cara cek |
+|---|---|---|---|
+| R10.1 · Kejelasan | Setiap paragraf harus punya satu subjek yang jelas. Dilarang memakai dua "dia" atau "orang itu" yang merujuk ke orang berbeda dalam satu paragraf tanpa menyebut nama. | BLOCKER | Baca tiap paragraf, tandai tiap kata ganti, cocokkan ke satu nama |
+| R10.2 · Logika | Setiap keputusan atau reaksi tokoh harus punya pemicu yang sudah ditanam sebelumnya di artikel itu. Dilarang tokoh tiba-tiba tahu, tiba-tiba marah, atau tiba-tiba sadar. | BLOCKER | Ambil tiap titik balik, cari kalimat pemicunya di atasnya |
+| R10.3 · Kontinuitas | Waktu, tempat, cuaca, dan benda harus konsisten. Kalau struk keluar dari dompet, harus jelas kapan dan oleh siapa. Kalau adegan pagi, tidak boleh jadi sore tanpa penanda. | BLOCKER | Tulis garis waktu satu baris; cek tiap benda yang muncul dan hilang |
+| R10.4 · Tempo | Adegan kunci dilarang lewat dalam kurang dari tiga kalimat. Bagian penjelasan dilarang lebih dari 250 kata tanpa kembali ke adegan. | BLOCKER | Hitung kalimat di adegan kunci; hitung jarak antar kemunculan adegan |
+| R10.5 · Transisi | Setiap subjudul harus disambung minimal satu kalimat yang menyebut alasan Raka pindah topik. Lompatan tanpa jembatan dilarang, walau subjudulnya bagus. | BLOCKER | Baca kalimat terakhir sebelum tiap subjudul; ada alasan pindah? |
+| R10.6 · Tokoh | Setiap tokoh yang muncul harus punya keinginan di adegan itu. Tokoh yang cuma hadir untuk dijelaskan dilarang; ganti jadi tanpa nama atau buang. | WARNING | Untuk tiap tokoh, tulis satu baris "dia mau apa di adegan ini" |
+| R10.7 · Pembuka | Kalimat pertama harus berisi orang dan tempat atau kejadian. Kalimat pertama yang isinya konsep, perasaan umum, atau pertanyaan retoris dilarang. | BLOCKER | Baca kalimat pertama; ada orang dan tempat/kejadian? |
+| R10.8 · Penutup | Penutup harus mengubah sesuatu: pemahaman, keputusan, atau pertanyaan yang belum dijawab. Penutup yang merangkum ulang isi artikel dilarang. | BLOCKER | Bandingkan penutup dengan paragraf sebelumnya; ada yang berubah? |
+| R10.9 · Line editing | Dilarang kalimat lebih dari 40 kata. Dilarang dua kata bersinonim dalam satu kalimat. Dilarang kalimat yang bisa dihapus tanpa kehilangan informasi. | WARNING | Hitung kata per kalimat; hapus satu kalimat, apakah ada yang hilang |
+
+## Dua jenis penolakan
+
+Reviewer memisahkan temuannya jadi dua blok, karena keduanya diperbaiki dengan cara berbeda:
+
+- **Kepatuhan (R0 sampai R8).** Salah atau tidak. Kalau ada pelanggaran, draft berhenti.
+- **Kerajinan (R9 dan R10).** Kurang atau tidak. Hasilnya REJECT juga, tapi Writer memperbaikinya dengan menulis ulang bagian itu, bukan dengan mengganti satu kalimat.
+
+Kalau sebuah temuan tidak bisa masuk ke dua blok itu, berarti bukan temuan. Jangan ditulis.
+
 ---
 
 ## Aturan yang sengaja tidak dibuat
 
 Ini penting untuk transparansi. Kopi Pagi **tidak** menilai:
 
-- Apakah tulisannya bagus secara sastra. Itu selera, bukan aturan.
-- Apakah ceritanya lucu. Sama.
+- Apakah ceritanya lucu, mengharukan, atau menyentuh.
 - Apakah pilihan sesi tepat. Itu keputusan Planner, bukan Reviewer.
+- Apakah kalimatnya indah. Itu bukan wilayah mesin, dan bukan wilayah yang bisa diuji ulang oleh orang lain.
 
-Tapi perhatikan: **R9 bukan selera.** Semua yang ada di R9 punya cara cek mekanis. Jadi sejak R9 ada, "tulisannya nggak nyambung" bukan lagi alasan untuk diam. Kalau Reviewer merasa draft berat dibaca, dia wajib mencari ID R9 yang melanggar, bukan meloloskan draft karena tidak ada aturan yang pas.
+Tapi ada perbedaan yang perlu dijelaskan, karena versi pertama rulebook ini salah memakainya sebagai alasan untuk diam.
 
-Kalau Reviewer menolak berdasarkan salah satu dari tiga hal di atas tanpa ID, itu pelanggaran R8, karena menolak tanpa ID.
+"Saya kurang suka tulisannya" adalah selera. "Paragraf ini punya dua 'dia' yang merujuk ke orang berbeda" bukan selera, itu R10.1. "Ceritanya nggak nyambung" adalah selera kalau dibiarkan begitu. Tapi begitu diturunkan jadi "keputusan tokoh ini tidak punya pemicu di atasnya", itu R10.2, dan bisa diperiksa orang lain dengan hasil yang sama.
+
+Kerajinan cerita punya disiplinnya sendiri: developmental editing dan line editing. Itu bukan rasa, itu prosedur. R10 adalah versi mesin dari prosedur itu.
+
+Konsekuensinya dua arah. Reviewer tidak boleh menolak tanpa ID. Dan Reviewer juga tidak boleh meloloskan draft yang jelas berat dibaca hanya karena tidak menemukan ID yang pas. Kalau itu terjadi, dia wajib melaporkan celah rulebook, bukan berpura-pura tidak lihat.

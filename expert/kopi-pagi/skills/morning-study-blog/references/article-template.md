@@ -42,8 +42,7 @@ Kalau kamu merasa sayang membuang, itu tanda kamu sedang menulis ringkasan, buka
 | Bagian | Isi | Panjang |
 |---|---|---|
 | **Judul** | Spesifik, ada konflik. Bukan "Ringkasan Sesi 4" | ≤ 12 kata |
-| **Dek** | 1-2 kalimat di bawah judul: siapa yang bicara, pertanyaan apa yang dibawa hari ini. Ini yang menyelamatkan pembaca baru | 20-40 kata |
-| **Buka** | Manusia, tempat, kejadian. Bukan definisi, bukan etimologi | 30-60 kata |
+| **Buka** | Manusia, tempat, kejadian. Bukan definisi, bukan etimologi, bukan perkenalan diri | 30-60 kata |
 | **1. Drama** | Adegan konkret. Ada dialog, ada detail fisik, ada rasa kesal atau kesal-kocak | 250-350 kata |
 | **2. "Terus gue kepikiran..."** | Materi masuk karena Raka mentok. Konsep inti dijelaskan lewat obrolan | 450-600 kata |
 | **3. "Kalau di hidup lo..."** | Penerapan. Hubungkan ke kerjaan, keluarga, diri sendiri | 250-350 kata |
@@ -115,7 +114,8 @@ Kalau dua bagian bisa ditukar tanpa cerita jadi rusak, urutannya salah.
 
 **Lakukan:**
 - Mulai dari manusia, bukan dari definisi. Dosen, teori, dan tokoh muncul **setelah** drama.
-- Sapa pembaca dengan "lo" minimal 4 kali, bervariasi: "lo", "lo pernah nggak", "coba bayangin lo", "lo tahu nggak".
+- Sapa pembaca minimal sekali, dan wajib ada di penutup. Di tengah, maksimal tiga, dan hanya kalau mengajak membayangkan sesuatu.
+- Perkenalan diri dan penjelasan blog tidak diulang di artikel. Itu tugas halaman About.
 - Setiap istilah teknis langsung diikuti terjemahan manusiawinya di kalimat yang sama.
 - Pakai satu adegan fisik kecil yang bikin hidup: uap kopi, suara motor, bau gorengan, layar HP yang retak.
 - Biarkan Raka salah paham dulu, baru dibetulkan. Pembaca belajar dari kesalahan Raka, bukan dari definisi.
@@ -135,11 +135,18 @@ Kalau dua bagian bisa ditukar tanpa cerita jadi rusak, urutannya salah.
 - **Jangan pakai em dash (—) atau en dash (–).** Ganti dengan koma, titik, titik dua, atau pecah kalimatnya. Tanda hubung biasa untuk kata ulang tetap boleh.
 - Jangan sebut nama dosen, kampus, atau kode mata kuliah asli. Pakai "dosenku" atau "Bu Alina", dan "Psikologi Anak" tanpa kode.
 
-## Contoh dek (rotasi)
+## Bangunan cerita
 
-> Catatan Raka, mahasiswa semester satu yang kuliah sambil kerja. Hari ini soal satu kalimat yang nggak diminta siapa-siapa, dan kenapa kalimat itu nggak mau pergi.
+Enam hal ini yang membedakan cerita dari catatan. Semuanya bisa diperiksa dengan menunjuk kalimat, jadi semuanya masuk rulebook (R10).
 
-> Raka kerja di distributor kecil, kuliah psikologi semester satu, dan tiap pekan menulis ulang modulnya di sini biar dia sendiri paham. Hari ini: kenapa rasa bersalah nggak butuh penonton.
+| Yang dicek | Tesnya | Gagal kalau |
+|---|---|---|
+| Kejelasan | Tandai tiap "dia" di satu paragraf, cocokkan ke satu nama | Satu kata ganti bisa dibaca sebagai dua orang |
+| Logika | Ambil tiap titik balik, cari pemicunya di atasnya | Tokoh tiba-tiba tahu, marah, atau sadar |
+| Kontinuitas | Tulis garis waktu satu baris, daftar benda yang muncul dan hilang | Benda pindah tangan tanpa diambil, atau jam melompat tanpa penanda |
+| Tempo | Hitung kalimat di adegan kunci; hitung jarak antar adegan | Adegan kunci lewat di bawah tiga kalimat, atau penjelasan lebih dari 250 kata tanpa kembali ke adegan |
+| Transisi | Baca kalimat terakhir sebelum tiap subjudul | Pindah topik tanpa alasan yang disebut |
+| Pembuka dan penutup | Baca kalimat pertama; bandingkan penutup dengan paragraf sebelumnya | Kalimat pertama isinya konsep; penutup cuma merangkum |
 
 ## Contoh suara (acuan nada, bukan untuk disalin)
 
@@ -165,18 +172,20 @@ Kalau dua bagian bisa ditukar tanpa cerita jadi rusak, urutannya salah.
 ## Sebelum kirim — checklist
 
 - [ ] 1000-1500 kata?
-- [ ] Ada dek di bawah judul?
-- [ ] Paragraf pertama berisi manusia atau kejadian, bukan definisi atau etimologi?
+- [ ] Paragraf pertama berisi manusia atau kejadian, bukan definisi, etimologi, atau perkenalan diri?
 - [ ] Ada drama konkret di 300 kata pertama?
 - [ ] Maksimal dua konsep inti?
 - [ ] Tiap konsep punya kalimat "gue nggak ngerti" sebelum namanya muncul?
-- [ ] Ada minimal 4 sapaan "lo"?
+- [ ] Ada sapaan "lo" di penutup, dan tidak lebih dari tiga di badan artikel?
 - [ ] Nol nama pembaca di dalam teks?
 - [ ] Tiap istilah teknis dijelaskan di kemunculan pertama, tanpa memakai istilah lain yang belum dijelaskan?
 - [ ] Nggak ada "modulnya juga..." atau "materi ini membahas..." sebagai jembatan?
 - [ ] Nggak ada paragraf satu kalimat berisi kesimpulan abstrak?
 - [ ] Kalau satu konsep dihapus, ending-nya jadi rusak?
-- [ ] Penutup cuma satu ajakan?
+- [ ] Penutup cuma satu ajakan, dan mengubah sesuatu, bukan merangkum?
+- [ ] Garis waktu dan benda sudah dicek, tidak ada yang muncul atau hilang tanpa sebab?
+- [ ] Tiap subjudul punya kalimat jembatan yang menyebut alasan pindah topik?
+- [ ] Tidak ada "dia" yang bisa merujuk ke dua orang dalam satu paragraf?
 - [ ] Nol em dash dan en dash?
 - [ ] Nggak ada nama dosen, kampus, atau kode matkul asli?
 - [ ] Tiap nama punya tag pengenal di penyebutan pertama?
