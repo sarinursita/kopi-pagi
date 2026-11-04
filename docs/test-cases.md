@@ -63,6 +63,23 @@ Legenda status: `PASS` / `FAIL` / `BELUM`
 
 ---
 
+## H. Kualitas penalaran (R9)
+
+Delapan kasus ini ditambahkan setelah sesi 3 lolos 34 aturan dengan nol putaran revisi, lalu ditolak manusia karena tidak bisa dibaca. Semuanya diambil dari kegagalan yang benar-benar terjadi, bukan skenario karangan.
+
+| ID | Skenario | Perilaku yang diharapkan | Aturan | Status |
+|---|---|---|---|---|
+| T23 | Writer membuka artikel dengan etimologi ("kata psikologi dibikin dari dua potong Yunani kuno...") | Reviewer REJECT R9.1 dan mengutip kalimatnya | R9.1 | BELUM |
+| T24 | Writer memakai materi sebagai subjek ("modulnya juga singgung ilmu saraf...") | Reviewer REJECT R9.3, minta diganti jadi Raka yang mentok | R9.3 | BELUM |
+| T25 | Writer menulis paragraf satu kalimat abstrak ("Struk itu perilaku. Dia bisa dicatat.") | Reviewer REJECT R9.4 | R9.4 | BELUM |
+| T26 | Writer menjelaskan istilah dengan istilah lain yang belum dijelaskan ("Id adalah bagian dari struktur kepribadian") | Reviewer REJECT R9.5 dan R9.8 | R9.5, R9.8 | BELUM |
+| T27 | Satu sesi berisi tujuh konsep dan Writer memasukkan semuanya | Reviewer REJECT R4.6, minta dibuang bukan diringkas | R4.6 | BELUM |
+| T28 | Writer menghapus semua sapaan "lo" untuk menghindari nama pembaca | Reviewer REJECT R3.5, dan menegaskan larangan nama bukan larangan menyapa | R3.5, R2.6 | BELUM |
+| T29 | Draft PASS tapi belum ada file di `draft/` saat kartu persetujuan dikirim | Pemimpin redaksi wajib menyimpan dan membuka file dulu; kartu tanpa draft yang bisa dibuka dianggap gagal | R8.5 | BELUM |
+| T30 | Prompt awal berbahasa Inggris | Seluruh keluaran tim tetap Bahasa Indonesia | R0.1 | BELUM |
+
+---
+
 ## Kegagalan yang sudah diketahui (sebelum pengujian)
 
 Bagian ini sengaja ditulis lebih dulu, supaya tidak terlihat seperti ditemukan belakangan.
@@ -74,6 +91,8 @@ Bagian ini sengaja ditulis lebih dulu, supaya tidak terlihat seperti ditemukan b
 | Planner bisa memilih sudut cerita yang sama berulang | Artikel terasa monoton | Tambahkan pemeriksaan "sudut ini sudah dipakai di sesi mana" terhadap `log.md` |
 | Caption Instagram bisa melewati 120 kata | R4 tidak mengatur IG, jadi tidak tertangkap | Perlu aturan tambahan atau batas yang dicek Writer sendiri |
 | Orchestrasi tim bisa gagal kalau anggota tidak ter-spawn | Alur berhenti di tengah | Diuji manual sebelum demo, bukan saat live |
+| **Sudah terjadi:** rulebook v1.0 tidak punya aturan kualitas penalaran, jadi draft sesi 3 lolos 34 aturan dengan 0 putaran revisi padahal tidak bisa dibaca | Reviewer terlihat bekerja padahal tidak menangkap masalah utama | Rulebook dinaikkan ke v1.1 dengan R9 (delapan aturan), dan Reviewer sekarang wajib memeriksa R9 sebelum meloloskan draft |
+| **Sudah terjadi:** kartu persetujuan dikirim tanpa draft yang bisa dibuka, dan dalam bahasa Inggris | Manusia diminta menyetujui sesuatu yang tidak bisa dia baca | R8.5 (draft wajib ada di disk dan path-nya disebut di kartu) dan R0.1 (keluaran wajib Bahasa Indonesia) |
 
 ---
 

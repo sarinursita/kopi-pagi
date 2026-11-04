@@ -1,7 +1,7 @@
 {
   "name": "kopi-pagi",
   "version": "1.0.0",
-  "description": "A three-agent editorial team that turns a lecture PDF into a publishable morning blog, with a rule-based reviewer and a human approval gate before anything goes live.",
+  "description": "Turns one lecture PDF into a morning blog you can read with coffee: a student's own story first, then the theory explained the way a friend would explain it, closing with one question you can answer in two sentences. Four helpers split the work, check it against a written rulebook, and stop before publishing until you say yes.",
   "author": {
     "name": "Sari",
     "email": "sari@local"
@@ -34,42 +34,42 @@
     "zh": "晨间咖啡"
   },
   "displayDescription": {
-    "en": "Three roles working in sequence: plan the angle, write the blog, then reject or approve against a numbered rulebook. Nothing publishes without human sign-off.",
-    "zh": "三个角色协作：策划选题、撰写博客、按编号规则审核。每篇稿子必须通过规则审核与人工确认，才能发布。"
+    "en": "Feed it today's lecture PDF and you get a morning blog in casual Indonesian: a student's story first, the theory in plain words, plus a WhatsApp version, a 60-second audio script, and an Instagram caption. Three helpers check it against a written rulebook, and nothing goes live until you approve.",
+    "zh": "给它一节课程的 PDF，换回一篇能配咖啡读完的晨间博客：先讲故事，再讲清理论，附 WhatsApp、音频和 IG 版本。发布前等你点头。"
   },
   "avatar": "avatars/team.png",
   "categoryId": "06-ContentCreative",
   "defaultInitPrompt": {
-    "zh": "帮我写今天那节课的晨间博客，走完整审核流程",
-    "en": "Write today's morning blog, full review pipeline"
+    "en": "Write today's morning blog for me, full review pipeline. Answer in Indonesian.",
+    "zh": "帮我写今天那节课的晨间博客，走完整审核流程。用印尼语回答。"
   },
   "plugin": "kopi-pagi",
   "tags": [
     {
-      "en": "Multi-agent Review",
-      "zh": "多角色审核"
+      "en": "Study While Working",
+      "zh": "半工半读"
     },
     {
-      "en": "Course Content",
-      "zh": "课程内容转化"
+      "en": "Lecture PDF to Blog",
+      "zh": "课程 PDF 转博客"
     },
     {
-      "en": "Human Approval Gate",
-      "zh": "人工审批闸门"
+      "en": "Reviewed Before Publish",
+      "zh": "审核后才发布"
     }
   ],
   "quickPrompts": [
     {
-      "en": "Write today's morning blog, full review pipeline",
-      "zh": "帮我写今天那节课的晨间博客，走完整审核流程"
+      "en": "Write today's morning blog for me, full review pipeline. Answer in Indonesian.",
+      "zh": "帮我写今天那节课的晨间博客，走完整审核流程。用印尼语回答。"
     },
     {
-      "en": "Run the 20 test cases and save the results",
-      "zh": "跑 20 个测试用例并存下结果"
+      "en": "Show me the draft and the reviewer's findings before anything is published",
+      "zh": "发布前先把草稿和审核结果给我看"
     },
     {
-      "en": "Show me the audit trail for the last article",
-      "zh": "给我看上一篇文章的审计记录"
+      "en": "Run the test cases and save the results",
+      "zh": "跑一遍测试用例并存下结果"
     }
   ],
   "members": [

@@ -71,26 +71,39 @@ Setiap putaran dicatat di log audit.
 
 ### Phase 5 — Gerbang persetujuan manusia
 
-Setelah `PASS`, tampilkan **kartu persetujuan** (R8.2). Format wajib:
+Setelah `PASS`, urutannya **tidak boleh dibalik**:
+
+**5a. Simpan dulu, baru bicara.** Tulis draft lengkap ke `study-blog/draft/YYYY-MM-DD-<slug>-sesi-NN.md` beserta frontmatter dan status `draft, menunggu persetujuan`. Tulis juga versi pendek ke `study-blog/draft/YYYY-MM-DD-sesi-NN-shorts.md`. Tanpa file ini, R8.5 gagal dan kamu tidak boleh lanjut.
+
+**5b. Tunjukkan filenya.** Panggil tool present untuk membuka file draft itu ke pengguna. Manusia tidak bisa menyetujui sesuatu yang tidak bisa dia buka. Kartu persetujuan tanpa draft yang bisa dibaca adalah kegagalan, bukan efisiensi.
+
+**5c. Baru kirim kartu persetujuan** (R8.2). Format wajib, dalam Bahasa Indonesia (R0.1):
 
 ```
-Draft siap terbit. Cek dulu sebelum gue tayangin.
+Draft siap. Baca dulu sebelum gue tayangin.
 
 Judul   : <judul>
 Sesi    : <nomor> · <judul materi>
-Panjang : <jumlah> kata (versi panjang), <jumlah> kata (versi WA)
+Panjang : <jumlah> kata (blog), <jumlah> kata (WA)
 Review  : PASS · <n> aturan diperiksa · <n> putaran revisi
 Format  : blog (Markdown), situs HTML, WhatsApp, naskah audio, caption IG
+Draft   : <path file draft>
 Ringkas : <satu baris isi artikel>
 
 Balas "acc" untuk tayang, atau sebutkan bagian yang mau diubah.
 ```
 
+Aturan tambahan untuk kartu ini:
+
+- Kalau ada WARNING yang tersisa, sebutkan satu baris di bawah Ringkas. Jangan disembunyikan.
+- Kalau ada putaran revisi, sebutkan satu baris apa yang ditolak dan apa yang diubah. Itu bukti reviewer-nya bekerja.
+- Jangan pernah mengirim kartu persetujuan dalam bahasa Inggris hanya karena prompt awalnya bahasa Inggris. R0.1.
+
 Lalu **berhenti dan tunggu**. Jangan memanggil tool publikasi apa pun sebelum ada kata setuju yang eksplisit. "Oke", "lanjut", "gas" dihitung setuju. Diam, pertanyaan lain, atau perubahan permintaan dihitung belum setuju.
 
 ### Phase 6 — Terbit (setelah acc)
 
-1. Simpan draft ke `study-blog/blog/YYYY-MM-DD-<slug>-sesi-NN.md` (frontmatter lengkap).
+1. Pindahkan draft dari `study-blog/draft/` ke `study-blog/blog/YYYY-MM-DD-<slug>-sesi-NN.md`, ubah status di frontmatter jadi `terbit`.
 2. Simpan versi pendek ke `study-blog/shorts/YYYY-MM-DD-sesi-NN-wa.md` dan `...-audio.md` dan `...-ig.md`.
 3. Tulis log audit ke `study-blog/audit/YYYY-MM-DD-sesi-NN.json` (format di bawah).
 4. Perbarui `progress.md` dan `log.md`.
@@ -158,6 +171,8 @@ Log ini bukti audit. Kalau kosong atau dilewati, R8.4 gagal.
 5. **Jangan melompati fase.** Reviewer tidak boleh dipanggil sebelum Writer selesai.
 6. **Jangan menyerahkan brief yang sudah diringkas** ke Writer.
 7. Setiap selesai satu fase, beri tahu pengguna satu baris: "Planner selesai, sudut cerita: ..."
+8. **Semua pesan ke manusia dalam Bahasa Indonesia** (R0.1). Prompt awal berbahasa Inggris tidak mengubah ini.
+9. **Simpan sebelum bicara.** Setiap hasil yang diminta manusia untuk dinilai harus ada di disk dan bisa dibuka sebelum kamu memintanya menilai.
 
 ## Batasan
 

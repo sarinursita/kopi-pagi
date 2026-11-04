@@ -1,0 +1,56 @@
+{
+  "sesi": 3,
+  "tanggal": "2026-11-04",
+  "mata_kuliah": "Psikologi Anak",
+  "sumber": "pcps-101-psikologi-anak/sesi-03/materi.md",
+  "instruksi_tersisip": [],
+  "catatan_rulebook": "Rulebook v1.0 tidak punya aturan kualitas penalaran. Draft v1 lolos 34 aturan dengan 0 putaran revisi, tapi ditolak manusia. Rulebook dinaikkan ke v1.1 dengan R9 (delapan aturan), lalu draft ditulis ulang.",
+  "putaran": [
+    {
+      "putaran": 1,
+      "penulis": "Wena (writer)",
+      "reviewer": "Yani",
+      "vonis": "PASS",
+      "aturan_diperiksa": 34,
+      "pelanggaran": [],
+      "catatan": "Lolos semua aturan v1.0. Ini kegagalan rulebook, bukan keberhasilan draft."
+    },
+    {
+      "putaran": 2,
+      "peninjau": "Sari (manusia)",
+      "vonis": "REJECT",
+      "pelanggaran": ["R9.1", "R9.3", "R9.4", "R9.5", "R4.6", "R2.6"],
+      "kutipan": [
+        "Kata psikologi dibikin dari dua potong Yunani kuno: psyche, yang artinya jiwa, dan logos, yang artinya pengetahuan.",
+        "Struk itu perilaku. Dia bisa dicatat.",
+        "Modulnya juga singgung ilmu saraf, yang ngukur aliran darah dan arus listrik di otak buat nyimpulin sesuatu soal jiwa.",
+        "Bagian yang permanen di bawah air cuma satu, namanya Id."
+      ],
+      "catatan": "Dibuka dengan etimologi (R9.1). Materi jadi subjek kalimat (R9.3). Paragraf satu kalimat abstrak (R9.4). Istilah dijelaskan dengan istilah lain (R9.5). Tujuh konsep dalam satu artikel (R4.6). Ditutup dengan menyapa nama pembaca (R2.6), dan untuk menghindari nama itu penulis menghapus sapaan sama sekali, yang justru membunuh keterlibatan pembaca."
+    },
+    {
+      "putaran": 3,
+      "penulis": "Wena (writer)",
+      "reviewer": "Yani",
+      "vonis": "PASS",
+      "aturan_diperiksa": 44,
+      "pelanggaran": [],
+      "catatan": "Dua konsep saja: pikiran versus perilaku, lalu bagian yang tidak bisa dicatat. Konsep lain dibuang. Sapaan 'lo' 9 kali tanpa nama. Nol em dash. 1.373 kata."
+    }
+  ],
+  "konsep_dipakai": [
+    "psikologi mulai dari perilaku karena perilaku bisa dicatat, sementara pikiran tidak",
+    "bagian yang tidak bisa dicatat tetap menggerakkan perilaku (Id, Ego, Super Ego), dan Super Ego dibentuk dari suara orang lain"
+  ],
+  "konsep_dibuang": [
+    "etimologi psyche dan logos",
+    "ilmu saraf dan kritik reduksionisme",
+    "ruh, nafs, fitrah, aql sebagai empat istilah Qurani",
+    "Al-Jasiyah 23 dan perbandingan Id dengan hawa nafsu",
+    "Eros dan Thanatos",
+    "teknik akses bawah sadar: mimpi, asosiasi bebas, lapsus"
+  ],
+  "disetujui_oleh": null,
+  "waktu_persetujuan": null,
+  "diterbitkan": false
+}

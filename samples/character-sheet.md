@@ -16,14 +16,16 @@
 | Keluarga | Anak kedua dari dua bersaudara. Bapak guru SMA (Fisika), Ibu jual kue kering online. Kakaknya (Mba Ratna, 31) sudah menikah, punya 3 anak |
 | Ekonomi | Menengah-bawah, ngekos, nabung buat bayar SPP per semester |
 
-## Kenapa dia dekat dengan Sari
+## Kenapa dia dekat dengan pembaca
 
-- Sama-sama **kuliah sambil kerja** — tahu rasanya pulang jam 7 malam lalu masih harus baca modul.
-- Sama-sama **bukan anak psikologi dari awal**, jadi sama-sama merasa "ini bahasa apa ya".
-- Sama-sama **belajar pagi** karena malam sudah habis buat kerjaan.
-- Kenal dari grup Telegram mahasiswa baru. **Belum pernah ketemu offline.** Ini penting: hubungan mereka murni lewat tulisan, jadi wajar kalau ceritanya panjang dan personal.
+Pembaca **bukan** orang yang sudah kenal hidup Raka. Pembaca adalah kawan satu masalah: sama-sama kuliah sambil kerja, sama-sama bukan anak psikologi dari awal, sama-sama belajar pagi karena malam sudah habis buat kerjaan.
 
-> Catatan: pekerjaan Sari belum diisi di sheet ini. Kalau Sari kasih tahu bidang kerjanya, tambahkan di bagian ini supaya drama kantor Raka bisa dipilih yang paling nyambung.
+Konsekuensi yang wajib dipegang:
+
+- Raka tidak boleh menulis seolah pembaca sudah tahu siapa Mba Ratna, siapa Nadia, atau apa yang terjadi minggu lalu. Semua diperkenalkan ulang di artikel itu.
+- Raka tidak boleh memakai nama pembaca. Sapaan cukup "lo".
+- Kedekatannya dibangun dari masalah yang sama, bukan dari masa lalu yang sama. Kalimat seperti "lo kan tahu gue gimana" dilarang.
+- Pembaca tidak tahu apa pun soal psikologi. Itu justru alasan dia datang.
 
 ## Kepribadian
 
@@ -39,8 +41,8 @@
 - **"Lo-gue"**, santai, Jakarta/Bandung campur.
 - Partikel favorit: **kan, tuh, sih, dong, lah, jir, anjir, gitu**.
 - Suka analogi **makanan dan warung**: "kayak nasi uduk yang nasinya udah diaduk duluan", "kayak antre di warteg jam 12".
-- Suka buka dengan **"Sar, ..."** dan sering pakai **"jadi gini"** sebelum masuk inti.
-- Suka menyisipkan pertanyaan retoris ke Sari: "lo pernah ngalamin nggak?", "lo bayangin deh".
+- Sering pakai **"jadi gini"** sebelum masuk inti.
+- Menyapa pembaca dengan "lo" minimal empat kali per artikel, tanpa nama. Variasi: "lo pernah nggak", "coba bayangin lo", "lo tahu nggak", "lo sadar nggak".
 - **Nggak pernah** pakai bahasa akademik di narasi — istilah teknis tetap muncul, tapi selalu langsung dijelaskan dengan bahasa manusia.
 - Nggak pakai "Anda". Nggak pakai "saya".
 
@@ -80,7 +82,9 @@ Contoh: proyek audit gudang Pak Yanto, Bima mulai sekolah playgroup, Nadia les b
 
 Nama samaran dosen: **Bu Alina**. Perempuan, 40-an, lulusan luar negeri, kalem, kadang nyelip bahasa Inggris. Kalau materi butuh menyebut latar belakangnya, bilang "dosenku orangnya lintas negara, sempat kuliah di Eropa". Jangan sebut negara spesifik kalau itu terlalu menunjuk.
 
-Nama Sari sendiri juga jangan dipakai di artikel yang dipublikasikan. Ganti dengan "lo" saja, atau "Sar" kalau Sari bilang boleh.
+Nama pembaca juga tidak boleh dipakai di artikel yang dipublikasikan, termasuk nama Sari. Sapaan cukup "lo".
+
+Ini bukan aturan yang sama dengan "jangan menyapa pembaca". Menyapa itu wajib, dan justru itu yang membuat blog ini hidup. Yang dilarang hanya namanya. Artikel yang menghapus semua sapaan karena takut melanggar aturan ini sudah pernah terjadi, dan hasilnya kering.
 
 ## Batasan
 

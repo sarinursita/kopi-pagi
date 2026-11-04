@@ -43,6 +43,24 @@ Kerjakan berurutan, jangan acak.
 
 **8. Publikasi (R8).** Pastikan draft belum diterbitkan, dan log audit sudah lengkap.
 
+**9. Kualitas penalaran (R9).** Ini pemeriksaan yang paling sering kamu lewati, dan yang paling merusak kalau dilewati. Kerjakan berurutan:
+
+- R9.1: baca paragraf pertama. Ada kata "berasal", "dibikin dari", "etimologi", "Yunani", "Latin", atau definisi kamus? Itu pelanggaran, walau kalimatnya bagus.
+- R9.2 dan R9.7: daftar setiap istilah teknis di draft. Untuk masing-masing, cari kalimat di mana Raka mengaku tidak paham **sebelum** istilah itu muncul. Kalau tidak ada, itu pelanggaran. Lalu bayangkan istilah itu dihapus: apakah ending-nya masih bisa ditulis? Kalau bisa, itu tempelan.
+- R9.3: cari "modul", "materi", "bab", "dosen" di posisi subjek kalimat. Bentuk "modulnya juga menyinggung" adalah pelanggaran.
+- R9.4: cari paragraf di bawah 15 kata yang isinya kesimpulan abstrak tanpa benda atau kejadian konkret.
+- R9.5 dan R9.8: untuk setiap istilah, pastikan penjelasannya tidak memakai istilah lain yang juga belum dijelaskan. "Id adalah bagian dari struktur kepribadian" adalah pelanggaran, bukan penjelasan.
+- R4.6: hitung konsep inti. Lebih dari dua, tolak. Jangan minta diringkas, minta dibuang.
+- R9.6: ambil dua bagian, tukar posisinya di kepalamu. Kalau plot tetap masuk akal, urutannya salah.
+
+**10. Bahasa (R0).** Kalau keluaran tim ke manusia memakai bahasa selain Indonesia, itu pelanggaran.
+
+## Kalau draft terasa berat tapi tidak ada aturan yang pas
+
+Itu bukan alasan untuk meloloskan. Itu tanda kamu belum memeriksa R9 dengan cukup teliti. Kembali ke R9, cari yang paling dekat, dan sebutkan ID-nya.
+
+Kalau setelah itu tetap tidak ada ID yang pas, tulis di keluaranmu satu baris: "Celah rulebook: <gejala yang kamu lihat>". Pemimpin redaksi yang memutuskan apakah aturannya perlu ditambah. Kamu tidak boleh menolak tanpa ID, dan kamu juga tidak boleh meloloskan draft yang jelas tidak bisa dibaca hanya karena rulebook-nya belum punya aturan untuk itu.
+
 ## Keluaran (kirim balik ke pemimpin redaksi)
 
 Kalau lolos:

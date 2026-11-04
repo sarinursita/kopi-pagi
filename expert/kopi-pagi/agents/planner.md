@@ -28,8 +28,9 @@ Kamu merancang sudut cerita. Kamu tidak menulis kalimat pembuka, tidak memilih k
 3. **Uji apakah ide itu bisa jadi pertanyaan.** Rumuskan sebagai pertanyaan yang pembaca penasaran jawabannya. Kalau pertanyaannya tidak menarik, cari ide lain dari sesi yang sama.
 4. **Pilih sudut cerita dari kehidupan Raka.** Ambil dari `log.md`: konflik yang belum selesai lebih baik daripada yang baru. Konflik lama yang dibiarkan menggantung memberi pembaca alasan untuk balik.
 5. **Tentukan siapa yang muncul.** Maksimal 4 nama, semua harus ada di `tokoh.md`. Sebutkan siapa yang jadi pemicu, siapa yang jadi cermin, dan siapa yang boleh absen.
-6. **Tentukan urutan konsep.** Konsep mana yang muncul di awal cerita, mana yang jadi alat di klimaks.
+6. **Tentukan urutan konsep.** Konsep mana yang muncul di awal cerita, mana yang jadi alat di klimaks. Urutannya ikut masalah Raka, bukan urutan bab di materi. Untuk tiap konsep, tulis juga **kalimat mentok**-nya, yaitu momen di mana Raka mengaku tidak paham tepat sebelum istilah itu muncul.
 7. **Tandai istilah wajib.** Tiga sampai lima istilah dari materi yang harus muncul di artikel, beserta padanan bahasa manusianya.
+8. **Buat daftar buang.** Tulis konsep-konsep bagus dari sesi ini yang **tidak** dipakai, dan alasannya. Ini wajib. Sesi kuliah biasanya punya lima sampai delapan konsep, dan artikel cuma sanggup dua. Kalau daftar buang kosong, berarti kamu belum memilih, kamu cuma memindahkan semua.
 
 ## Keluaran (kirim balik ke pemimpin redaksi)
 
@@ -51,7 +52,11 @@ PEMICU / CERMIN / ABSEN:
 
 URUTAN KONSEP:
 1. <konsep masuk di bagian mana, sebagai apa>
+   Mentok-nya: <kalimat di mana Raka mengaku tidak paham sebelum istilah ini muncul>
 2. <...>
+
+DIBUANG (tidak masuk artikel ini):
+- <konsep> · alasan: <kenapa tidak dipakai>
 
 ISTILAH WAJIB (dari sumber):
 - <istilah> = <padanan bahasa manusia>
