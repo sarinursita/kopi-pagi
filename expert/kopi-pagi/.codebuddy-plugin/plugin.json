@@ -1,0 +1,129 @@
+{
+  "name": "kopi-pagi",
+  "version": "1.0.0",
+  "description": "A three-agent editorial team that turns a lecture PDF into a publishable morning blog, with a rule-based reviewer and a human approval gate before anything goes live.",
+  "author": {
+    "name": "Sari",
+    "email": "sari@local"
+  },
+  "agents": [
+    "./agents/kopi-pagi-team-lead.md",
+    "./agents/planner.md",
+    "./agents/writer.md",
+    "./agents/reviewer.md"
+  ],
+  "skills": [
+    "./skills/morning-study-blog"
+  ],
+  "expertType": "team",
+  "agentName": "kopi-pagi-team-lead",
+  "teamInfo": {
+    "leadAgent": "kopi-pagi-team-lead",
+    "memberAgents": [
+      "planner",
+      "writer",
+      "reviewer"
+    ]
+  },
+  "displayName": {
+    "en": "Kopi Pagi",
+    "zh": "晨间咖啡"
+  },
+  "profession": {
+    "en": "Kopi Pagi",
+    "zh": "晨间咖啡"
+  },
+  "displayDescription": {
+    "en": "Three roles working in sequence: plan the angle, write the blog, then reject or approve against a numbered rulebook. Nothing publishes without human sign-off.",
+    "zh": "三个角色协作：策划选题、撰写博客、按编号规则审核。每篇稿子必须通过规则审核与人工确认，才能发布。"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "06-ContentCreative",
+  "defaultInitPrompt": {
+    "zh": "帮我写今天那节课的晨间博客，走完整审核流程",
+    "en": "Write today's morning blog, full review pipeline"
+  },
+  "plugin": "kopi-pagi",
+  "tags": [
+    {
+      "en": "Multi-agent Review",
+      "zh": "多角色审核"
+    },
+    {
+      "en": "Course Content",
+      "zh": "课程内容转化"
+    },
+    {
+      "en": "Human Approval Gate",
+      "zh": "人工审批闸门"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Write today's morning blog, full review pipeline",
+      "zh": "帮我写今天那节课的晨间博客，走完整审核流程"
+    },
+    {
+      "en": "Run the 20 test cases and save the results",
+      "zh": "跑 20 个测试用例并存下结果"
+    },
+    {
+      "en": "Show me the audit trail for the last article",
+      "zh": "给我看上一篇文章的审计记录"
+    }
+  ],
+  "members": [
+    {
+      "id": "kopi-pagi-team-lead",
+      "displayName": {
+        "en": "Kiki",
+        "zh": "Kiki"
+      },
+      "profession": {
+        "en": "Editor-in-Chief",
+        "zh": "内容总编"
+      },
+      "avatar": "avatars/kopi-pagi-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "planner",
+      "displayName": {
+        "en": "Susi",
+        "zh": "Susi"
+      },
+      "profession": {
+        "en": "Curriculum Planner",
+        "zh": "选题策划"
+      },
+      "avatar": "avatars/planner.png",
+      "role": "member"
+    },
+    {
+      "id": "writer",
+      "displayName": {
+        "en": "Wena",
+        "zh": "Wena"
+      },
+      "profession": {
+        "en": "Blog Writer",
+        "zh": "博客主笔"
+      },
+      "avatar": "avatars/writer.png",
+      "role": "member"
+    },
+    {
+      "id": "reviewer",
+      "displayName": {
+        "en": "Yani",
+        "zh": "Yani"
+      },
+      "profession": {
+        "en": "Rulebook Reviewer",
+        "zh": "规则审核"
+      },
+      "avatar": "avatars/reviewer.png",
+      "role": "member"
+    }
+  ]
+}
