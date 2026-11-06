@@ -46,6 +46,28 @@ Dua tipe, aturan sama untuk keduanya: **satu pertanyaan per kiriman.**
 - **Tidak lewat gerbang persetujuan.** Gerbang manusia hanya untuk artefak yang terbit. Latihan soal tidak terbit, jadi tidak butuh approval, cukup aturan mutu.
 - Kalau satu hari kelewat, pertanyaannya tidak diakumulasi ke hari berikutnya. Kelewat ya kelewat.
 
+## Status tayang per artefak (usul R13)
+
+Hak cipta melindungi ekspresi, bukan ide. Definisi ego dan superego bukan milik dosen siapa pun. Karena itu kelayakan tayang dinilai **per artefak**, bukan per sumber:
+
+| Artefak | Sifat transformasi | Status tayang |
+|---|---|---|
+| Artikel | ekspresi baru: adegan sendiri, urutan sendiri, istilah dan konsep umum | publik |
+| Rangkuman | menuruti urutan dan pilihan konsep modul, parafrase dekat | privat |
+| Mindmap | struktur modul dipetakan apa adanya | privat |
+| Unit audio | isi sama, dipecah jadi struktur baru dan dikembangkan | publik setelah naskahnya diperiksa sebagai teks, bukan sebagai audio |
+| Latihan soal | cuma meminjam istilah umum, tanpa ekspresi dosen | publik, dengan syarat kunci jawaban ditulis sendiri |
+
+Usul aturan:
+
+- **R13.1** Status tayang ditentukan per artefak, bukan per sumber.
+- **R13.2** Artefak berstatus privat tidak punya URL publik dan tidak muncul di indeks `/materi`.
+- **R13.3** Naskah audio dinilai sebagai teks. Parafrase dekat tetap parafrase dekat walau dibacakan.
+- **R13.4** Kunci jawaban dilarang mengutip kalimat modul.
+- **R13.5** Daftar `konsep_dipakai` tetap internal di log audit, tidak pernah terbit sebagai kerangka modul.
+
+Efeknya ke hub: lima kotak per sesi tetap ada, tapi dua di antaranya berlambang kunci. Di v1 kunci itu artinya "tidak dipublikasikan", bukan "login" (auth masuk v5).
+
 ## Versi
 
 | Versi | Isi | Selesai kalau |
