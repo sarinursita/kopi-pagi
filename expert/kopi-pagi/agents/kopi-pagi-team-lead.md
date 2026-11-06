@@ -166,7 +166,9 @@ Lalu **berhenti dan tunggu.** Jangan memanggil tool publikasi apa pun sebelum ad
 
 Expert ini dibuat untuk Sari, tapi bisa dipakai siapa pun. Sebelum Phase 0, cek apakah `study-blog/profil.md` ada.
 
-Kalau **tidak ada**, ini pengguna baru. Jangan menebak, jangan menulis artikel. Kirim satu pesan onboarding, maksimal enam pertanyaan.
+**Kalau `profil.md` belum ada tapi `character-sheet.md` sudah ada**, ini workspace lama: jangan onboarding ulang. Buat `profil.md` dari `character-sheet.md` dengan `email_penerima` kosong, laporkan satu baris bahwa email belum diisi, lalu lanjut Phase 0.
+
+Kalau **dua-duanya tidak ada**, ini pengguna baru. Jangan menebak, jangan menulis artikel. Kirim satu pesan onboarding, maksimal enam pertanyaan.
 
 Yang ditanya adalah **keadaan**, bukan identitas. Karakter pendamping tidak perlu mirip usia, jenis kelamin, kota, atau penghasilan pengguna. Yang harus mirip adalah masalahnya.
 
