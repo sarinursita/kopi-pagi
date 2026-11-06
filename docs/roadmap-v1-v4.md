@@ -68,6 +68,38 @@ Usul aturan:
 
 Efeknya ke hub: lima kotak per sesi tetap ada, tapi dua di antaranya berlambang kunci. Di v1 kunci itu artinya "tidak dipublikasikan", bukan "login" (auth masuk v5).
 
+## Ruang privat: Slack sebagai portal (bukan login sendiri)
+
+Menerbitkan artinya menaruh konten di suatu tempat. Menaruh di channel Slack privat adalah menerbitkan juga, tapi batas aksesnya sudah ada: keanggotaan workspace. Jadi portal privat tidak perlu dibangun dari nol.
+
+- **Blog publik = etalase.** Artikel, soal, dan tautan. Tidak ada yang sensitif.
+- **Slack privat = ruang belajar.** Rangkuman, mindmap, unit audio, arsip. Satu channel per kebutuhan, anggota hanya user dan agent.
+- Kotak yang terkunci di hub tidak menautkan berkas, tapi boleh menautkan pesan Slack. Yang melihat tautan tanpa akses akan mendarat di halaman minta masuk, bukan di materi.
+- Aturan yang menyertainya: artefak privat hanya boleh berada di channel yang anggotanya user dan agent. Begitu ada anggota manusia lain, status privat gugur dan artefak harus ditinjau ulang.
+
+Konsekuensi yang diakui: Slack bukan pengaman keras. Anggota bisa menyalin, dan admin workspace bisa mengekspor. Untuk catatan belajar pribadi itu cukup, dan lebih jujur daripada mengaku aman.
+
+## Tutor: peran kelima (v2, bukan v1)
+
+Interaksi di Slack adalah tempat produk ini bisa naik kelas atau justru kehilangan disiplin. Dua pilihan:
+
+| Pilihan | Kekuatan | Masalah |
+|---|---|---|
+| Asisten WorkBuddy tanpa batas | bebas, apa pun bisa ditanya | tidak bisa dipertanggungjawabkan, bisa membocorkan isi modul, tidak ada aturan yang bisa dikutip |
+| **Agent Tutor dengan batas** | jawaban bisa ditelusuri, penolakan beralasan | perlu aturan baru dan artefak bukti |
+
+Yang dipakai: Tutor dengan batas. Batasnya sederhana karena bahan bakunya sudah ada, yaitu **rangkuman sesi**.
+
+- Tutor menjawab dari rangkuman sesi itu, bukan dari PDF.
+- Setiap jawaban menyebut konsep mana yang dipakai.
+- Pertanyaan di luar sesi ditolak dengan alasan, bukan dijawab setengah.
+- Tutor dilarang menulis artikel baru atau mengubah rangkuman. Tugasnya menjelaskan, bukan memproduksi.
+- Format jawaban: maksimal 120 kata, satu contoh konkret.
+
+Ini sekaligus menjawab satu pertanyaan desain yang belum pernah dijawab: rangkuman bukan cuma artefak yang disimpan, tapi **basis pengetahuan Tutor**. Karena rangkuman dijaga R12, jawaban Tutor otomatis terikat cakupan yang sama.
+
+Tidak masuk v1 karena menambah satu peran berarti menambah aturan, bukti, dan waktu demo di hari yang sama dengan deadline.
+
 ## Versi
 
 | Versi | Isi | Selesai kalau |
