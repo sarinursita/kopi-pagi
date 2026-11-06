@@ -1,6 +1,6 @@
 # Skrip Video Demo — Kopi Pagi (v3, versi manusia)
 
-**8 slide · ±6:15 · narasi 612 kata** (bicara ±4:40, sisanya jeda menunjuk layar)
+**8 slide · ±6:00 · narasi 566 kata** (bicara ±4:20, sisanya jeda menunjuk layar dan scroll artefak)
 
 ## Kenapa v3 ada
 
