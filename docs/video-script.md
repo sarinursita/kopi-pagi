@@ -1,6 +1,6 @@
 # Skrip Video Demo — Kopi Pagi (v2, versi jual)
 
-**8 slide · ±6:30 · narasi 702 kata** (bicara ±5:00, sisanya jeda menunjuk layar)
+**8 slide · ±6:15 · narasi 611 kata** (bicara ±4:35, sisanya jeda menunjuk layar dan scroll artefak)
 **Batas lomba:** 5–8 menit, wajib memuat satu momen menolak dan satu momen menunggu persetujuan.
 
 ## Apa yang berubah dari v1
