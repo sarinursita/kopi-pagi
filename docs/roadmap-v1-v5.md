@@ -141,10 +141,10 @@ Tidak ada hook, tidak ada portal, tidak ada penjadwalan sepanjang hari. Satu jad
 | Jam | Apa yang terjadi | Di mana |
 |---|---|---|
 | **05:00** | scheduled task menyala. Planner menyusun brief, Writer menulis rangkuman, Reviewer memeriksa R12, lalu Writer menulis artikel, Reviewer memeriksa R4, R9, R11 | WorkBuddy di laptop, mesin memang menyala karena jam belajar |
-| **05:10** | rangkuman dikirim ke **email** pribadi. Artikel ditahan, belum tayang | email |
-| **05:15** | sesi belajar: baca rangkuman, kalau ada yang meleset revisi langsung dengan Kiki di WorkBuddy, lalu approve artikel | WorkBuddy desktop |
+| **05:10** | rangkuman dikirim ke **email** pribadi. Artikel dilampirkan di percakapan, ditahan, belum tayang | email dan WorkBuddy |
+| **05:15** | sesi belajar: artikel dibaca penuh di jendela WorkBuddy, revisi langsung dengan Kiki kalau ada yang meleset, lalu approve | WorkBuddy desktop |
 | **06:00** | artikel tayang di blog setelah approve | situs publik |
-| **06:15** | di KRL: baca artikel di HP. Rangkuman sudah ada di email, tidak perlu laptop | HP |
+| **06:15** | di KRL: baca ulang di HP kalau mau. Sesi belajarnya sudah selesai di jam 05:15, ini cuma mengulang | HP |
 
 Kenapa email, bukan kanal: email itu kiriman ke satu orang. Tidak ada URL publik, tidak ada yang bisa mengindeks, dan tidak ada yang perlu dibangun. Untuk catatan belajar pribadi, itu sudah cukup dan paling murah.
 
@@ -155,11 +155,13 @@ Ini yang tadinya kabur, dan pertanyaanmu benar: mahasiswa tidak bisa menilai ben
 | Artefak | Diperiksa mesin | Disetujui manusia | Alasannya |
 |---|---|---|---|
 | Rangkuman | R12: cakupan dan larangan konsep buangan | **tidak** | penerimanya satu orang, bukan publik. Yang bisa dinilai manusia cuma "ini nyambung atau tidak", dan itu ketahuan saat dipakai |
-| Artikel | R2, R4, R9, R11 | **ya, layak tayang** | akan dilihat orang lain. Yang dinilai manusia: identitas bocor atau tidak, nada, dan kamu mau namamu menempel di situ atau tidak |
+| Artikel | R2, R4, R9, R11 | **ya, layak tayang** | akan dilihat orang lain, dan manusianya **membaca penuh** sebelum menyetujui. Membaca itu sekaligus sesi belajarnya, bukan pemeriksaan terpisah |
 | Unit audio (v3) | naskahnya dinilai sebagai teks | ya, kalau tayang publik | publik |
 | Latihan soal (v4) | aturan mutu soal | tidak | privat, dan salah ketik bukan bencana |
 
-Yang harus diakui: **tidak ada yang memverifikasi kebenaran isi terhadap modul.** Reviewer memeriksa cakupan (R12.1) dan aturan gaya, bukan kebenaran. Manusia juga tidak bisa, karena justru sedang belajar. Solusi murahnya ada di v2: kartu approval menampilkan tiga klaim dari artikel beserta konsep asalnya di rangkuman, jadi kamu bisa memeriksa tiga baris dalam tiga puluh detik, tanpa membaca ulang seluruh artikel.
+Konsekuensi yang harus jujur: **tidak ada pemeriksaan sistematis atas kebenaran isi.** Reviewer memeriksa cakupan (R12.1) dan gaya, bukan kebenaran. Manusia membaca penuh, tapi dia sedang belajar, jadi yang dia tangkap adalah "ini nyambung dengan modul atau tidak", bukan audit.
+
+Yang dipakai sebagai gantinya bukan kartu ringkasan, karena itu cuma menambah lapisan yang tidak dibaca. Yang dipakai: **artikelnya dibaca utuh di jendela WorkBuddy sebelum approve.** Itu sudah menjadi sesi belajar, jadi tidak ada pembacaan kedua yang sia-sia. Blog adalah arsip publik, dan membacanya lagi setelah tayang sifatnya opsional.
 
 ## Versi
 
