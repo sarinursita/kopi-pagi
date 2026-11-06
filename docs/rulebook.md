@@ -155,6 +155,18 @@ Ini bukan daftar lengkap, ini daftar yang sudah terbukti muncul. Tambahkan setia
 - "dan itu juga yang dihitung", "yang dinilai" tanpa menyebut siapa yang menilai
 - "sebagian dari itu bukan punya gue" dan semua "punya" yang menunjuk hal abstrak
 
+## R12 · Cakupan rangkuman
+
+Rangkuman ditulis dan diperiksa **sebelum** artikel. Artikel ditulis dari rangkuman, bukan dari PDF. Alasannya bukan kerapian: cakupan materi jadi warisan, bukan kebetulan. Kalau artikel boleh kembali ke PDF, dua dokumen bisa bicara berbeda dan tidak ada yang tahu mana yang benar.
+
+| ID | Aturan | Severity | Cara cek |
+|---|---|---|---|
+| R12.1 | Rangkuman wajib memuat setiap item di `konsep_dipakai` pada log audit. | BLOCKER | Cocokkan satu per satu, jangan menaksir |
+| R12.2 | Rangkuman dilarang memuat konsep yang ada di `konsep_dibuang`. | BLOCKER | Cocokkan dengan daftar buang |
+| R12.3 | Rangkuman wajib lolos Reviewer sebelum artikel ditulis. Tidak ada artikel dari rangkuman yang belum lolos. | BLOCKER | Cek urutan putaran di log audit |
+| R12.4 | Artikel hanya boleh memakai konsep yang ada di rangkuman. Konsep baru yang muncul di artikel adalah pelanggaran, walau benar menurut PDF. | BLOCKER | Bandingkan daftar konsep artikel dengan rangkuman |
+| R12.5 | Rangkuman maksimal 500 kata per sesi. Fungsinya daftar periksa cakupan, bukan bacaan. | WARNING | Hitung kata |
+
 ## Dua jenis penolakan
 
 Reviewer memisahkan temuannya jadi dua blok, karena keduanya diperbaiki dengan cara berbeda:

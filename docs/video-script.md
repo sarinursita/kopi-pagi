@@ -139,14 +139,14 @@ Mekanisme sekarang 28%, dan semuanya berbentuk bukti, bukan penjelasan arsitektu
 **Subjudul:** Rekaman sesi yang sudah terjadi. Saya nggak mengulanginya.
 **Isi slide (timeline 6 titik, tiap titik satu screenshot):**
 1. **Brief** satu ide inti, satu sudut cerita
-2. **Draft** blog 1.352 kata · WhatsApp 150 kata · audio 60 detik · caption
+2. **Ringkasan dulu** semua konsep sesi dalam satu halaman, lalu **draft** artikel 1.352 kata ditulis dari ringkasan itu
 3. **Ditolak** nama dosen saya ikut kebawa · penutup punya dua pertanyaan
 4. **Diperbaiki** dua bagian itu saja
 5. **Saya baca, saya setuju** judul, jumlah kata, format yang terbit
 6. **Tayang** dan tercatat di satu berkas audit
 **Tampil di layar:** artefak #2–#8, di-scroll pelan, jangan dipercepat
 **Narasi:**
-> Ini rekaman sesi yang sudah terjadi. Susi menyusun brief: satu ide inti, satu sudut cerita. Wena menulis empat format sekaligus. Lalu Yani menolak. Bukan karena nggak suka: nama dosen saya masih ikut kebawa, dan penutupnya punya dua pertanyaan padahal cuma boleh satu. Dia menyebut aturan yang dilanggar, jadi saya tahu persis bagian mana yang harus diperbaiki. Wena memperbaiki dua bagian itu saja. Putaran kedua lolos. Lalu Kiki berhenti dan menampilkan kartu persetujuan: judul, jumlah kata, format yang akan terbit. Saya baca. Saya setuju. Baru setelah itu artikelnya tayang. Semua putaran tercatat di satu berkas, jadi kalau saya lupa kenapa sebuah kalimat dihapus, jawabannya ada. Dan pagi itu saya baca sesi itu sampai habis, untuk pertama kali dalam semester itu.
+> Ini rekaman sesi yang sudah terjadi. Susi menyusun brief: satu ide inti, satu sudut cerita. Wena meringkas seluruh sesi dulu, jadi semua konsep ada di satu halaman. Artikelnya ditulis dari ringkasan itu, bukan dari PDF lagi. Lalu Yani menolak. Bukan karena nggak suka: nama dosen saya masih ikut kebawa, dan penutupnya punya dua pertanyaan padahal cuma boleh satu. Dia menyebut aturan yang dilanggar, jadi saya tahu persis bagian mana yang harus diperbaiki. Wena memperbaiki dua bagian itu saja. Putaran kedua lolos. Lalu Kiki berhenti dan menampilkan kartu persetujuan: judul, jumlah kata, format yang akan terbit. Saya baca. Saya setuju. Baru setelah itu artikelnya tayang. Semua putaran tercatat di satu berkas, jadi kalau saya lupa kenapa sebuah kalimat dihapus, jawabannya ada. Dan pagi itu saya baca sesi itu sampai habis, untuk pertama kali dalam semester itu.
 
 ---
 

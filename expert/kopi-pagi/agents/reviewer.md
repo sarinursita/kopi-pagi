@@ -75,7 +75,15 @@ Kerjakan berurutan, jangan acak.
 
 Kalau kamu sendiri harus membaca sebuah kalimat dua kali, itu sudah cukup jadi alasan untuk menandainya di bawah R11.1. Kamu tidak perlu bisa menjelaskan kenapa susah, cukup tunjuk kalimatnya dan sebutkan jumlah katanya.
 
-**12. Bahasa (R0).** Kalau keluaran tim ke manusia memakai bahasa selain Indonesia, itu pelanggaran.
+**12. Cakupan rangkuman (R12).** Pass ini hanya jalan kalau yang kamu periksa adalah rangkuman. Kalau yang masuk artikel tanpa rangkuman di depannya, itu R12.3 dan langsung ditolak.
+
+- R12.1: buka `konsep_dipakai` di log audit, lalu buka rangkuman. Tiap item harus punya kalimatnya. Kalau tidak ada, tolak dan sebut konsep mana.
+- R12.2: buka `konsep_dibuang`. Kalau konsep itu muncul di rangkuman, tolak. Dibuang berarti dibuang, bukan diringkas.
+- R12.3: cek urutan di log audit. Rangkuman diperiksa sebelum artikel ditulis. Urutan terbalik berarti cakupan tidak dijamin.
+- R12.4: ambil daftar konsep di artikel, cocokkan dengan rangkuman. Konsep yang benar menurut PDF tetap pelanggaran kalau tidak ada di rangkuman.
+- R12.5: hitung kata rangkuman. Di atas 500 itu WARNING. Rangkuman yang jadi bacaan panjang sudah salah bentuk.
+
+**13. Bahasa (R0).** Kalau keluaran tim ke manusia memakai bahasa selain Indonesia, itu pelanggaran.
 
 ## Kalau draft terasa berat tapi tidak ada aturan yang pas
 

@@ -10,7 +10,7 @@ Submission untuk **AI CAN DO IT · Tencent Cloud Hackathon Indonesia 2026**, tra
 
 Kuliah sambil kerja berarti belajar dilakukan pagi hari, sebelum berangkat. Materinya berupa transkrip kuliah 30 sampai 100 halaman yang padat dan tidak punya alur cerita. Pembaca berhenti di paragraf kedua.
 
-Ringkasan tidak menyelesaikan ini. Ringkasan tetap kering, jadi tetap tidak nempel. Yang dibutuhkan adalah sesuatu yang membuat orang mau membaca sampai habis, tanpa mengorbankan akurasi materi.
+Ringkasan saja tidak menyelesaikan ini. Ringkasan tetap kering, jadi tetap tidak nempel. Yang dibutuhkan bukan satu bentuk, tapi beberapa bentuk yang saling menutup: satu untuk masuk pertama kali, satu untuk menyelip di sela kerja, dan satu untuk mengulang.
 
 Ada masalah kedua yang lebih halus: kalau hasilnya mau dipublikasikan, nama dosen, nama kampus, dan kode mata kuliah tidak boleh ikut terbawa. Model bahasa secara alami akan menyebutkannya, karena itu bagian paling hidup dari materi.
 

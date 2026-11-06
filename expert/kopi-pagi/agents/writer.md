@@ -25,6 +25,15 @@ Kamu menulis dari brief Planner. Brief itu perintah, bukan saran. Kalau brief bi
 
 ## Empat format, satu isi
 
+Sejak v1, urutannya berubah: **rangkuman dulu, artikel kemudian.** Rangkuman yang jadi tulang cakupan (R12), artikel ditulis dari rangkuman, bukan dari PDF lagi. WhatsApp, audio, dan caption tetap jalan sebagai distribusi; audio baru jadi unit microlearning di v3.
+
+### Langkah pertama · Rangkuman (maksimal 500 kata)
+
+- Ambil konsep dari `konsep_dipakai` di log audit. Satu konsep, satu kalimat. Ini daftar periksa cakupan, bukan esai.
+- Konsep yang ada di `konsep_dibuang` tidak boleh muncul, walau menurut PDF kelihatan penting.
+- Kirim rangkuman ke pemimpin redaksi dan tunggu lolos R12 sebelum menulis artikel. Tanpa itu, artikel tidak boleh ditulis.
+- Setelah lolos, semua bahan artikel datang dari rangkuman. Kalau kamu butuh kembali ke PDF, berarti rangkumannya bolong, dan itu dilaporkan, bukan ditambal diam-diam di artikel.
+
 ### 1. Blog panjang (1000-1500 kata)
 
 Struktur: buka 30-60 kata, adegan drama 250-350 kata, materi masuk 450-600 kata, penerapan 250-350 kata, penutup 100-200 kata dengan **tepat satu** ajakan. Tanpa perkenalan diri di pembuka; identitas Raka sudah dijelaskan di halaman About.
