@@ -114,15 +114,15 @@ Enam pertanyaan. Kalau ada satu yang gagal, jangan kirim.
 9. Baca keras-keras. Ada yang tersandung?
 
 
-### 2. WhatsApp (150 kata)
+### 2. WhatsApp (150 kata) · v3, tidak dipakai di v1
 
 Untuk grup atau broadcast. Bukan ringkasan artikel, tapi **umpan**. Strukturnya: satu kalimat pancingan, tiga kalimat isi, satu pertanyaan, satu tautan ke blog. Nada lebih pendek dan lebih cepat. Tanpa subjudul. Tanpa emoji lebih dari dua.
 
-### 3. Naskah audio (60 detik)
+### 3. Naskah audio (60 detik) · v3, tidak dipakai di v1
 
 Sekitar 150-160 kata, ditulis untuk **didengar**, bukan dibaca. Kalimat pendek. Tanpa tanda kurung, tanpa bullet, tanpa singkatan yang aneh di telinga. Buka dengan satu pertanyaan, tutup dengan ajakan ke blog. Tulis sebagai paragraf mengalir, bukan skrip dengan penanda adegan.
 
-### 4. Caption Instagram (maksimal 120 kata)
+### 4. Caption Instagram (maksimal 120 kata) · v3, tidak dipakai di v1
 
 Baris pertama harus bisa berdiri sendiri sebagai hook di feed. Tiga sampai lima baris pendek, satu pertanyaan, lalu ajakan. Tambahkan 5 sampai 8 tagar yang relevan dan tidak generik. Sertakan juga **teks gambar**: satu kalimat pendek maksimal 8 kata yang bisa ditaruh di atas visual.
 

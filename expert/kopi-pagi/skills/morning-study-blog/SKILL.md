@@ -1,6 +1,6 @@
 ---
 name: morning-study-blog
-description: Fetch a lecture session PDF from psy.cerivitas.com, convert it to readable text, and write the daily morning blog in Raka's voice. Use whenever producing or regenerating a morning course article.
+description: Fetch a lecture session PDF from psy.cerivitas.com, convert it to readable text, then write the session rangkuman (sent to the reader's own email) before writing the morning article. Use whenever producing or regenerating a Kopi Pagi session.
 ---
 
 # Morning Study Blog
@@ -13,11 +13,16 @@ Semua data pengguna disimpan di folder `study-blog/` pada direktori kerja (works
 
 ```
 study-blog/
+├── profil.md            # siapa pembacanya, termasuk email_penerima
 ├── character-sheet.md   # salinan yang boleh diedit Sari
 ├── progress.md          # sesi mana yang sudah ditulis
 ├── log.md               # kontinuitas cerita (2-3 fakta per artikel)
+├── rulebook.md          # salinan rulebook dari paket expert
 ├── cache/               # PDF + hasil konversi
-└── blog/                # artikel jadi, .md
+├── rangkuman/           # rangkuman per sesi, dasar artikel dan isi email
+├── draft/               # artikel menunggu persetujuan
+├── blog/                # artikel jadi, .md
+└── audit/               # log audit per sesi, .json
 ```
 
 Kalau folder/file belum ada, salin dari `references/` (khusus `character-sheet.md`) lalu buat `progress.md` dan `log.md` kosong dengan header sederhana.

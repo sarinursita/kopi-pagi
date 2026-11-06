@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kopi Pagi</title>
+<meta name="description" content="Blog belajar psikologi anak, ditulis jam 5 pagi sebelum berangkat kerja.">
+<style>
+:root{
+  --ink:#1d1a16; --muted:#6f665c; --paper:#fbf8f3; --card:#ffffff;
+  --line:#e7e0d5; --accent:#a8462a; --accent-soft:#f3e4dd;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:18px; line-height:1.75;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:720px; margin:0 auto; padding:0 24px}
+
+header.site{padding:56px 0 40px; border-bottom:1px solid var(--line)}
+header.site .kicker{font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:600; margin-bottom:14px}
+header.site h1{
+  font-family:Georgia,"Times New Roman",serif; font-size:clamp(30px,5vw,44px);
+  line-height:1.15; margin:0 0 12px; letter-spacing:-.02em;
+}
+header.site p{margin:0; color:var(--muted); font-size:17px; max-width:52ch}
+
+.list{padding:16px 0 8px}
+.post-card{
+  display:block; padding:26px 0; border-bottom:1px solid var(--line);
+  color:inherit;
+}
+.post-card:hover{text-decoration:none}
+.post-card:hover h2{color:var(--accent)}
+.post-meta{font-size:13px; color:var(--muted); letter-spacing:.02em; margin-bottom:8px}
+.post-meta .dot{margin:0 8px; opacity:.5}
+.post-card h2{
+  font-family:Georgia,"Times New Roman",serif; font-size:24px; line-height:1.3;
+  margin:0 0 8px; letter-spacing:-.01em; transition:color .15s;
+}
+.post-card p{margin:0; color:var(--muted); font-size:16px}
+
+article{padding:48px 0 24px}
+article .post-meta{margin-bottom:18px}
+article h1{
+  font-family:Georgia,"Times New Roman",serif; font-size:clamp(28px,4.6vw,40px);
+  line-height:1.2; letter-spacing:-.02em; margin:0 0 18px;
+}
+article .lede{border-left:3px solid var(--accent-soft); padding-left:16px; color:var(--muted); font-style:italic}
+article h2{
+  font-family:Georgia,"Times New Roman",serif; font-size:23px; line-height:1.35;
+  margin:44px 0 12px; letter-spacing:-.01em;
+}
+article h3{font-size:19px; margin:32px 0 10px}
+article p{margin:0 0 20px}
+article ul{margin:0 0 20px; padding-left:22px}
+article li{margin-bottom:8px}
+article blockquote{
+  margin:26px 0; padding:16px 20px; background:var(--card);
+  border-left:3px solid var(--accent); border-radius:0 6px 6px 0;
+  color:var(--muted); font-style:italic;
+}
+article hr{border:0; border-top:1px solid var(--line); margin:36px 0}
+article code{background:var(--accent-soft); padding:1px 5px; border-radius:4px; font-size:.9em}
+article strong{font-weight:650}
+
+.pager{display:flex; justify-content:space-between; gap:16px; margin:44px 0 0; padding-top:24px; border-top:1px solid var(--line); font-size:15px}
+.pager a{max-width:48%}
+.pager .lbl{display:block; font-size:12px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; margin-bottom:4px}
+
+.about{margin:52px 0 0; padding:28px; background:var(--card); border:1px solid var(--line); border-radius:10px}
+.about h2{font-family:Georgia,serif; font-size:19px; margin:0 0 10px}
+.about p{margin:0 0 10px; color:var(--muted); font-size:16px}
+.about p:last-child{margin-bottom:0}
+.about ul.cast{list-style:none; margin:0 0 26px; padding:0; font-size:16px; color:var(--muted)}
+.about ul.cast li{padding:7px 0; border-bottom:1px dashed var(--line)}
+.about ul.cast li:last-child{border-bottom:0}
+.about ul.cast strong{color:var(--ink); font-weight:650}
+
+footer.site{margin-top:64px; padding:28px 0 56px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
+.back{display:inline-block; margin-bottom:26px; font-size:15px}
+@media (max-width:560px){
+  body{font-size:17px}
+  header.site{padding:40px 0 30px}
+  article{padding:32px 0 16px}
+}
+
+.toc{margin:28px 0 8px; padding:0; list-style:none}
+.toc li{display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--line)}
+.toc a{font-family:Georgia,serif; font-size:18px}
+.toc-date{color:var(--muted); font-size:14px; white-space:nowrap}
+section{scroll-margin-top:24px}
+section + section{margin-top:56px; padding-top:40px; border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+<div class="kicker">Study in public</div>
+<h1>Kopi Pagi</h1>
+<p>Ngopi dulu, baru kuliah. Catatan pagi seorang mahasiswa yang kuliah sambil kerja: satu sesi, satu cerita, satu kopi.</p>
+</header>
+<ul class="toc"><li><a href="#2026-11-04-pcps-101-sesi-03">Buku Itu Gue Bilang Punyanya Temen, Padahal Gue Beli Sendiri</a><span class="toc-date">4 November 2026</span></li><li><a href="#2026-11-04-pcps-101-sesi-02">Nadia Kena Marah Gara-Gara Adiknya Jatuh, dan Gue Baru Ngeh Kenapa</a><span class="toc-date">4 November 2026</span></li><li><a href="#2026-11-04-pcps-101-sesi-01">Gue Hafal Semua, tapi Tetap Nggak Ngerti, dan Ternyata Itu Ada Tingkatannya</a><span class="toc-date">4 November 2026</span></li></ul>
+<section id="2026-11-04-pcps-101-sesi-03"><article><div class="post-meta">4 November 2026<span class="dot">·</span>Psikologi Anak, sesi 3</div><h1>Buku Itu Gue Bilang Punyanya Temen, Padahal Gue Beli Sendiri</h1><p class="lede">Definisi psikologi dan pengantar psikologi anak</p><p>Sabtu pagi gue di rumah Mba Ratna, kakak gue. Dia mau ke pasar bawa dua anaknya yang kecil, soalnya dua itu nggak bisa ditinggal sendirian. Nadia nggak ikut, karena di pasar dia gampang ilang kalau lagi rame. Lesnya juga baru jam satu.</p>
+<p>Jadi Nadia tinggal di rumah. Gue yang nungguin.</p>
+<p>Gue bawa satu buku bacaan untuk anak yang baru bisa baca. Tipis, dua puluh halaman, gambar kucing oren yang kakinya kegedean. Gue beli sendiri di toko buku lantai dua. Tiga puluh lima ribu. Gue inget harganya karena sebelum bayar gue ngitung dulu di kepala, masih ada sisa buat bensin seminggu atau nggak.</p>
+<p>Nadia baca keras-keras. "Ka... king. Kaking." Salah. Dia ketawa. Nggak nutup mulut, nggak nunduk. "Om, ini apaan?" Gue bilang kucing. Dia bilang oh, terus baca lagi, salah lagi di kata yang sama, dan minta dibenerin. Bukan minta dimaafin. Minta dibenerin.</p>
+<p>Mba Ratna pulang jam sebelas. Jaket masih nempel, dua tangan penuh plastik. Dia naruh belanjaan di meja makan, ngeliat buku itu, dan nanya satu kalimat datar.</p>
+<p>"Itu buku baru?"</p>
+<p>Nggak ada nada nuduh. Nggak ada mata nyempit. Pertanyaan itu jawabannya bisa iya, bisa bukan, dan dua-duanya aman.</p>
+<p>Dan gue, tanpa disuruh siapa-siapa, bilang, "Bukan. Punyanya temen. Gue pinjem."</p>
+<p>Dia bilang oh, terus masuk dapur.</p>
+<p>Gue tahu kenapa gue ngomong gitu. Minggu lalu Mba Ratna sempat nyindir soal gue ngemanjain Nadia, dan itu belum kelar. Buku tiga puluh lima ribu itu, di matanya, cuma bukti berikutnya. Jadi gue keluarin kalimat yang paling gampang, biar nggak ada yang perlu dijelasin.</p>
+<p>Abis itu gue nggak bisa duduk tenang. Gue geser kursi, buka HP, tutup lagi. Nggak ada yang nuduh gue. Nggak ada yang curiga. Tapi kalimat tadi udah keluar, dan dia nggak mau balik.</p>
+<h2>Struk di dompet</h2>
+<p>Struk buku itu masih di dompet gue. Lipat dua, lecek kena koin. Tiga puluh lima ribu, tanggal, nama toko.</p>
+<p>Gue keluarin, gue buka di meja, dan gue ngeliatin kertas kecil itu lama sekali. Kalau Mba Ratna mau, dia bisa ambil dompet gue, buka, dan tahu persis kapan gue beli buku itu, di mana, berapa. Nggak perlu nanya siapa-siapa.</p>
+<p>Jadi ada dua hal yang jalan bareng di Sabtu pagi ini.</p>
+<p>Yang pertama, mulut gue yang ngeluarin "punyanya temen". Itu kelihatan. Ada bunyinya, ada jamnya, Mba Ratna denger.</p>
+<p>Yang kedua, alasan gue ngomong gitu. Itu nggak ada bunyinya, nggak ada tanggalnya, nggak ada struknya.</p>
+<p>Gue nggak nyangka kuliah hari ini bahas persis itu.</p>
+<p>Dosen gue mulai dari satu pertanyaan: psikologi itu apa. Dia nyuruh gue buka kamus. Gue buka, dan definisinya cuma dua kata.</p>
+<p>Pikiran dan perilaku.</p>
+<p>Dua kata itu kelihatan sederhana. Tapi bedanya besar. Perilaku itu yang tadi: mulut gue, kalimatnya, jamnya. Bisa dilihat orang lain, bisa dicatat, bisa diperiksa. Perilaku punya bukti, dan buktinya tadi berupa struk lecek di dompet gue.</p>
+<p>Pikiran nggak punya bukti. Pikiran cuma punya satu saksi, dan saksinya gue, yang dua jam sebelumnya jelas-jelas bohong.</p>
+<p>Terus dosen gue bilang satu hal yang bikin gue narik napas. Katanya, dalam Islam manusia memang nggak dikasih tahu semua. Ada bagian yang cuma Allah yang tahu. Siapa pun yang ngaku tahu di luar yang diwahyukan, dia lagi ngaku-ngaku. Jadi kalau ada ilmu yang bilang bisa mengukur jiwa sampai ke dalamnya, itu bukan cuma salah cara. Itu ngaku tahu sesuatu yang bukan wilayahnya.</p>
+<p>Gue nggak pernah mikir sampai ke situ. Selama ini gue pikir psikologi itu alat buat nebak isi kepala orang, termasuk isi kepala gue sendiri. Ternyata dia mulai dari bagian yang bisa dilihat dulu. Dan itu justru yang bikin gue betah ikut kuliah ini. Gue nggak bisa lihat isi kepala gue. Tapi gue bisa lihat apa yang barusan gue lakuin, dan hari ini gue lakuin sesuatu yang lumayan memalukan.</p>
+<h2>Nadia minta bukunya</h2>
+<p>Gue masih di meja yang sama, struk masih kebuka di depan gue, waktu Nadia dateng dan megang buku itu. "Om, buku ini boleh gue bawa pulang nggak?"</p>
+<p>Gue bilang belum. Bukan buku gue. Pinjeman.</p>
+<p>Dan gue denger kalimat itu keluar dari mulut gue sendiri, kedua kalinya, ke anak tujuh tahun yang tadi cuma minta dibenerin bacaannya. Dia bilang oh, terus balik ke karpet. Nggak protes, nggak nanya lagi.</p>
+<p>Harusnya gue lega. Nggak ada yang ketahuan, buku tetap di tas gue, besok semua jalan seperti biasa.</p>
+<p>Yang gue rasain bukan lega.</p>
+<p>Yang gue nggak ngerti justru ini. Kalau perilaku cuma bagian yang kelihatan, yang di bawahnya apa. Kenapa gue bohong padahal nggak ada yang nuduh.</p>
+<p>Dosen gue jawab pakai Freud. Dia pakai satu gambar: gunung es. Garis airnya kesadaran. Yang di atas air, yang lo sadar. Yang di bawah air, yang nggak lo sadar dan nggak bisa lo lihat dari atas.</p>
+<p>Freud motong diri jadi tiga bagian.</p>
+<p>Yang pertama, yang paling bawah, namanya Id. Bahasa gampangnya, Id itu bagian dari lo yang cuma bisa bilang "gue mau sekarang". Dia nggak kenal kata besok. Dosen gue bilang, kalau cuma Id yang ngatur, dua orang nggak mungkin bisa tinggal serumah, karena nggak ada yang mau nunggu kamar mandi.</p>
+<p>Yang kedua Ego. Ini yang nawar. Dia ngitung, nunda, dan nyari cara biar dapet tanpa harus berurusan sama akibatnya. Akal sehat, kata dosen gue.</p>
+<p>Yang ketiga Super Ego. Ini hakimnya. Yang bilang "nggak boleh, itu salah".</p>
+<p>Sekarang gue taruh Sabtu pagi tadi di gambar itu.</p>
+<p>Bohong gue bukan dorongan Id. Id nggak ngerti bohong. Id cuma mau buku itu sampai ke tangan Nadia. Yang bikin kalimat "punyanya temen" keluar itu Ego, yang lagi nawar sama hakim di kepala gue, nyari kalimat yang paling gampang, biar nggak ada yang perlu dijelasin.</p>
+<p>Yang aneh, gue nawar sama hakim itu padahal nggak ada yang nuduh. Nggak ada hukuman yang nunggu. Gue takut sama sesuatu yang belum terjadi.</p>
+<h2>Hakimnya bukan suara gue</h2>
+<p>Terus dosen gue baca satu kalimat Freud. Kalimatnya pendek, dan gue berhenti nyatet.</p>
+<p>Kurang lebih: Super Ego itu nggak lahir bareng lo. Dia kebentuk dari luar. Makin kuat tekanan dari orang tua, agama, sekolah, dan bacaan, makin ketat dia jadinya. Ujungnya bisa jadi suara hati yang kaku, atau rasa bersalah yang lo nggak sadar.</p>
+<p>Gue baca kalimat itu tiga kali di HP.</p>
+<p>Hakim di kepala gue, yang tadi ribut soal tiga puluh lima ribu, ternyata nggak ngarang sendiri. Dia kebentuk. Dia dengerin orang yang pernah nyalahin gue, hafal gayanya, terus dia pakai.</p>
+<p>Gue selalu pikir suara itu suara gue. Yang paling keras, yang paling sering, yang paling gue turutin. Ternyata dia kumpulan suara orang lain yang gue telan, dan gue udah lama nggak ngecek siapa aja yang ikut masuk.</p>
+<p>Yang bikin makin nggak enak, Freud nggak suka hakim itu. Dia nganggepnya suka nindas orang, dan dari situ dia nyebut neurosis, gangguan yang katanya lahir dari tekanan yang nggak kelar. Bagi Freud, itu masalah.</p>
+<p>Dosen gue bilang sebaliknya. Dalam Islam, kemampuan yang sama itu yang bikin lo bisa bedain mana yang baik dan mana yang salah. Dan menurut dosen gue, itu juga yang dinilai.</p>
+<p>Satu hal yang sama, dua penilaian. Yang satu bilang penyakit, yang satu bilang anugerah. Gue nggak tahu harus ikut yang mana, karena dua-duanya kerasa bener buat gue.</p>
+<h2>Yang nggak jadi keluar</h2>
+<p>Gue masih mikirin itu waktu Mba Ratna balik ke meja, bawa dua gelas, dan naruh satu di depan gue. Terus dia nanya ke arah karpet. "Nad, ayo siap-siap, lesnya jam satu."</p>
+<p>Gue buka mulut. Kalimatnya udah nyusun rapi di belakang gigi. "Mbak, itu buku..."</p>
+<p>Dan dia udah balik badan, buka lemari, nyari kotak pensil Nadia.</p>
+<p>Kalimatnya nggak jadi keluar. Bukan karena gue milih diem. Karena nggak ada celah, dan gue nggak bikin celah.</p>
+<p>Buku itu gue masukin tas. Struknya masih di dompet, masih lecek. Bohongnya masih berdiri, kecil, nggak ada yang ambil. Besok Nadia mungkin nanya lagi, dan gue mungkin nambah satu bohong lagi.</p>
+<p>Gue pulang naik Beat putih. Nggak ada yang selesai, dan gue nggak ngerasa lega.</p>
+<p>Tapi ada satu yang berubah. Sebelum hari ini, gue pikir masalah gue cuma soal berani ngomong atau nggak. Sekarang gue tahu, kalimat yang nggak keluar tadi bukan satu-satunya yang jalan di kepala gue. Ada bagian yang gue nggak lihat, dan yang paling nggak gue sangka: sebagian dari suara itu bukan suara gue sendiri.</p>
+<p>Lo pernah nggak ngucapin sesuatu yang sampai sekarang masih kepikiran?</p></article></section><section id="2026-11-04-pcps-101-sesi-02"><article><div class="post-meta">4 November 2026<span class="dot">·</span>Psikologi Anak, sesi 2</div><h1>Nadia Kena Marah Gara-Gara Adiknya Jatuh, dan Gue Baru Ngeh Kenapa</h1><p class="lede">Apa itu anak dalam perspektif sejarah, hak anak dan hak orang tua</p><p>Jam 5 pagi, kopi tubruk baru setengah, teras kos masih gelap. Gue nulis ini sambil nahan ngantuk karena semalem pulang dari rumah Mba Ratna, kakak gue, jam sepuluh. Bukan lembur. Gue cuma nggak enak hati pulang.</p>
+<h2>Nadia, gelas pecah, dan kalimat "kamu kan udah gede"</h2>
+<p>Mba Ratna ikut arisan RT. Sebelum pergi dia nitip dua anaknya ke yang paling gede. "Nadia jagain Bima sama Aya ya, Nadia kan udah gede."</p>
+<p>Nadia tujuh tahun. Bima empat. Aya belum dua. Tujuh tahun. Dia lagi belajar baca, kadang masih ketuker huruf b sama d.</p>
+<p>Gue ada di rumah itu. Duduk di sofa, garuk-garuk kepala, baca modul dari HP. Jadi secara logika, orang dewasa yang ada di rumah itu gue. Tapi Mba Ratna nitipnya ke Nadia.</p>
+<p>Setengah jam kemudian Nadia buka buku Kancil, dia baca keras-keras buat Bima. "Si Kan... cil, si kan... cil yang cu... cung..." Bima nggak peduli. Bima mau HP. Dan karena HP-nya nggak dikasih, dia mulai nangis model nangis yang udah gue hafal: duduk di lantai, kaki nendang-nendang, muka merah.</p>
+<p>Aya ikut-ikutan. Bedanya Aya nggak nangis, Aya banting gelas. Gelas beling. Pecah di depan TV.</p>
+<p>Nadia panik. Dia berdiri di tengah pecahan gelas, masih megang buku Kancil, dan dia nggak nangis. Dia cuma diem, mukanya pucet, terus dia ngambil sapu. Nyapu sambil tangan gemeter.</p>
+<p>Mba Ratna pulang jam sembilan, lihat tempat sampah isi beling, lihat Bima masih ngeces, dan langsung ngomong: "Nadia, kamu kan udah gede. Sekali disuruh jaga adik aja nggak bisa."</p>
+<p>Nadia naruh sapu. Masuk kamar. Nggak bantah, nggak nangis di depan kita.</p>
+<p>Dan gue? Gue masih duduk di sofa. Masih megang HP. Masih belum ngomong apa-apa.</p>
+<h2>Terus gue inget lukisan-lukisan itu</h2>
+<p>Modul sesi ini sebenernya nanya satu hal yang kedengeran bodoh: apa itu anak?</p>
+<p>Dosennya bawa kita jalan-jalan ke empat zaman. Dan yang bikin gue berhenti ngopi justru bagian Roma.</p>
+<p>Di Roma kuno, kalau ada bayi lahir, bayi itu ditaruh di lantai, di depan kaki Pater Familias, laki-laki tertua di keluarga besar itu. Kalau dia menggendong bayinya, berarti bayi itu diakui. Kalau dia nggak ngangkat, bayinya ditinggal. Di ujung jalan. Mati kelaparan, atau dipungut orang dan dijual jadi budak.</p>
+<p>Gue baca itu dua kali. Anjir. Diakui atau nggak, se-gampang itu.</p>
+<p>Dan bukan cuma bayi yang nggak diinginkan. Hukumnya waktu itu malah mewajibkan Pater Familias membunuh bayi yang lahir cacat atau sakit. Ayah itu punya hak hidup-mati. Bukan hak orang tua. Hak ayah. Ibunya nggak dihitung.</p>
+<p>Terus Eropa abad pertengahan. Ada buku namanya <em>Centuries of Childhood</em> tulisan Philippe Aries, dan kesimpulannya sederhana tapi nyelekit: di masyarakat abad pertengahan, gagasan tentang masa kanak-kanak itu nggak ada. Nggak ada kesadaran bahwa anak itu makhluk yang beda dari orang dewasa.</p>
+<p>Cara dia membuktikannya? Lukisan. Anak-anak di lukisan abad pertengahan digambar sebagai orang dewasa versi kecil. Bajunya sama. Gayanya sama. Posturnya sama. Ada lukisan tahun 1596, Barbara Gamage dengan enam anaknya. Anak-anaknya udah pakai perhiasan rumit, dan yang paling kecil malah pakai pedang dan helm. Pedang. Anak umur lima tahun.</p>
+<p>Dan gue langsung kepikiran Nadia. Berdiri di tengah pecahan gelas, megang sapu, tangan gemeter. Badannya kecil. Tugasnya tugas orang dewasa.</p>
+<p>Oh iya, ada juga Quintilian, ahli retorika Romawi, yang nulis delapan jilid soal seni mendidik. Buku itu jadi akar sistem pendidikan modern. Tapi di seluruh buku itu, pendidikan anak perempuan nggak pernah disebut satu kali pun.</p>
+<p>Terus ada satu doktrin di abad pertengahan yang bikin gue merem sebentar. Namanya dosa warisan. Intinya, semua manusia lahir udah bawa kesalahan Adam, jadi bayi itu datang ke dunia dalam keadaan bernoda. Buat banyak tokoh gereja waktu itu, satu-satunya cara menghapusnya ya dibaptis. Bayi yang mati sebelum dibaptis dianggap nggak selamat.</p>
+<p>Gue duduk di teras mikirin itu. Bayi baru lahir, belum ngapa-ngapain, udah punya utang.</p>
+<p>Balik lagi ke Arab sebelum Islam. Di situ anak itu bukan orang, tapi aset suku. Kalau laki-laki, dia jadi kekuatan masa depan. Kalau perempuan, ada tradisi menguburnya hidup-hidup. Dan Al-Qur'an nyentil itu di Surah At-Takwir ayat 8, "dan ketika gadis yang dikubur hidup-hidup itu ditanya, atas dosa apa dia dibunuh". Pertanyaannya dibalik. Yang ditanya bukan pembunuhnya, tapi korbannya. Itu cara Al-Qur'an bikin pembunuhnya mikir.</p>
+<p>Dan satu lagi yang bikin gue ngerem: anak di Arab jahiliyah nggak selalu berhak tahu siapa ayahnya. Modulnya nyebut empat model pernikahan yang ada waktu itu, dan di sebagian model, satu anak bisa punya beberapa laki-laki yang mungkin jadi ayahnya, terus yang nentuin justru orang lain, ahli nujum yang katanya bisa nebak garis keturunan. Jadi identitas anak itu bisa ditentukan orang asing. Bandingin sama sekarang, di mana nama ayah di akta itu hal paling dasar yang kita anggap otomatis.</p>
+<p>Terus Islam masuk dengan versi yang benar-benar beda. Anak lahir dalam keadaan fitrah, bukan lahir bawa dosa orang lain. Adam salah, Adam minta ampun, Allah ampuni, selesai. Nggak ada yang diwarisin ke anaknya. Jadi nggak masuk akal buat kita kalau ada bayi yang lahir udah dianggap bersalah.</p>
+<p>Dan hak anak dalam Islam itu spesifik. Ada hadits Umar bin Khattab: seorang bapak ngadu ke Umar karena anaknya durhaka. Anaknya ditanya, dia balik nanya, "Bukankah anak punya hak atas ayahnya?" Umar bilang iya. Haknya apa? "Memilihkan ibu yang baik untuknya, memberi nama yang baik, dan mengajarkan Al-Qur'an." Terus anak itu bilang ayahnya nggak ngasih satu pun. Dan Umar balik ke bapak itu: "Kamu datang mengeluhkan kedurhakaan anakmu, padahal kamu belum memberikan hak-haknya. Kamu sudah berbuat salah kepadanya sebelum dia berbuat salah kepadamu."</p>
+<p>Gue baca kalimat itu sambil ngeliat pintu kamar Nadia yang ketutup.</p>
+<p>Dan yang paling nyesek, zaman kita juga nggak sepenuhnya beres. Tahun 1989 PBB bikin konvensi hak anak. Di atas kertas hak anak itu lengkap: hidup, nama, identitas, dibesarkan dalam keluarga, hubungan dengan kedua orang tua. Tapi dosennya bilang, dalam praktik, ibu yang kerja penuh waktu bisa nitip bayinya di daycare umur enam minggu, dan rata-rata cuma punya 30 menit seminggu buat ngobrol yang beneran sama anaknya. Tiga puluh menit. Seminggu.</p>
+<h2>Kalau di hidup lo</h2>
+<p>Ngomong-ngomong soal "diakui", ibu pelanggan yang kemarin marah itu akhirnya gue telpon sore itu juga. Nggak pakai script. Gue bilang aja gue nggak bisa janji barangnya nggak telat lagi, tapi gue bisa janji bakal ngabarin dia duluan kalau ada masalah. Dia diem lama. Terus dia bilang, "Ya udah, saya pesan dua dus. Tapi antar sendiri ya."</p>
+<p>Gue antar sendiri pagi-pagi sebelum ke kantor. Dua dus, ke Cimahi, naik Beat putih yang kickstarter-nya rewel. Dan sepanjang jalan gue mikir: ternyata yang dia butuhin bukan janji manis, tapi dipastiin dia nggak ditinggal.</p>
+<p>Lo pernah nggak ngeliat orang ngomong "kamu kan udah gede" ke anak kecil? Itu kalimat paling sering dipakai buat nyerahin tugas orang dewasa ke anak. Kadang ke adik lo, kadang ke keponakan lo, kadang ke anak tetangga.</p>
+<p>Dan di kantor juga gitu. Orang baru masuk, minggu kedua udah dianggap paham semua karena "kan udah dikasih tahu". Padahal yang dikasih tahu cuma prosedurnya, bukan kenapa-nya. Persis kayak Nadia yang disuruh jaga dua anak cuma karena tingginya udah nyampe pinggang meja makan.</p>
+<p>Yang paling nggak nyaman, gue juga ngelakuin itu ke diri sendiri. Gue pikir karena gue udah 24, udah kerja tiga tahun, udah pernah kuliah tiga semester di teknik sipil, gue harusnya udah ngerti semuanya duluan. Padahal umur cuma angka. Yang bikin orang siap itu kesempatan buat belajar, bukan tanggal lahir.</p>
+<p>Yang bikin gue agak tenang: konsep masa kanak-kanak itu sendiri baru muncul belakangan. Berarti bukan cuma gue yang telat paham. Peradaban juga telat berabad-abad.</p>
+<h2>Penutup</h2>
+<p>Gue ngetok pintu kamar Nadia. Nggak bilang apa-apa soal gelas. Gue duduk di lantai, terus gue bilang, "Nad, bacaannya tadi belum selesai. Baca lagi dong, gue dengerin."</p>
+<p>Dia baca terbata-bata, salah beberapa kata, dan gue nggak benerin. Cuma nanya, "Terus kancilnya gimana?" Dia lanjut.</p>
+<p>Mba Ratna sampai sekarang masih nganggap gue ikut-ikutan ngemanjain Nadia. Mungkin iya. Gue belum bisa jelasin ke dia tanpa keliatan sok tahu.</p>
+<p>Satu pertanyaan aja: kalau lo jadi gue malam itu, lo bakal bilang apa ke Mba Ratna?</p></article></section><section id="2026-11-04-pcps-101-sesi-01"><article><div class="post-meta">4 November 2026<span class="dot">·</span>Psikologi Anak, sesi 1</div><h1>Gue Hafal Semua, tapi Tetap Nggak Ngerti, dan Ternyata Itu Ada Tingkatannya</h1><p class="lede">Pengantar psikologi anak, latar belakang dosen dan gambaran mata kuliah</p><p>Jam 5 pagi ini gue duduk di teras kos sambil ngopi tubruk, dan gue lagi kesel sama diri sendiri. Bukan sama atasan gue, bukan sama siapa-siapa. Sama gue.</p>
+<h2>Kejadian kemarin sore</h2>
+<p>Ada komplain masuk. Ibu-ibu, pelanggan toko, marah karena pesanannya telat tiga hari. Dan gue, seperti orang baik-baik yang sudah tiga tahun kerja, langsung masuk mode CS profesional.</p>
+<p>"Mohon maaf atas ketidaknyamanannya, Bu. Saya cek dulu ya posisi barangnya."</p>
+<p>Hafal. Kata per kata. Gue bisa ngomong itu sambil mata ketutup, sambil bales chat, sambil mikirin kenapa AC kantor selalu setelan 18 derajat padahal semua orang kedinginan.</p>
+<p>Terus ibu itu nanya satu kalimat yang nggak ada di script.</p>
+<p>"Kalau saya pesan lagi besok, saya bisa percaya nggak?"</p>
+<p>Dan gue freeze. Kosong. Kayak HP yang tiba-tiba mati padahal baterai 60 persen.</p>
+<p>Yang keluar dari mulut gue: "Ee, nanti saya cek dulu ya, Bu."</p>
+<p>Ibu itu ketawa. Nggak lucu. Ketawanya itu ketawa orang yang sudah memutuskan nggak akan balik lagi. Terus dia bilang "ya udah, saya pikir-pikir dulu deh" dan pergi. Sinta, anak CS yang mejanya sebelah gue, cuma bisa ngangkat alis dari seberang.</p>
+<p>Malemnya Sinta nanya, "Rak, lo tadi kenapa sih?"</p>
+<p>Gue bilang gue nggak tahu harus jawab apa.</p>
+<p>Dia bilang, "Ya tinggal jawab aja bisa atau nggak. Kan lo tahu."</p>
+<p>Nah itu masalahnya. Gue nggak tahu. Gue cuma hafal.</p>
+<h2>Terus gue buka modul, dan kena tampar</h2>
+<p>Sesi pertama ini sebenernya cuma pengantar. Dosenku, sebut aja Bu Alina, orangnya bukan orang Indonesia, sudah belasan tahun tinggal di Eropa, dan mualaf sejak 2010. Latar belakangnya ilmu saraf. Jadi bayangin, dosen yang otaknya penuh istilah teknis soal otak, tapi ngajarin psikologi anak dari sudut pandang Islam. Awalnya gue mikir ini bakal aneh. Ternyata justru itu yang bikin sesi ini menarik.</p>
+<p>Di tengah-tengah, dia jelasin sesuatu yang bikin gue berhenti ngopi.</p>
+<p>Katanya, belajar itu ada tingkatannya. Enam tingkat, dari paling rendah sampai paling tinggi.</p>
+<p><strong>Pengetahuan.</strong> Ini level paling dasar. Lo bisa nyebut ulang konsep, fakta, teori. Hafal. Modulnya cuma jadi daftar panjang barang yang harus diinget. Bu Alina bilang gaya ngajar kayak gini paling umum, tapi juga paling bikin motivasi turun dan paling pasif.</p>
+<p><strong>Pemahaman.</strong> Baru di sini lo dianggap beneran ngerti, kalau lo bisa nyatain masalah atau teori itu pakai kata-kata lo sendiri, dan bisa main-main sama informasinya di kepala lo.</p>
+<p><strong>Penerapan.</strong> Lo bisa bawa yang lo pelajari di kelas ke situasi baru yang nggak ada di contoh dosen.</p>
+<p><strong>Analisis.</strong> Lo bisa ngeliat satu teori secara kritis, atau bandingin dua teori yang beda.</p>
+<p><strong>Sintesis.</strong> Lo bisa gabungin pengetahuan teoretis buat memperbaiki suatu proses.</p>
+<p><strong>Evaluasi.</strong> Level paling atas. Lo bisa nimbang kekuatan dan kelemahan sebuah teori pakai data empiris.</p>
+<p>Gue baca itu tiga kali. Terus gue sadar gue selama ini berhenti di tingkat satu. Tiga tahun kerja, hafal semua SOP, dan gue masih di lantai satu.</p>
+<p>Dan bagian paling nusuk justru bukan daftar tingkatannya. Tapi kalimat Bu Alina setelah itu. Katanya, masalahnya adalah ketika dosen pura-pura mahasiswanya sudah sampai level tertinggi, padahal kuliahnya masih di level rendah. Atau sebaliknya, mahasiswa dituntut buat ngevaluasi teori, tapi cuma dikasih hafalan.</p>
+<p>Gue ngerasa itu bukan cuma soal kampus. Itu kerjaan gue juga. Gue dianggap "udah bisa" karena hafal script, padahal gue belum bisa mikir sendiri di luar script.</p>
+<h2>Ada satu pertanyaan lagi yang bikin gue diem</h2>
+<p>Di bagian lain modul, Bu Alina bilang pertanyaan pertama yang harus ditanyain di kelas psikologi anak bukan "gimana cara mendidik anak yang bener", tapi "apa itu anak?"</p>
+<p>Kedengerannya bodoh kan? Anak ya anak. Yang kecil, yang nangis, yang minta HP.</p>
+<p>Tapi kata dia, itu nggak gampang. Karena tiap budaya jawabnya beda-beda. Dan dia mau ngebedah empat: Arab pra-Islam, Romawi kuno, Eropa abad pertengahan, dan postmodern, zaman kita sekarang. Baru setelah itu Islam.</p>
+<p>Kenapa empat itu? Arab pra-Islam karena di situ Islam pertama kali muncul, jadi kita bisa liat bedanya sebelum dan sesudah. Romawi kuno karena banyak orang nganggep itu dasar budaya Barat sekarang. Abad pertengahan Eropa karena waktunya barengan sama turunnya wahyu, dan Bu Alina bilang bedanya menakjubkan. Di Eropa konsep masa kanak-kanak aneh, sementara di Islam ada keseimbangan luar biasa antara hak dan kewajiban anak. Terus postmodern, karena ya itu tempat kita hidup.</p>
+<p>Dan gue duduk di teras, kopi udah dingin, mikir: kalau gue nggak bisa jawab "apa itu anak", gimana gue bisa jawab "gimana ngasuh anak yang bener"?</p>
+<p>Itu kayak gue ngasih saran soal Bima tanpa gue tahu dulu masalahnya apa. Bima itu keponakan gue, umurnya empat tahun. Tiap dia nangis, gue langsung nyaranin ini-itu, padahal gue belum ngerti dia kenapa.</p>
+<h2>Kalau di hidup lo</h2>
+<p>Lo juga kuliah sambil kerja, jadi gue yakin lo ngerti rasanya. Kita belajar buat ujian. Deadline mepet, mata udah capek dari pagi, jadi cara paling cepet ya hafal. Baca, tandain, ulang. Besoknya udah nggak inget apa-apa, tapi nilainya lumayan. Aman.</p>
+<p>Masalahnya, hafalan itu hilang. Dan yang lebih parah, hafalan nggak bisa jawab pertanyaan yang digeser sedikit. Persis gue di depan ibu itu.</p>
+<p>Jadi gue mikir, ada tiga hal kecil yang bisa naikin kita dari lantai satu. Ini bukan dari modul ya, ini kesimpulan gue sendiri sambil ngopi.</p>
+<p>Pertama, setelah baca satu bagian, <strong>tutup modulnya</strong> dan jelasin pakai bahasa lo sendiri. Ke orang, ke gelas kopi, ke kucing tetangga, nggak penting. Kalau lo tersendat, berarti di situ lo belum paham.</p>
+<p>Kedua, <strong>cari satu contoh di hidup lo</strong> yang mirip sama konsep itu. Kalau nggak nemu, jangan buru-buru nyalahin diri sendiri. Kadang artinya materinya belum nyampe.</p>
+<p>Ketiga, <strong>coba bantah materinya</strong>. "Kalau gitu, yang ini gimana?" Ini yang paling berat, tapi paling cepet naikin level.</p>
+<p>Dan ada satu hal yang bikin gue tenang. Bu Alina sendiri bilang, kuliah pertama bakal lebih banyak di level pengetahuan dan pemahaman, dan dia tahu itu bisa bikin frustrasi, tapi itu perlu sebelum bisa sampai ke penerapan, analisis, sintesis.</p>
+<p>Jadi gue nggak sebego yang gue kira. Gue cuma baru di lantai satu, dan lantai satu itu memang harus dilewatin.</p>
+<h2>Penutup</h2>
+<p>Sore ini gue mau nelpon ibu itu balik. Nggak pakai script. Gue mau coba jawab pakai kepala gue sendiri. Jujur aja, kalau gue nggak bisa jamin, gue bilang nggak bisa jamin, terus gue jelasin kenapa.</p>
+<p>Kalau gue gagal lagi, ya setidaknya gue tahu gagalnya di mana. Itu udah lebih bagus daripada ketawa-ketawa sopan sambil nggak ngerti apa-apa.</p>
+<p>Pertanyaan buat lo hari ini gampang aja. Coba inget <strong>satu hal yang lo hafal banget</strong>, materi kuliah, script kerja, doa, apa aja. Sekarang bayangin ada orang nanya "kenapa harus gitu, kenapa nggak sebaliknya?"</p>
+<p>Lo bisa jawab nggak? Kalau nggak bisa, berarti lo masih di lantai satu. Nggak apa-apa. Cuma perlu tahu aja.</p></article></section>
+<footer class="site">Nama orang dan lembaga di tulisan ini sudah disamarkan.</footer>
+</div>
+</body>
+</html>

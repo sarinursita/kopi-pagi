@@ -55,8 +55,13 @@ URUTAN KONSEP:
    Mentok-nya: <kalimat di mana Raka mengaku tidak paham sebelum istilah ini muncul>
 2. <...>
 
-DIBUANG (tidak masuk artikel ini):
+DIBUANG (tidak masuk sesi ini, dicek R12.2):
 - <konsep> · alasan: <kenapa tidak dipakai>
+
+KONSEP DIPAKAI (semua harus muncul di rangkuman, dicek R12.1):
+- <konsep 1> · <satu kalimat isinya>
+- <konsep 2> · <...>
+- <sisanya, termasuk yang tidak akan jadi adegan artikel>
 
 ISTILAH WAJIB (dari sumber):
 - <istilah> = <padanan bahasa manusia>
@@ -65,11 +70,9 @@ PERANGKAP:
 <hal di sesi ini yang gampang bikin Writer salah, misal: materi abstrak,
 nama tokoh di transkrip rusak, konsep mirip dengan sesi sebelumnya>
 
-FORMAT:
-- panjang: blog 1000-1500 kata
-- pendek: WhatsApp 150 kata
-- audio: 60 detik
-- visual: caption Instagram
+FORMAT (v1):
+- rangkuman: satu kalimat per konsep di KONSEP DIPAKAI, maksimal 500 kata
+- artikel: 1000-1500 kata, ditulis dari rangkuman, bukan dari PDF
 ```
 
 ## Yang tidak boleh kamu lakukan

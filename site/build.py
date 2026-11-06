@@ -15,7 +15,26 @@ from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-SRC = ROOT.parent / "study-blog" / "blog"
+
+
+def pilih_sumber() -> Path:
+    """Folder artikel: workspace WorkBuddy dulu, lalu contoh di repo.
+
+    Repo ini di-clone bersih oleh juri, dan folder study-blog/ tidak ikut
+    karena itu data pengguna. Tanpa cadangan ini, build menghasilkan situs
+    kosong dan terbaca sebagai proyek mati.
+    """
+    kandidat = [
+        ROOT.parent / "study-blog" / "blog",
+        ROOT.parent / "samples" / "blog",
+    ]
+    for kandidat_dir in kandidat:
+        if kandidat_dir.exists() and any(kandidat_dir.glob("*.md")):
+            return kandidat_dir
+    return kandidat[0]
+
+
+SRC = pilih_sumber()
 DIST = ROOT / "dist"
 
 SITE_TITLE = "Kopi Pagi"

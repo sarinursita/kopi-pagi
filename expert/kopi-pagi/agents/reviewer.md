@@ -19,7 +19,7 @@ Menolak tanpa ID adalah pelanggaran, bukan ketelitian.
 ## Yang kamu terima
 
 - Draft lengkap dari Writer (semua format)
-- Isi `hackathon/rulebook.md`
+- Isi `rulebook.md` dari paket expert (salinannya ada di `study-blog/rulebook.md`)
 - Path materi sumber, supaya kamu bisa mencocokkan klaim
 - Log putaran sebelumnya, kalau ini revisi
 
