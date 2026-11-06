@@ -1,33 +1,39 @@
-# Skrip Video Demo — Kopi Pagi (v2, versi jual)
+# Skrip Video Demo — Kopi Pagi (v3, versi manusia)
 
-**8 slide · ±6:15 · narasi 611 kata** (bicara ±4:35, sisanya jeda menunjuk layar dan scroll artefak)
-**Batas lomba:** 5–8 menit, wajib memuat satu momen menolak dan satu momen menunggu persetujuan.
+**8 slide · ±6:15 · narasi 612 kata** (bicara ±4:40, sisanya jeda menunjuk layar)
 
-## Apa yang berubah dari v1
+## Kenapa v3 ada
 
-| v1 | v2 | Alasan |
+v2 masih salah. Walaupun sudah pakai struktur jual, porsi mekanismenya masih 50%: empat peran dijelaskan satu per satu, aturan dijelaskan sebagai sistem, penolakan dibahas dua kali. Itu masih presentasi tentang mesin.
+
+v3 mengubah subjeknya. **Yang dibicarakan bukan sistem yang punya aturan, tapi materi kuliah yang dirancang untuk orang yang punya waktu luang, padahal saya nggak punya.** Aturan dan penolakan turun jadi satu kalimat bukti di dalam walkthrough, tanpa nomor aturan, tanpa nama peran yang dijelaskan.
+
+Bahan ini bukan karangan baru. Premisnya sudah ada di `ians-notebook-013-self-directed-learning-sprint-pagi.md` (2 November 2026): Mas Hendra menanyakan modul pelatihan yang menuntut orang kerja delapan jam belajar dua jam nonstop tiap malam, lalu kamu menulis sendiri bahwa energi orang kantoran jam tujuh malam sudah habis, dan strategi yang masuk akal adalah pagi-only. Presentasi ini akhirnya memakai tesis itu sebagai tulangnya.
+
+## Koreksi fakta yang harus dipegang
+
+- **Kerja siang, kuliah malam.** Bukan sebaliknya. Yang habis adalah energi malam setelah delapan jam kerja.
+- Pagi (05:15–06:30) adalah slot untuk mengejar materi, bukan jam kuliah.
+- Narasi pakai **"saya"** (presentasi ke juri). Kutipan produk tetap **"gue"** (suara blog, dan itu buktinya).
+
+**Angka bertanda `[ISI]` wajib diisi angka nyata. Kalau nggak ketemu, hapus kalimatnya. Jangan dikarang.**
+
+## Porsi bicara
+
+| Bagian | Waktu | Porsi |
 |---|---|---|
-| 10 slide, tur aturan R0–R11 | 8 slide, aturan dijelaskan lewat satu cerita | Audiens kehilangan kita di menit teknis. Nomor aturan bukan bahan presentasi, dia bahan audit |
-| Masalah tanpa angka | Masalah + harga per sesi + segmen | Taruhan abstrak nggak menggerakkan siapa pun |
-| Alat lain dibandingkan | Alat lain + objeksi "kenapa nggak prompt saja" | Objeksi itu yang benar-benar dipikirkan audiens |
-| Nggak ada after-state | Ada: yang saya dapat, yang saya bayar | Nilai harus kelihatan, bukan disimpulkan sendiri |
-| Batas akses jadi slide sendiri | Dilipat ke satu baris di S08 | Detail teknis, bukan bahan cerita |
-| Berakhir di pengakuan kelemahan | Berakhir di ajakan | Pengakuan sebelum penutup, bukan sebagai penutup |
-| Cerita 34 aturan ada di docs | Jadi S05, slide kunci | Konflik terkuat yang kamu punya |
+| Manusia dan masalahnya (S01–S04) | 2:45 | 44% |
+| Produk sebagai jawaban (S05) | 0:45 | 12% |
+| Bukti, termasuk satu penolakan (S06) | 1:45 | 28% |
+| Harga, batas, ajakan (S07–S08) | 1:00 | 16% |
 
-## Cara pakai
-
-1. Baca ulang narasi, ganti kalimat yang nggak terdengar seperti kamu.
-2. Rekam dua pass: **Pass A** voice over slide (satu take per slide), **Pass B** rekaman layar artefak yang **sudah ada** (scroll, bukan ngetik ulang).
-3. Sambung dengan cut keras. Tanpa musik, tanpa intro animasi.
-
-**Angka yang diberi tanda `[ISI]` wajib kamu isi dengan angka nyata sebelum rekam.** Jangan dikira-kira. Kalau satu angka pun nggak ketemu, hapus kalimatnya, jangan diganti karangan.
+Mekanisme sekarang 28%, dan semuanya berbentuk bukti, bukan penjelasan arsitektur.
 
 ## Artefak yang direkam (Pass B)
 
 | # | Artefak | Sumber |
 |---|---|---|
-| 1 | PDF materi sesi, di-scroll cepat | berkas materi |
+| 1 | Transkrip materi sesi, di-scroll cepat | berkas materi |
 | 2 | Brief dari Susi | percakapan WorkBuddy |
 | 3 | Draft Wena, empat format | `study-blog/draft/` |
 | 4 | Vonis penolakan: nama dosen + dua pertanyaan di penutup | percakapan WorkBuddy |
@@ -42,142 +48,131 @@
 **Waktu:** 0:00–0:15
 **Kicker:** KOPI PAGI · SATU SESI KULIAH, SATU ARTIKEL
 **Judul:** Ngopi dulu, baru kuliah
-**Subjudul:** Bukan alat yang memendekkan materi. Alat yang membuat saya mau membacanya.
+**Subjudul:** Materi yang dirancang untuk orang yang baru selesai kerja delapan jam.
 **Isi slide:** judul + subjudul saja
 **Tampil di layar:** slide
 **Narasi:**
-> Nama saya Sari. Saya kuliah sambil kerja. Dan ini bukan alat ringkas. Ini alat yang bikin saya mau baca.
+> Nama saya Sari. Kerja siang, kuliah malam. Dan ini bukan alat ringkas. Ini materi yang dirancang untuk orang yang baru selesai kerja delapan jam.
 
 ---
 
-## S02 · Masalah, dan harganya
+## S02 · Malam
 **Waktu:** 0:15–1:00 (45 detik)
-**Kicker:** MASALAH
-**Judul:** Materinya ada. Waktunya tidak.
-**Subjudul:** Kuliah sambil kerja memindahkan belajar ke pagi, sebelum berangkat.
-**Isi slide:**
-- **30–100 halaman** transkrip per sesi, padat, tanpa alur cerita
-- **Jam 5 pagi** satu-satunya waktu yang tersisa
-- **Paragraf kedua** di situ bacaan berhenti, tiap kali
-- **12 sesi per semester.** Yang saya baca sampai habis: **[ISI]**.
+**Kicker:** MASALAHNYA MULAI JAM TUJUH MALAM
+**Judul:** Kuliah jam tujuh, setelah delapan jam kerja
+**Subjudul:** Bukan malas. Energinya memang sudah habis di jalan.
+**Isi slide (garis waktu satu hari):**
+- 08.00 kerja · 17.00 keluar kantor, macet · **19.00 kelas** · 21.30 pulang
+- Kartu kanan: **30–100 halaman** transkrip per sesi, masuk di jam itu
+- Kartu kanan bawah: yang tersisa buat mikir hal baru: **remahan**
 **Tampil di layar:** slide, lalu 5 detik artefak #1
 **Narasi:**
-> Malam saya habis buat kerjaan, jadi belajar saya pindah ke pagi, sebelum berangkat. Materinya tiga puluh sampai seratus halaman transkrip per sesi. Padat, tanpa alur cerita. Saya baca dua paragraf, mata saya lari ke HP. Semester lalu ada dua belas sesi. Yang benar-benar saya baca sampai habis: **[ISI]**. Sisanya saya lewati, dan SPP-nya tetap saya bayar penuh. Jadi tiap sesi yang saya lewati ada harganya, kira-kira Rp **[ISI]** per sesi.
+> Hari saya begini. Kerja dari pagi. Jam lima sore keluar kantor, kena macet, sampai kelas jam tujuh malam. Di situ materi baru masuk: tiga puluh sampai seratus halaman transkrip per sesi. Dan jam tujuh malam itu, kapasitas buat mikir hal baru sudah habis. Bukan karena saya malas. Seharian otak saya sudah dipakai buat kerjaan, revisi, dan grup WhatsApp yang nggak pernah tidur. Materinya masuk, dan besok paginya sudah nggak ada.
 
 ---
 
-## S03 · Kenapa ringkasan nggak cukup
-**Waktu:** 1:00–1:45 (45 detik)
-**Kicker:** MASALAHNYA BUKAN PANJANGNYA
-**Judul:** Ringkasan menjawab pertanyaan yang salah
-**Subjudul:** Yang saya butuhkan bukan materi yang lebih pendek, tapi alasan untuk masuk ke dalamnya.
+## S03 · Yang saya baru sadar
+**Waktu:** 1:00–1:50 (50 detik)
+**Kicker:** YANG SAYA BARU SADAR
+**Judul:** Materinya dirancang untuk orang yang punya waktu luang
+**Subjudul:** Seolah pesertanya masih punya energi malaikat jam tujuh malam.
 **Isi slide:**
-- **"Apa isi sesi ini?"** dijawab ringkasan, dengan rapi
-- **"Kenapa saya mau lanjut baca?"** nggak dijawab siapa pun
-- Satu baris: ringkasan tetap kering, jadi tetap nggak nempel
-- Satu baris: **dan saya bukan satu-satunya**
+- Kutipan besar: **"Targetnya manusia yang kerja delapan jam sehari, kan? Kenapa estimasi belajarnya dua jam nonstop tiap malam?"**
+- Satu baris: yang salah bukan isi materinya, tapi asumsi tentang energinya
+- Satu baris: materi sehebat apa pun berakhir jadi berkas yang nggak pernah dibuka
 **Tampil di layar:** slide
 **Narasi:**
-> Jalan pintas yang biasa saya pakai: minta ringkasan. Tapi ringkasan menjawab pertanyaan yang salah. Dia menjawab apa isi sesi ini. Yang saya butuhkan jawaban dari kenapa saya mau lanjut baca. Ringkasan tetap kering, jadi tetap nggak nempel. Dan saya bukan satu-satunya. Ini masalah semua orang yang kuliah sambil kerja: waktunya sempit, materinya nggak ditulis untuk orang yang lelah, dan nggak ada yang mengukur apakah bacaannya selesai.
+> Teman kerja saya pernah nanya satu kalimat soal modul yang saya rancang sendiri: ini targetnya manusia yang kerja delapan jam sehari, kan? Kenapa estimasi belajarnya dua jam nonstop tiap malam? Pertanyaan itu kena. Dan pertanyaan yang sama berlaku untuk materi kuliah saya. Yang salah bukan isi materinya. Yang salah asumsinya: semua materi ini ditulis untuk orang yang datang dengan kepala kosong dan dua jam luang. Saya datang dengan kepala penuh dan nol jam luang. Kalau begitu caranya, materinya secanggih apa pun cuma jadi berkas yang nggak pernah dibuka.
 
 ---
 
-## S04 · Yang sudah ada, dan objeksinya
-**Waktu:** 1:45–2:40 (55 detik)
-**Kicker:** YANG SUDAH ADA
-**Judul:** Semuanya memendekkan. Nggak ada yang menjaga apa yang boleh terbit.
-**Subjudul:** Tiga alat, satu lubang yang sama.
-**Isi slide (tabel):**
-
-| Alat | Yang diberi | Yang tidak |
-|---|---|---|
-| NotebookLM | ringkasan + tanya jawab atas sumber | aturan yang bisa menolak hasilnya |
-| ChatGPT dengan PDF | ringkasan bebas, gaya bisa diminta | penjaga anonimitas, jejak audit |
-| Aplikasi ringkas otomatis | poin-poin per bab | titik berhenti sebelum tayang |
-
-- Kotak bawah, huruf besar: **"Kenapa nggak prompt ChatGPT saja?"**
-- Jawaban tiga baris: prompt nggak bisa menolak hasilnya sendiri · nggak meninggalkan jejak yang bisa diperiksa · nggak punya titik berhenti, jadi hasilnya beda tiap kali
-**Tampil di layar:** slide
-**Narasi:**
-> Saya sudah coba yang ada: NotebookLM, ChatGPT dengan PDF-nya, aplikasi ringkas otomatis. Semuanya bekerja, dan semuanya memberi saya hal yang sama, yaitu teks yang lebih pendek. Objeksi yang paling sering saya dengar: kenapa nggak prompt ChatGPT saja. Jawabannya tiga. Prompt nggak bisa menolak hasilnya sendiri. Prompt nggak meninggalkan jejak yang bisa saya periksa. Dan prompt nggak punya titik berhenti, jadi hasilnya beda tiap kali saya coba.
-
----
-
-## S05 · Kegagalan yang membentuk produk
-**Waktu:** 2:40–3:30 (50 detik)
-**Kicker:** KEGAGALAN YANG MEMBENTUK PRODUK
-**Judul:** Lolos semua aturan. Tetap nggak bisa dibaca.
-**Subjudul:** Sistem yang lulus sempurna, dan tetap gagal.
+## S04 · Pagi, dan jalan pintas yang gagal
+**Waktu:** 1:50–2:45 (55 detik)
+**Kicker:** SATU-SATUNYA SLOT YANG SISA
+**Judul:** Pagi. Dan pagi itu pendek.
+**Subjudul:** Ringkasan menjawab pertanyaan yang salah.
 **Isi slide:**
-- **34 aturan lolos · 0 putaran revisi · tetap ditolak manusia**
-- Satu baris: masalahnya bukan di modelnya, tapi di aturan yang belum pernah ditulis
-- Tiga baris kecil: aturan diberi nomor · yang menolak wajib menyebut nomornya · penolakan tanpa nomor dianggap batal
+- Slot: **05.15–06.30**, sebelum berangkat kerja
+- Dua kolom: **"Apa isi sesi ini?"** dijawab ringkasan · **"Kenapa saya mau lanjut baca?"** nggak dijawab siapa pun
+- Baris alat: NotebookLM · ChatGPT dengan PDF · aplikasi ringkas otomatis → **semuanya memendekkan**
+- Baris objeksi: **"Kenapa nggak prompt saja?"** → hasilnya beda tiap kali · nggak ada yang menolak · nggak ada jejak
 **Tampil di layar:** slide
 **Narasi:**
-> Ini yang bikin produknya ada. Sesi ketiga saya lolos semua pemeriksaan. Tiga puluh empat aturan, nol putaran revisi. Saya senang setengah jam. Lalu saya baca sendiri, dan saya nggak sanggup sampai paragraf ketiga. Sistemnya lulus, tulisannya tetap nggak bisa dibaca. Dari situ saya tahu masalahnya bukan di modelnya, tapi di aturannya. Aturan yang nggak pernah ditulis nggak akan pernah diperiksa. Jadi saya tulis aturannya: satu berkas, tiap aturan punya nomor dan tingkat bahaya. Yang menolak wajib menyebut nomornya. Kalau nggak bisa, penolakannya batal. Bukan karena saya percaya agentnya, tapi karena penolakan tanpa nomor nggak bisa saya periksa ulang.
+> Jadi saya pindah ke pagi. Antara jam lima seperempat dan jam enam pagi, sebelum berangkat. Pendek. Dan di situ saya coba semua jalan pintas: minta ringkasan, pakai NotebookLM, tempel PDF ke ChatGPT. Semuanya memberi hal yang sama, yaitu teks yang lebih pendek. Tapi ringkasan menjawab pertanyaan yang salah. Dia menjawab apa isi sesi ini. Yang saya butuhkan jawaban dari kenapa saya mau lanjut baca. Dan kalau saya cuma prompt, hasilnya beda tiap pagi, nggak ada yang menolak kalau hasilnya jelek, dan nggak ada yang bisa saya periksa lagi.
 
 ---
 
-## S06 · Yang saya bangun
-**Waktu:** 3:30–4:15 (45 detik)
+## S05 · Yang saya bangun
+**Waktu:** 2:45–3:30 (45 detik)
 **Kicker:** YANG SAYA BANGUN
-**Judul:** Bukan ringkasan yang lebih baik
-**Subjudul:** Empat peran, satu alur, satu gerbang persetujuan.
-**Isi slide:**
-- Diagram empat kotak: **brief** (satu ide inti, satu sudut cerita) → **tulis** (empat format sekaligus) → **periksa** (lolos atau tolak) → **gerbang** (saya yang memutuskan)
-- Satu baris tebal di bawah diagram: yang menulis dan yang menolak **nggak boleh ngobrol langsung**
-- Satu baris kecil: kalau mereka bisa negosiasi, penolakan gampang dilunakkan
+**Judul:** Satu sesi jadi satu artikel yang saya baca sambil kopi
+**Subjudul:** Bukan ringkasan. Cerita yang membuat materinya masuk.
+**Isi slide (tiga kotak alur):**
+- **Malam** materi sesi masuk
+- **Pagi** satu artikel 1.000–1.500 kata, plus versi pendek: WhatsApp · audio 60 detik · caption
+- **Saya** baca sampai habis, sebelum berangkat
+- Satu baris kecil di bawah: dikerjakan empat peran, satu di antaranya tugasnya cuma menolak yang melanggar
 **Tampil di layar:** slide
 **Narasi:**
-> Jadi yang saya bangun bukan ringkasan yang lebih baik. Satu sesi dikerjakan empat peran. Satu menyusun brief: satu ide inti, satu sudut cerita. Satu menulis empat format sekaligus: blog, WhatsApp, audio, caption. Satu memeriksa dan memutuskan. Satu memimpin dan memegang gerbang terakhir. Yang paling penting: yang menulis dan yang menolak nggak boleh ngobrol langsung. Kalau mereka bisa negosiasi, penolakan gampang dilunakkan, dan gunanya hilang.
+> Jadi yang saya bangun begini. Materi satu sesi masuk malam itu juga. Pagi berikutnya saya dapat satu artikel seribu sampai seribu lima ratus kata, plus versi pendeknya: pesan WhatsApp, naskah audio enam puluh detik, dan caption. Yang penting bukan panjangnya. Yang penting saya punya alasan untuk masuk ke paragraf pertama, dan materinya nyambung ke hidup saya, bukan ke urutan silabus. Artikelnya dikerjakan empat peran, dan satu di antaranya tugasnya cuma menolak kalau ada yang melanggar.
 
 ---
 
-## S07 · Bukti: satu sesi, dari PDF sampai tayang
-**Waktu:** 4:15–5:45 (90 detik)
+## S06 · Bukti: satu sesi, dari malam sampai pagi
+**Waktu:** 3:30–5:15 (105 detik)
 **Kicker:** BUKTI
-**Judul:** Satu sesi, dari PDF sampai tayang
+**Judul:** Satu sesi, dari malam sampai pagi
 **Subjudul:** Rekaman sesi yang sudah terjadi. Saya nggak mengulanginya.
 **Isi slide (timeline 6 titik, tiap titik satu screenshot):**
 1. **Brief** satu ide inti, satu sudut cerita
 2. **Draft** blog 1.352 kata · WhatsApp 150 kata · audio 60 detik · caption
-3. **Ditolak** nama dosen asli ikut kebawa · penutup punya dua pertanyaan
-4. **Diperbaiki** dua bagian itu saja, bukan tulis ulang
-5. **Saya baca, saya setuju** kartu persetujuan: judul, jumlah kata, format yang terbit
+3. **Ditolak** nama dosen saya ikut kebawa · penutup punya dua pertanyaan
+4. **Diperbaiki** dua bagian itu saja
+5. **Saya baca, saya setuju** judul, jumlah kata, format yang terbit
 6. **Tayang** dan tercatat di satu berkas audit
 **Tampil di layar:** artefak #2–#8, di-scroll pelan, jangan dipercepat
 **Narasi:**
-> Ini rekaman sesi yang sudah terjadi. Susi menyerahkan brief. Wena menulis empat format: blog seribu tiga ratus lima puluh dua kata, WhatsApp seratus lima puluh kata, naskah audio enam puluh detik, dan caption. Lalu Yani menolak. Bukan karena nggak suka. Ada nama dosen asli yang ikut kebawa, dan penutupnya punya dua pertanyaan padahal cuma boleh satu. Wena memperbaiki dua bagian itu saja, bukan menulis ulang semuanya. Putaran kedua lolos. Lalu Kiki berhenti dan menampilkan kartu persetujuan: judul, jumlah kata, aturan yang lolos, format yang akan terbit. Saya baca. Saya setuju. Baru setelah itu artikelnya disimpan dan situsnya dibangun ulang. Semua putaran tercatat di satu berkas audit. Dan pagi itu saya baca sesi itu sampai habis, untuk pertama kali dalam semester itu.
+> Ini rekaman sesi yang sudah terjadi. Susi menyusun brief: satu ide inti, satu sudut cerita. Wena menulis empat format sekaligus. Lalu Yani menolak. Bukan karena nggak suka: nama dosen saya masih ikut kebawa, dan penutupnya punya dua pertanyaan padahal cuma boleh satu. Dia menyebut aturan yang dilanggar, jadi saya tahu persis bagian mana yang harus diperbaiki. Wena memperbaiki dua bagian itu saja. Putaran kedua lolos. Lalu Kiki berhenti dan menampilkan kartu persetujuan: judul, jumlah kata, format yang akan terbit. Saya baca. Saya setuju. Baru setelah itu artikelnya tayang. Semua putaran tercatat di satu berkas, jadi kalau saya lupa kenapa sebuah kalimat dihapus, jawabannya ada. Dan pagi itu saya baca sesi itu sampai habis, untuk pertama kali dalam semester itu.
 
 ---
 
-## S08 · Yang saya dapat, yang saya bayar, dan satu langkah
-**Waktu:** 5:45–6:45 (60 detik)
-**Kicker:** HARGA, BATAS, DAN SATU LANGKAH
-**Judul:** Yang saya dapat, yang saya bayar, yang masih bocor
-**Subjudul:** Gerbang manusia tetap wajib, bukan opsional.
-**Isi slide (empat blok):**
-- **Yang saya dapat:** satu sesi yang dulu dilewati, sekarang selesai dalam **[ISI]** menit dan isinya saya ingat
-- **Yang saya bayar:** lebih lambat, lebih mahal per artikel, nggak bisa jalan saat saya tidur
-- **Yang masih bocor:** parafrase identitas lolos ("dosen asal Eropa yang mualaf") · hitungan kata bergeser setelah revisi · kualitas cerita bukan wilayah mesin
-- **Satu langkah:** rulebook-nya saya buka di repo · blog-nya terbuka · **sesi mana yang paling sering kamu lewati?**
+## S07 · Yang saya dapat, dan yang saya bayar
+**Waktu:** 5:15–6:00 (45 detik)
+**Kicker:** HARGA DAN BATAS
+**Judul:** Yang saya dapat, dan yang saya bayar
+**Subjudul:** Nggak ada yang gratis, termasuk yang ini.
+**Isi slide (tiga blok):**
+- **Dapat:** sesi yang dulu dilewati, sekarang selesai dalam **[ISI]** menit, dan isinya masih saya ingat minggu berikutnya
+- **Bayar:** lebih lambat · lebih mahal per artikel · nggak bisa jalan saat saya tidur
+- **Masih bocor:** parafrase identitas lolos ("dosen asal Eropa yang mualaf") · hitungan kata bergeser setelah revisi · enak atau tidaknya cerita bukan wilayah mesin
+**Tampil di layar:** slide
+**Narasi:**
+> Yang saya dapat: sesi yang dulu saya lewati, sekarang selesai dalam **[ISI]** menit, dan isinya masih saya ingat minggu berikutnya. Yang saya bayar: lebih lambat dan lebih mahal per artikel, dan nggak bisa jalan saat saya tidur, karena keputusan terakhir tetap manusia. Yang masih bocor: kalau nama dosen diganti jadi dosen asal Eropa yang mualaf, aturannya lolos. Hitungan kata bisa bergeser setelah revisi. Dan apakah ceritanya enak dibaca, itu tetap bukan wilayah mesin.
+
+---
+
+## S08 · Satu langkah
+**Waktu:** 6:00–6:20 (20 detik)
+**Kicker:** SATU LANGKAH
+**Judul:** Satu sesi, satu artikel, satu kopi
+**Subjudul:** Rulebook-nya saya buka. Blog-nya terbuka untuk siapa pun.
+**Isi slide:** alamat repo · alamat blog · satu pertanyaan besar di tengah: **sesi mana yang paling sering kamu lewati?**
 **Tampil di layar:** slide, lalu artefak #7 (artikel tayang)
 **Narasi:**
-> Yang saya dapat: satu sesi yang dulu saya lewati, sekarang selesai dalam **[ISI]** menit, dan isinya saya ingat. Yang saya bayar: lebih lambat dan lebih mahal per artikel, dan nggak bisa jalan saat saya tidur, karena gerbang terakhirnya manusia. Yang masih bocor: Yani bisa melewatkan parafrase identitas. Kalau nama dosen diganti jadi dosen asal Eropa yang mualaf, aturannya lolos. Hitungan kata juga bisa bergeser setelah revisi terakhir. Dan kualitas cerita bukan wilayah mesin. Karena itu gerbang manusia tetap wajib, bukan opsional. Rulebook-nya saya buka di repo, dan blog-nya bisa dibaca siapa pun. Kalau kamu kuliah sambil kerja, saya ingin tahu: sesi mana yang paling sering kamu lewati?
+> Rulebook-nya saya buka di repo, dan blog-nya bisa dibaca siapa pun. Kalau kamu juga kuliah sambil kerja, saya ingin tahu satu hal: sesi mana yang paling sering kamu lewati?
 
 ---
 
-## Bahan teknis yang diparkir (belum diputuskan)
+## Kalau juri butuh mekanismenya (belum diputuskan)
 
-Semua ini **tidak dihapus**, cuma dikeluarkan dari alur 6 menit. Nanti kita putuskan mau masuk ke mana:
+Yang dihapus dari alur **tidak hilang dari repo**. Kalau nanti terasa kurang untuk penilaian Track C, tambahannya begini, bukan dengan mengembalikan slide arsitektur:
 
-| Bahan | Sekarang di | Calon tempat |
-|---|---|---|
-| Rulebook R0–R11 lengkap, severity, kolom cara cek | `docs/rulebook.md` | slide lampiran (backup, nggak diucapkan) atau lembar akuntabilitas |
-| Batas akses rinci: dua folder, tanpa email, tanpa medsos | `docs/accountability.md` | satu baris di S08 (sudah), sisanya lampiran |
-| 45 test case + kegagalan yang diketahui | `docs/test-cases.md` | lampiran + isian status uji |
-| Audit JSON, struktur putaran | `samples/audit/` | artefak #8 di S07 |
-| Trade-off arsitektur (empat kartu) | `docs/Kopi-Pagi-Arsitektur.pptx` | lampiran, atau 15 detik lisan kalau waktu masih sisa |
-| Cerita asal R9/R10/R11 versi panjang | `docs/test-cases.md` bagian H | sudah jadi S05 versi pendek |
+| Kebutuhan | Cara masuk |
+|---|---|
+| Bukti ada empat agent terpisah | sudah kelihatan di S06: empat nama muncul dan bertindak |
+| Rulebook terdokumentasi + aturan yang dikutip saat menolak | satu kalimat di S06 (sudah), detail di `docs/rulebook.md` + lampiran |
+| Batas akses, tanpa email/medsos | satu baris lisan di S07 kalau waktu sisa, detail di `docs/accountability.md` |
+| 45 test case, termasuk yang gagal | lampiran slide, disebut 5 detik: "empat puluh lima kasus uji, termasuk yang gagal, ada di repo" |
+| Audit trail | artefak #8 di S06 (sudah) |
 
-**Prinsipnya:** yang diucapkan cuma yang mengubah keputusan audiens. Sisanya jadi lampiran yang bisa ditanya, bukan narasi yang harus didengar.
+**Prinsip v3:** yang diucapkan cuma yang mengubah keputusan audiens. Sisanya lampiran yang bisa ditanya.
