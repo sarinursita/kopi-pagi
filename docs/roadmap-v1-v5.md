@@ -24,7 +24,9 @@ modul PDF
 
 Urutan kerja **rangkuman dulu, artikel kemudian** mengikuti cara Sari bekerja sehari-hari: materi diringkas bersama Max, lalu artikelnya ditulis Wiz dari rangkuman itu. Konsekuensi teknis: Writer tidak membaca PDF lagi setelah rangkuman jadi. Artikel tidak bisa membawa konsep yang tidak ada di rangkuman, jadi cakupan otomatis warisan.
 
-## Tempat terbit: kanal sebagai portal, blog sebagai etalase
+## Tempat terbit (berlaku v3 ke atas): kanal sebagai portal, blog sebagai etalase
+
+**Untuk v1 tidak dipakai.** Rangkuman lewat email, artikel lewat blog, tidak ada kanal. Bagian ini disimpan untuk v3 ke atas, saat artefak privat perlu dikumpulkan di satu tempat yang bisa dicari.
 
 Ada dua permukaan terbit, dan pembagiannya bukan selera tapi soal hak dan akses.
 
@@ -132,11 +134,38 @@ Kalau kanal terasa kurang, portal sendiri bisa dibangun tanpa kerangka berat:
 - Login jangan ditaruh di aplikasi. Taruh di depan, pakai Cloudflare Access atau Worker dengan basic auth. Nol basis data, nol framework tambahan.
 - Portal baru layak kalau artefak privat perlu dicari, disaring, dan ditautkan dari luar kanal. Selama kebutuhannya cuma "jangan tayang publik", kanal sudah cukup.
 
+## v1: alur satu pagi (tanpa akrobat)
+
+Tidak ada hook, tidak ada portal, tidak ada penjadwalan sepanjang hari. Satu jadwal, satu jalur, satu gerbang.
+
+| Jam | Apa yang terjadi | Di mana |
+|---|---|---|
+| **05:00** | scheduled task menyala. Planner menyusun brief, Writer menulis rangkuman, Reviewer memeriksa R12, lalu Writer menulis artikel, Reviewer memeriksa R4, R9, R11 | WorkBuddy di laptop, mesin memang menyala karena jam belajar |
+| **05:10** | rangkuman dikirim ke **email** pribadi. Artikel ditahan, belum tayang | email |
+| **05:15** | sesi belajar: baca rangkuman, kalau ada yang meleset revisi langsung dengan Kiki di WorkBuddy, lalu approve artikel | WorkBuddy desktop |
+| **06:00** | artikel tayang di blog setelah approve | situs publik |
+| **06:15** | di KRL: baca artikel di HP. Rangkuman sudah ada di email, tidak perlu laptop | HP |
+
+Kenapa email, bukan kanal: email itu kiriman ke satu orang. Tidak ada URL publik, tidak ada yang bisa mengindeks, dan tidak ada yang perlu dibangun. Untuk catatan belajar pribadi, itu sudah cukup dan paling murah.
+
+### Gerbang manusia menjaga publikasi, bukan kebenaran isi
+
+Ini yang tadinya kabur, dan pertanyaanmu benar: mahasiswa tidak bisa menilai benar atau salah rangkuman materi yang belum dia pelajari. Jadi gerbangnya diskop per artefak.
+
+| Artefak | Diperiksa mesin | Disetujui manusia | Alasannya |
+|---|---|---|---|
+| Rangkuman | R12: cakupan dan larangan konsep buangan | **tidak** | penerimanya satu orang, bukan publik. Yang bisa dinilai manusia cuma "ini nyambung atau tidak", dan itu ketahuan saat dipakai |
+| Artikel | R2, R4, R9, R11 | **ya, layak tayang** | akan dilihat orang lain. Yang dinilai manusia: identitas bocor atau tidak, nada, dan kamu mau namamu menempel di situ atau tidak |
+| Unit audio (v3) | naskahnya dinilai sebagai teks | ya, kalau tayang publik | publik |
+| Latihan soal (v4) | aturan mutu soal | tidak | privat, dan salah ketik bukan bencana |
+
+Yang harus diakui: **tidak ada yang memverifikasi kebenaran isi terhadap modul.** Reviewer memeriksa cakupan (R12.1) dan aturan gaya, bukan kebenaran. Manusia juga tidak bisa, karena justru sedang belajar. Solusi murahnya ada di v2: kartu approval menampilkan tiga klaim dari artikel beserta konsep asalnya di rangkuman, jadi kamu bisa memeriksa tiga baris dalam tiga puluh detik, tanpa membaca ulang seluruh artikel.
+
 ## Versi
 
 | Versi | Isi | Selesai kalau |
 |---|---|---|
-| **v1** | rangkuman + artikel, portal di kanal, blog artikel saja | setiap `konsep_dipakai` muncul di rangkuman; artikel 1.000 sampai 1.500 kata lolos Reviewer; satu post forum per sesi berisi keduanya |
+| **v1** | rangkuman lewat email, artikel tayang di blog setelah approve | satu jadwal 05:00 jalan; rangkuman sampai di email; artikel tidak pernah tayang sebelum di-approve; setiap `konsep_dipakai` muncul di rangkuman |
 | **v2** | mindmap | satu sesi punya mindmap yang bisa dirender dari teks (Mermaid atau SVG), dan tiap cabang cocok dengan `konsep_dipakai` |
 | **v3** | unit audio microlearning + transkrip | jumlah unit = jumlah `konsep_dipakai`; maksimal 90 detik per unit; setiap unit punya transkrip; tidak ada konsep yang hanya muncul di artikel |
 | **v4** | latihan soal terjadwal | bank soal menutup semua `konsep_dipakai`; tiga slot per hari jalan tanpa approval; kunci tidak pernah terkirim sebelum jawaban |
