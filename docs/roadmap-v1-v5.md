@@ -148,6 +148,14 @@ Tidak ada hook, tidak ada portal, tidak ada penjadwalan sepanjang hari. Satu jad
 
 Kenapa email, bukan kanal: email itu kiriman ke satu orang. Tidak ada URL publik, tidak ada yang bisa mengindeks, dan tidak ada yang perlu dibangun. Untuk catatan belajar pribadi, itu sudah cukup dan paling murah.
 
+Dan alasan keduanya, yang lebih praktis: **chat WorkBuddy menumpuk.** Rangkuman sesi 1 di antara seratus pesan berikutnya praktis hilang. Email punya subjek, dan subjek bisa dicari. Format subjek yang dipakai:
+
+```
+Rangkuman <mata kuliah> sesi <N> · <tanggal>
+```
+
+Satu baris, konsisten, dan bisa disaring pakai filter di aplikasi email kalau mau lebih rapi. Chat tetap tempat kerja dan tempat membaca artikel; email tempat arsip yang bisa ditemukan lagi.
+
 ### Gerbang manusia menjaga publikasi, bukan kebenaran isi
 
 Ini yang tadinya kabur, dan pertanyaanmu benar: mahasiswa tidak bisa menilai benar atau salah rangkuman materi yang belum dia pelajari. Jadi gerbangnya diskop per artefak.
