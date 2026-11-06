@@ -57,9 +57,22 @@ Yang masuk ke Discord adalah **asisten WorkBuddy**, bukan Kiki, Susi, Wena, dan 
 WorkBuddy berjalan di mesin user. Artinya:
 
 - Cron 05:00 hanya jalan kalau mesin menyala jam 05:00. Kalau laptop tutup, tidak ada artikel.
-- Konsekuensi untuk demo: kalimat "pagi berikutnya saya dapat artikel" harus diberi syarat "mesin menyala", atau demo dijalankan manual saat sesi direkam.
 - Agent 24/7 butuh runtime di server, bukan di laptop. Itu di luar lingkup hackathon dan ditulis sebagai batas, bukan disembunyikan.
-- Efek samping ke v4: soal terjadwal juga hanya terkirim saat mesin menyala. Jadwal yang bolong bukan bug, itu batas runtime.
+
+### Yang fatal bukan artikelnya, tapi jam kirimnya
+
+Artikel bisa dibuat saat laptop menyala di rumah malam hari, lalu dibaca pagi di HP. Tidak ada laptop yang dibawa ke KRL, karena yang dibuka di KRL adalah Discord di HP, bukan mesinnya.
+
+Yang tidak mungkin: soal jam 12:30 dan 16:45 kalau laptop ikut ke kantor dalam keadaan tertutup. Jadi lapisannya dipisah:
+
+| Lapisan | Jalan di mana | Tugas |
+|---|---|---|
+| **Menghasilkan** | WorkBuddy di laptop, saat menyala (malam, atau 05:00 sebelum berangkat) | rangkuman, artikel, dan soal hari itu, disimpan ke antrean berkas |
+| **Mengirim** | hook yang selalu nyala (GitHub Actions cron atau Cloudflare Worker) | jam 07:00, 12:30, 16:45 ambil satu item dari antrean, kirim ke kanal lewat webhook |
+
+Agent tidak perlu bangun 24 jam. Yang perlu selalu nyala cuma pengirim, dan itu dua puluh baris skrip, bukan agent. Ini juga menjaga aturan hackathon: orkestrasi agent tetap di WorkBuddy, yang dipindah keluar cuma jam dindingnya.
+
+Konsekuensi yang harus diterima: kalau laptop tidak menyala sama sekali hari itu, antrean kosong dan pengirim tidak mengirim apa pun. Pengirim dilarang mengarang isi atau minta maaf atas nama agent.
 
 ## Latihan soal (v4)
 
@@ -71,7 +84,7 @@ Dua tipe, aturan sama untuk keduanya: **satu pertanyaan per kiriman.**
 | Esai | satu pertanyaan, jawaban 1 sampai 2 kalimat, kunci muncul setelah dijawab | pagi di KRL, sore |
 
 - **Bukan soal analisis.** Tujuannya mengulang, bukan menguji kecerdasan. Contoh: sebutkan tahapan software design, sebutkan salah satu agile manifesto, apa itu regresi, spam filter itu machine learning jenis apa.
-- **Dijadwalkan, jangan ditumpuk.** Tiga kiriman per hari di waktu berbeda, bukan lima sekaligus. Lima terasa seperti kewajiban ibadah, tiga terasa seperti teman yang mencolek. Slot yang dipakai: 07:00 (KRL), 12:30 (makan siang), 16:45 (menjelang pulang).
+- **Dijadwalkan, jangan ditumpuk.** Tiga kiriman per hari di waktu berbeda, bukan lima sekaligus. Lima terasa seperti kewajiban ibadah, tiga terasa seperti teman yang mencolek. Slot yang dipakai: 07:00 (KRL), 12:30 (makan siang), 16:45 (menjelang pulang). Ketiganya dikirim oleh lapisan pengirim, bukan oleh cron agent, karena laptop tidak ikut ke kantor.
 - **Tidak lewat gerbang persetujuan.** Gerbang manusia hanya untuk artefak yang terbit. Latihan soal tidak terbit, jadi tidak butuh approval, cukup aturan mutu.
 - Kalau satu hari kelewat, pertanyaannya tidak diakumulasi ke hari berikutnya. Kelewat ya kelewat.
 
@@ -141,6 +154,7 @@ Kalau kanal terasa kurang, portal sendiri bisa dibangun tanpa kerangka berat:
 | Risiko | Catatan |
 |---|---|
 | Runtime di mesin user | cron mati kalau mesin mati. Semua janji "otomatis pagi" bergantung pada ini |
+| Antrean kosong | pengirim jalan tapi tidak ada isi. Harus diam, bukan mengarang atau minta maaf |
 | Kanal jadi satu-satunya arsip | kalau server dihapus atau akun kena limit, arsip hilang. Perlu ekspor berkala ke repo |
 | Bank soal 3 per hari x 30 sesi | 90 soal. v1 cukup satu sesi sebagai bukti |
 | Rangkuman jadi batas mutu | kalau rangkuman salah, artikel, audio, dan soal mewarisi salahnya. Reviewer wajib memeriksa rangkuman sebelum artikel ditulis |
