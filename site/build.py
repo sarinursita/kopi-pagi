@@ -27,6 +27,11 @@ def pilih_sumber() -> Path:
     """
     kandidat = [
         ROOT.parent / "study-blog" / "blog",
+        # Repo sering ditaruh satu tingkat di dalam folder kerja (mis.
+        # Claw/kopi-pagi-repo), sementara study-blog/ ada di folder kerja.
+        # Tanpa cadangan ini, build diam-diam memakai samples/ dan artikel
+        # yang baru di-approve tidak pernah muncul di situs.
+        ROOT.parent.parent / "study-blog" / "blog",
         ROOT.parent / "samples" / "blog",
     ]
     for kandidat_dir in kandidat:

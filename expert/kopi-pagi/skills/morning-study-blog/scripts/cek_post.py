@@ -33,8 +33,10 @@ def calon_akar() -> list[Path]:
 
 
 def cari_situs() -> Path | None:
-    for akar in calon_akar():
-        for rel in ("blog-site/dist", "site/dist", "dist"):
+    # Urutan rel di luar, akar di dalam: situs baru menang di akar mana pun
+    # sebelum situs lama (blog-site) dipertimbangkan.
+    for rel in ("site/dist", "kopi-pagi-repo/site/dist", "blog-site/dist", "dist"):
+        for akar in calon_akar():
             kandidat = akar / rel
             if (kandidat / "index.html").exists():
                 return kandidat
@@ -42,8 +44,10 @@ def cari_situs() -> Path | None:
 
 
 def cari_blog() -> Path | None:
-    for akar in calon_akar():
-        for rel in ("study-blog/blog", "samples/blog"):
+    # study-blog/ (data pengguna) selalu menang atas samples/ (contoh repo),
+    # walau cwd-nya ada di dalam repo.
+    for rel in ("study-blog/blog", "samples/blog"):
+        for akar in calon_akar():
             kandidat = akar / rel
             if kandidat.exists() and any(kandidat.glob("*.md")):
                 return kandidat
