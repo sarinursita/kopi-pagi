@@ -102,7 +102,8 @@ def inline(s: str) -> str:
 def md_to_html(md: str) -> str:
     out: list[str] = []
     buf: list[str] = []
-    in_list = False
+    list_tag: str | None = None
+    lines = md.splitlines()
 
     def flush_para() -> None:
         if buf:
@@ -110,13 +111,22 @@ def md_to_html(md: str) -> str:
             buf.clear()
 
     def close_list() -> None:
-        nonlocal in_list
-        if in_list:
-            out.append("</ul>")
-            in_list = False
+        nonlocal list_tag
+        if list_tag:
+            out.append(f"</{list_tag}>")
+            list_tag = None
 
-    for raw in md.splitlines():
-        line = raw.rstrip()
+    def open_list(tag: str, kelas: str = "") -> None:
+        nonlocal list_tag
+        if list_tag != tag:
+            close_list()
+            out.append(f'<{tag}{f" class={chr(34)}{kelas}{chr(34)}" if kelas else ""}>')
+            list_tag = tag
+
+    i = 0
+    while i < len(lines):
+        line = lines[i].rstrip()
+        i += 1
         if not line.strip():
             flush_para()
             close_list()
@@ -124,6 +134,23 @@ def md_to_html(md: str) -> str:
         if line.startswith("# "):
             flush_para(); close_list()
             continue  # judul sudah dipakai di header halaman
+        gambar = re.match(r"^!\[([^\]]*)\]\(([^)\s]+)\)\s*$", line)
+        if gambar:  # gambar; baris berikutnya diawali _..._ jadi keterangan
+            flush_para(); close_list()
+            alt, src = gambar.group(1), gambar.group(2)
+            ket = ""
+            if i < len(lines):
+                cocok = re.match(r"^_(.+)_$", lines[i].strip())
+                if cocok:
+                    ket = cocok.group(1)
+                    i += 1
+            out.append(
+                f'<figure class="gambar"><a href="{src}" target="_blank" rel="noopener">'
+                f'<img src="{src}" alt="{html.escape(alt)}"></a>'
+                + (f"<figcaption>{inline(ket)}</figcaption>" if ket else "")
+                + "</figure>"
+            )
+            continue
         if line.startswith("### "):
             flush_para(); close_list()
             out.append("<h3>" + inline(line[4:]) + "</h3>")
@@ -133,11 +160,11 @@ def md_to_html(md: str) -> str:
         elif line.startswith("> "):
             flush_para(); close_list()
             out.append("<blockquote>" + inline(line[2:]) + "</blockquote>")
+        elif re.match(r"^\d+\.\s", line):
+            flush_para(); open_list("ol", "langkah")
+            out.append("<li>" + inline(re.sub(r"^\d+\.\s+", "", line)) + "</li>")
         elif re.match(r"^[-*] ", line):
-            flush_para()
-            if not in_list:
-                out.append("<ul>")
-                in_list = True
+            flush_para(); open_list("ul")
             out.append("<li>" + inline(line[2:]) + "</li>")
         elif line.strip() in ("---", "***"):
             flush_para(); close_list()
@@ -471,22 +498,51 @@ def main() -> int:
 
     (DIST / "index.html").write_text(page(SITE_TITLE, SITE_DESC, body), encoding="utf-8")
 
-    # ---- halaman tetap: WorkBuddy x Tencent Cloud Hackathon (isi di site/pages/)
-    halaman = PAGES / "hackathon.html"
+    # ---- halaman tetap: kopi dari site/pages/hackathon.md (teks bisa diedit tanpa sentuh kode)
+    halaman = PAGES / "hackathon.md"
     if halaman.exists():
+        meta, isi = parse_front(halaman.read_text(encoding="utf-8"))
         if DIAGRAM.exists():
             (DIST / "arsitektur-mvp.svg").write_text(
                 DIAGRAM.read_text(encoding="utf-8"), encoding="utf-8"
             )
+
+        def tombol(kunci: str, kelas: str = "") -> str:
+            nilai = meta.get(kunci, "")
+            if "|" not in nilai:
+                return ""
+            label, url = (x.strip() for x in nilai.split("|", 1))
+            cls = ("tombol " + kelas).strip()
+            return f'<a class="{cls}" href="{html.escape(url)}">{html.escape(label)}</a>'
+
+        chip = "".join(
+            f"<span>{inline(meta[k])}</span>" for k in ("chip1", "chip2", "chip3") if meta.get(k)
+        )
+        bawah = tombol("tombol1", "kedua") + tombol("tombol2", "kedua") + tombol("tombol3", "kedua")
+        badan = f"""<a class="back" href="index.html">&larr; Semua catatan</a>
+<article class="halaman">
+<div class="hero">
+<div class="kicker">{inline(meta.get("kicker", ""))}</div>
+<h1>{html.escape(meta.get("judul", "Kopi Pagi"))}</h1>
+<p class="lede">{inline(meta.get("lede", ""))}</p>
+<div class="chips">{chip}</div>
+<div class="tautan">{tombol("tombol1")}{tombol("tombol2", "kedua")}</div>
+</div>
+{md_to_html(isi)}
+<div class="tautan">{bawah}</div>
+<footer class="site">{inline(meta.get("footer", ""))}</footer>
+</article>"""
+
+        judul = meta.get("judul", "Kopi Pagi")
         (DIST / "hackathon.html").write_text(
             page(
-                "Cara blog ini dibuat · Kopi Pagi x WorkBuddy",
-                "Blog Kopi Pagi dibuat dengan expert WorkBuddy untuk submission Tencent Cloud Hackathon Indonesia 2026, track C.",
-                halaman.read_text(encoding="utf-8"),
+                f"{judul} · WorkBuddy x Tencent Cloud Hackathon",
+                plain(meta.get("lede", ""), 180) or f"Halaman submission {judul}.",
+                badan,
             ),
             encoding="utf-8",
         )
-        print("    hackathon.html (halaman submission, diagram ikut disalin)")
+        print("    hackathon.html (dari site/pages/hackathon.md, diagram ikut disalin)")
 
     # ---- indeks pencarian (statis; disaring di browser, tanpa server)
     def teks_mentah(md: str) -> str:
