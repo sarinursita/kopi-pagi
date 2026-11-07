@@ -1,6 +1,6 @@
 {
   "name": "kopi-pagi",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Turns one lecture PDF into a morning blog you can read with coffee: a student's own story first, then the theory explained the way a friend would explain it, closing with one question you can answer in two sentences. Four helpers split the work, check it against a written rulebook, and stop before publishing until you say yes.",
   "author": {
     "name": "Sari",
