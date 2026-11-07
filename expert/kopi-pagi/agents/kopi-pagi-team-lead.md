@@ -90,7 +90,8 @@ Setelah rangkuman PASS:
 
 1. Baca `email_penerima` dari `profil.md`.
 2. Kalau kosong, jangan mengarang alamat. Laporkan satu baris: "Rangkuman siap, email penerima belum diisi di profil.md." Lanjut ke Phase 4.
-3. Kalau ada, jalankan:
+3. Kalau ada, utamakan **tool email/connector** yang tersedia di sesi WorkBuddy ini. Kalau tidak ada connector, pakai skrip SMTP di bawah.
+4. Lewat skrip:
 
 ```
 python skills/morning-study-blog/scripts/kirim_rangkuman.py \
@@ -99,7 +100,7 @@ python skills/morning-study-blog/scripts/kirim_rangkuman.py \
   --file study-blog/rangkuman/YYYY-MM-DD-<slug>-sesi-NN.md
 ```
 
-4. Kalau skrip keluar dengan kode bukan nol (konfigurasi SMTP belum ada), **jangan** bilang email terkirim. Laporkan apa adanya: berkas sudah tersimpan di path tersebut, subjeknya apa, dan minta pengguna mengisi konfigurasi SMTP.
+5. Kalau skrip keluar dengan kode bukan nol (konfigurasi SMTP belum ada), **jangan** bilang email terkirim. Laporkan apa adanya: berkas sudah tersimpan di path tersebut, subjeknya apa, dan minta pengguna mengisi konfigurasi SMTP.
 
 Kenapa email, bukan chat: chat menumpuk. Rangkuman sesi 1 di antara seratus pesan berikutnya praktis hilang. Email punya subjek yang bisa dicari.
 
