@@ -85,6 +85,23 @@ kata: 1234
 
 Sampaikan ke Sari: judul, jumlah kata, sesi berikutnya, dan satu kalimat "besok gue mau cerita soal ...". Jangan minta maaf berlebihan kalau artikelnya panjang.
 
+## 7. Daftar berkas yang wajib ikut berubah saat ada post baru
+
+Satu sesi baru bukan cuma satu berkas. Kalau salah satu terlewat, situs jadi bohong: artikelnya ada tapi nggak muncul di daftar, atau kategori dan pencariannya ketinggalan.
+
+| Berkas | Kenapa wajib |
+|---|---|
+| `study-blog/blog/YYYY-MM-DD-<slug>-sesi-NN.md` | artikelnya. Frontmatter **wajib** memuat `mata_kuliah` dan `sesi`; dari dua kolom itu halaman kategori `/kuliah/<slug>.html` dibentuk |
+| `study-blog/rangkuman/YYYY-MM-DD-<slug>-sesi-NN.md` | rangkuman yang sudah dikirim ke email |
+| `study-blog/audit/YYYY-MM-DD-sesi-NN.json` | bukti audit: putaran, `konsep_dipakai`, `konsep_dibuang`, siapa menyetujui |
+| `study-blog/progress.md` | sesi berikutnya, supaya tidak dobel |
+| `study-blog/log.md` | kontinuitas cerita untuk sesi berikutnya |
+| `blog-site/dist/` | hasil build. Menjalankan `python blog-site/build.py` otomatis memperbarui **index, halaman kategori, dan `search.json`** |
+
+Nama `mata_kuliah` harus **persis sama** dengan sesi sebelumnya (contoh: `Psikologi Anak`). Kalau beda satu kata, halaman kategorinya pecah jadi dua.
+
+Setelah build, sebutkan di laporan satu baris: "situs dibangun ulang, indeks dan kategori ikut diperbarui". Kalau build gagal atau folder `blog-site/` tidak ada, jangan bilang sudah tayang.
+
 ## Referensi
 
 - `references/character-sheet.md` — siapa Raka, cara ngomongnya, siapa saja orang di sekitarnya

@@ -157,11 +157,13 @@ Lalu **berhenti dan tunggu.** Jangan memanggil tool publikasi apa pun sebelum ad
 
 ### Phase 8 — Terbit (setelah acc)
 
-1. Pindahkan draft dari `study-blog/draft/` ke `study-blog/blog/YYYY-MM-DD-<slug>-sesi-NN.md`, ubah status jadi `terbit` dan isi tanggal terbit.
+1. Pindahkan draft dari `study-blog/draft/` ke `study-blog/blog/YYYY-MM-DD-<slug>-sesi-NN.md`, ubah status jadi `terbit` dan isi tanggal terbit. Pastikan frontmatter memuat `mata_kuliah` (persis sama dengan sesi sebelumnya) dan `sesi`.
 2. Tulis log audit ke `study-blog/audit/YYYY-MM-DD-sesi-NN.json` (format di bawah), termasuk `konsep_dipakai` dan `konsep_dibuang`.
 3. Perbarui `progress.md` dan `log.md`.
-4. Jalankan `python blog-site/build.py`. Kalau foldernya tidak ada, **jangan** bilang sudah tayang. Laporkan: artikel tersimpan, situs belum dibangun, dan sebutkan path berkasnya.
-5. Setelah acc, langsung terbit. Jangan bertanya dua kali; kartu persetujuan sudah menyebut bahwa "acc" berarti tayang.
+4. Jalankan `python blog-site/build.py`. Build ini yang memperbarui halaman depan, halaman kategori `/kuliah/<slug>.html`, dan `search.json`. Tanpa langkah ini, artikelnya ada tapi tidak muncul di daftar dan tidak bisa dicari.
+5. Periksa hasil build: artikel baru muncul di halaman depan, di kategori mata kuliahnya, dan bisa ditemukan lewat pencarian.
+6. Kalau foldernya tidak ada atau build gagal, **jangan** bilang sudah tayang. Laporkan: artikel tersimpan, situs belum dibangun, sebutkan path berkasnya.
+7. Setelah acc, langsung terbit. Jangan bertanya dua kali; kartu persetujuan sudah menyebut bahwa "acc" berarti tayang.
 
 ## Kalau dipakai orang lain (onboarding)
 
