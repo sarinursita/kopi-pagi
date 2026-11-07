@@ -144,89 +144,125 @@ def plain(md: str, limit: int = 190) -> str:
 
 CSS = """
 :root{
-  --ink:#1d1a16; --muted:#6f665c; --paper:#fbf8f3; --card:#ffffff;
-  --line:#e7e0d5; --accent:#a8462a; --accent-soft:#f3e4dd;
+  --ink:#2b2620; --muted:#6f6459; --desk:#e7ddcc; --paper:#fdfaf2; --rule:#dbe6f1;
+  --margin:#e8a79c; --accent:#b04a2b; --high:#ffe98c; --note:#fff9c9; --tape:rgba(255,255,255,.62);
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0; background:var(--paper); color:var(--ink);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-size:18px; line-height:1.75;
+  margin:0; color:var(--ink);
+  background:
+    radial-gradient(1200px 600px at 50% -10%, #f4ecdd 0%, transparent 70%),
+    var(--desk);
+  font-family:"Nunito",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size:18px; line-height:32px;
 }
 a{color:var(--accent); text-decoration:none}
 a:hover{text-decoration:underline}
-.wrap{max-width:720px; margin:0 auto; padding:0 24px}
 
-header.site{padding:56px 0 40px; border-bottom:1px solid var(--line)}
-header.site .kicker{font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:600; margin-bottom:14px}
-header.site h1{
-  font-family:Georgia,"Times New Roman",serif; font-size:clamp(30px,5vw,44px);
-  line-height:1.15; margin:0 0 12px; letter-spacing:-.02em;
+/* kertas buku catatan */
+.wrap{
+  max-width:800px; margin:32px auto; padding:52px 46px 44px 104px;
+  background-color:var(--paper);
+  background-image:repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px);
+  border-radius:3px 6px 6px 3px; position:relative;
+  box-shadow:0 20px 44px rgba(74,55,32,.20), 0 1px 0 #fff inset;
 }
-header.site p{margin:0; color:var(--muted); font-size:17px; max-width:52ch}
+.wrap::before{ /* lubang spiral */
+  content:""; position:absolute; left:0; top:0; bottom:0; width:64px;
+  border-radius:3px 0 0 3px;
+  background-image:radial-gradient(circle at 26px 50%, #cfc3ae 0 7px, #b9ab93 7px 8px, transparent 8.5px);
+  background-size:64px 52px; background-repeat:repeat-y; background-position:0 26px;
+  box-shadow:inset -10px 0 14px -12px rgba(80,60,30,.35);
+}
+.wrap::after{ /* garis margin merah */
+  content:""; position:absolute; left:88px; top:0; bottom:0; width:2px;
+  background:var(--margin); opacity:.55;
+}
 
-.list{padding:16px 0 8px}
-.post-card{
-  display:block; padding:26px 0; border-bottom:1px solid var(--line);
-  color:inherit;
+header.site{padding:0 0 24px}
+header.site .kicker{
+  font-family:"Caveat",cursive; font-size:24px; color:var(--accent);
+  display:block; margin:0 0 2px; transform:rotate(-1.5deg); transform-origin:left center;
+}
+header.site h1{
+  font-family:"Caveat",cursive; font-weight:700; font-size:clamp(44px,8vw,70px);
+  line-height:1.02; margin:0; display:inline; padding:0 8px 2px 0;
+  background-image:linear-gradient(transparent 58%, var(--high) 58%, var(--high) 90%, transparent 90%);
+  background-repeat:no-repeat; background-size:100% 100%;
+}
+header.site p{margin:14px 0 0; color:var(--muted); font-size:17px}
+
+/* catatan tempel: about */
+.note{
+  position:relative; margin:6px 0 30px; padding:20px 22px 16px;
+  background:var(--note); border-radius:2px; transform:rotate(-.6deg);
+  box-shadow:0 8px 18px rgba(90,70,40,.16), 0 1px 0 rgba(255,255,255,.7) inset;
+}
+.note::before{ /* selotip */
+  content:""; position:absolute; top:-13px; left:50%; transform:translateX(-50%) rotate(-2.5deg);
+  width:132px; height:26px; background:var(--tape);
+  box-shadow:0 1px 4px rgba(90,70,40,.14);
+  border-left:1px dashed rgba(120,100,60,.15); border-right:1px dashed rgba(120,100,60,.15);
+}
+.note h2{font-family:"Caveat",cursive; font-size:31px; line-height:1.1; margin:0 0 8px}
+.note p{margin:0 0 10px; font-size:16px; line-height:26px; color:#4a4136}
+.note p:last-child{margin-bottom:0}
+.note ul.cast{list-style:none; margin:0 0 14px; padding:0; font-size:16px; line-height:26px; color:#4a4136}
+.note ul.cast li{padding:3px 0; border-bottom:1px dashed rgba(120,100,60,.25)}
+.note ul.cast li:last-child{border-bottom:0}
+.note ul.cast strong{color:var(--ink)}
+
+.list{padding:0}
+.list-head{font-family:"Caveat",cursive; font-size:29px; margin:0 0 2px; line-height:1.2}
+.list-head span{font-family:"Nunito",sans-serif; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-left:8px}
+.post-card{display:block; padding:14px 0 14px 34px; position:relative; color:inherit; border-bottom:1px dashed rgba(120,100,60,.28)}
+.post-card::before{ /* kotak centang */
+  content:""; position:absolute; left:4px; top:23px; width:13px; height:13px;
+  border:1.5px solid #bfae92; border-radius:3px; transform:rotate(-3deg);
 }
 .post-card:hover{text-decoration:none}
 .post-card:hover h2{color:var(--accent)}
-.post-meta{font-size:13px; color:var(--muted); letter-spacing:.02em; margin-bottom:8px}
-.post-meta .dot{margin:0 8px; opacity:.5}
-.post-card h2{
-  font-family:Georgia,"Times New Roman",serif; font-size:24px; line-height:1.3;
-  margin:0 0 8px; letter-spacing:-.01em; transition:color .15s;
-}
-.post-card p{margin:0; color:var(--muted); font-size:16px}
+.post-meta{font-size:13px; line-height:20px; color:var(--muted); letter-spacing:.02em; margin-bottom:2px}
+.post-meta .dot{margin:0 7px; opacity:.5}
+.post-card h2{font-family:"Caveat",cursive; font-size:30px; line-height:1.15; margin:0 0 2px; transition:color .15s}
+.post-card p{margin:0; font-size:16px; line-height:25px; color:var(--muted)}
 
-article{padding:48px 0 24px}
-article .post-meta{margin-bottom:18px}
-article h1{
-  font-family:Georgia,"Times New Roman",serif; font-size:clamp(28px,4.6vw,40px);
-  line-height:1.2; letter-spacing:-.02em; margin:0 0 18px;
-}
-article .lede{border-left:3px solid var(--accent-soft); padding-left:16px; color:var(--muted); font-style:italic}
-article h2{
-  font-family:Georgia,"Times New Roman",serif; font-size:23px; line-height:1.35;
-  margin:44px 0 12px; letter-spacing:-.01em;
-}
-article h3{font-size:19px; margin:32px 0 10px}
-article p{margin:0 0 20px}
-article ul{margin:0 0 20px; padding-left:22px}
-article li{margin-bottom:8px}
+article{padding:6px 0 10px}
+article .post-meta{margin-bottom:6px}
+article h1{font-family:"Caveat",cursive; font-weight:700; font-size:clamp(34px,6vw,52px); line-height:1.08; margin:0 0 6px}
+article .lede{color:var(--muted); font-style:italic; margin:0 0 20px; padding-left:14px; border-left:3px solid var(--high)}
+article h2{font-family:"Caveat",cursive; font-size:32px; line-height:1.15; margin:34px 0 4px}
+article h3{font-family:"Caveat",cursive; font-size:26px; margin:26px 0 2px}
+article p{margin:0 0 16px}
+article ul,article ol{margin:0 0 16px; padding-left:24px}
+article li{margin-bottom:4px}
 article blockquote{
-  margin:26px 0; padding:16px 20px; background:var(--card);
-  border-left:3px solid var(--accent); border-radius:0 6px 6px 0;
-  color:var(--muted); font-style:italic;
+  margin:20px 0; padding:14px 18px; background:rgba(255,249,201,.75); color:#4a4136;
+  border-radius:2px; transform:rotate(-.35deg); box-shadow:0 6px 14px rgba(90,70,40,.12);
+  font-style:italic;
 }
-article hr{border:0; border-top:1px solid var(--line); margin:36px 0}
-article code{background:var(--accent-soft); padding:1px 5px; border-radius:4px; font-size:.9em}
-article strong{font-weight:650}
+article hr{border:0; border-top:1px dashed rgba(120,100,60,.3); margin:28px 0}
+article code{background:#efe7d6; padding:1px 5px; border-radius:4px; font-size:.9em}
+article strong{font-weight:700}
 
-.pager{display:flex; justify-content:space-between; gap:16px; margin:44px 0 0; padding-top:24px; border-top:1px solid var(--line); font-size:15px}
+.pager{display:flex; justify-content:space-between; gap:16px; margin:34px 0 0; padding-top:18px; font-size:15px; line-height:22px; border-top:1px dashed rgba(120,100,60,.3)}
 .pager a{max-width:48%}
-.pager .lbl{display:block; font-size:12px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; margin-bottom:4px}
+.pager .lbl{display:block; font-size:11px; color:var(--muted); letter-spacing:.1em; text-transform:uppercase; margin-bottom:2px}
 
-.about{margin:52px 0 0; padding:28px; background:var(--card); border:1px solid var(--line); border-radius:10px}
-.about h2{font-family:Georgia,serif; font-size:19px; margin:0 0 10px}
-.about p{margin:0 0 10px; color:var(--muted); font-size:16px}
-.about p:last-child{margin-bottom:0}
-.about ul.cast{list-style:none; margin:0 0 26px; padding:0; font-size:16px; color:var(--muted)}
-.about ul.cast li{padding:7px 0; border-bottom:1px dashed var(--line)}
-.about ul.cast li:last-child{border-bottom:0}
-.about ul.cast strong{color:var(--ink); font-weight:650}
+footer.site{margin-top:34px; padding-top:16px; border-top:1px dashed rgba(120,100,60,.3); color:var(--muted); font-size:14px}
+footer.site .sign{font-family:"Caveat",cursive; font-size:23px; color:var(--ink)}
+.back{display:inline-block; margin-bottom:14px; font-size:15px}
 
-footer.site{margin-top:64px; padding:28px 0 56px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
-.back{display:inline-block; margin-bottom:26px; font-size:15px}
-@media (max-width:560px){
-  body{font-size:17px}
-  header.site{padding:40px 0 30px}
-  article{padding:32px 0 16px}
+@media (max-width:640px){
+  body{font-size:17px; line-height:30px}
+  .wrap{margin:0; padding:34px 22px 30px; border-radius:0; background-image:none}
+  .wrap::before,.wrap::after{display:none}
+  header.site h1{font-size:clamp(40px,12vw,56px)}
+  article h2{font-size:28px}
+  .post-card{padding-left:30px}
 }
 """
-
 
 def page(title: str, desc: str, body: str, root: str = "") -> str:
     return f"""<!doctype html>
@@ -239,6 +275,9 @@ def page(title: str, desc: str, body: str, root: str = "") -> str:
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{root}style.css">
 </head>
 <body>
@@ -290,7 +329,7 @@ def main() -> int:
             f'<p>{html.escape(p["excerpt"])}</p></a>'
         )
 
-    about = """<div class="about">
+    about = """<aside class="note">
 <h2>Panggil gue Raka</h2>
 <p>Bukan nama sebenarnya, tapi cerita gue adalah keseharian yang mungkin lo alami juga. Siangnya kerja, malamnya kuliah. Udah kebayang kan sisa-sisa energi gue kayak apa? Capek, nggak bisa mikir. Baca segepok modul kuliah kayak masuk telinga kanan, keluar telinga kiri.</p>
 <p>Tapi gue nggak mau nyerah, soalnya gue yakin ilmu Psikologi Islam yang gue dapet bakal berguna buat masa depan gue. Jadi sekarang gue belajar pagi, saat otak gue masih fresh.</p>
@@ -314,18 +353,20 @@ def main() -> int:
 
 <h2>Soal nama</h2>
 <p>Semua nama di sini samaran, termasuk nama gue. Nama kampus dan nama dosen juga nggak gue tulis. Isi materinya tetap sesuai modul, cuma cara nyampeinnya yang gue bikin kayak ngobrol.</p>
-</div>"""
+</aside>"""
 
+    jumlah = f"{len(posts)} catatan" if posts else "belum ada"
     body = f"""<header class="site">
-<div class="kicker">Study in public</div>
+<div class="kicker">catatan pagi sebelum berangkat kerja</div>
 <h1>{html.escape(SITE_TITLE)}</h1>
 <p>{html.escape(SITE_TAGLINE)}</p>
 </header>
-<main class="list">
-{''.join(cards) if cards else '<p style="color:#6f665c">Belum ada artikel.</p>'}
-</main>
 {about}
-<footer class="site">Ditulis tiap pagi sebelum berangkat kerja.</footer>"""
+<main class="list">
+<div class="list-head">Catatan<span>{jumlah}</span></div>
+{''.join(cards) if cards else '<p style="color:#6f6659">Belum ada artikel.</p>'}
+</main>
+<footer class="site"><span class="sign">Raka</span><br>Ditulis tiap pagi sebelum berangkat kerja.</footer>"""
 
     (DIST / "index.html").write_text(page(SITE_TITLE, SITE_DESC, body), encoding="utf-8")
 
