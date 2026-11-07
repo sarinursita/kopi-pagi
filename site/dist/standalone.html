@@ -109,6 +109,14 @@ ul.peran{list-style:none; margin:0 0 18px; padding:0}
 ul.peran li{line-height:32px; margin:0; padding:2px 0}
 ul.peran li + li{border-top:1px dashed rgba(120,100,60,.25)}
 ul.peran strong{color:var(--ink)}
+ol.langkah{counter-reset:l; list-style:none; margin:0 0 18px; padding:0}
+ol.langkah li{counter-increment:l; position:relative; padding:12px 0 12px 54px; line-height:30px; margin:0}
+ol.langkah li + li{border-top:1px dashed rgba(120,100,60,.25)}
+ol.langkah li::before{
+  content:counter(l); position:absolute; left:6px; top:10px;
+  font-family:"Caveat",cursive; font-size:36px; line-height:1; color:var(--accent); opacity:.85;
+}
+ol.langkah b{display:block; font-size:17.5px; line-height:26px; margin-bottom:2px}
 
 
 .list{padding:0}
