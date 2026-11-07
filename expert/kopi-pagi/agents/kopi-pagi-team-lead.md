@@ -43,6 +43,7 @@ Di folder kerja pengguna (`study-blog/`):
 - `progress.md` — sesi berikutnya
 - `log.md` — kontinuitas cerita
 - `rulebook.md` — salinan dari paket, dibaca Reviewer
+- `publikasi.md` — alamat tayang, folder yang tayang, dan larangan soal `ngopi-dulu`
 - `cache/<slug>/sesi-NN/materi.md` — hasil konversi PDF
 
 ## SOP
@@ -162,8 +163,11 @@ Lalu **berhenti dan tunggu.** Jangan memanggil tool publikasi apa pun sebelum ad
 3. Perbarui `progress.md` dan `log.md`.
 4. Jalankan build situs, sesuai letak folder kerja: `python site/build.py` kalau folder kerja adalah root repo, atau `python kopi-pagi-repo/site/build.py` kalau folder kerja adalah folder induk (tempat `study-blog/` berada). **Jangan pakai `blog-site/build.py`**: itu situs lama yang tidak punya halaman kategori maupun `search.json`, dan build ke sana membuat artikel tidak pernah muncul di situs yang tayang. Build ini yang memperbarui halaman depan, halaman kategori `/kuliah/<slug>.html`, dan `search.json`. Tanpa langkah ini, artikelnya ada tapi tidak muncul di daftar dan tidak bisa dicari.
 5. Jalankan pemeriksaan: `python skills/morning-study-blog/scripts/cek_post.py`. Skrip ini memastikan artikel benar-benar muncul di halaman depan, kategori mata kuliahnya, dan `search.json`, serta menangkap kategori yang pecah gara-gara `mata_kuliah` ditulis beda. Kalau ada yang GAGAL, jangan bilang sudah tayang: sebutkan baris yang gagal apa adanya.
-6. Kalau foldernya tidak ada atau build gagal, **jangan** bilang sudah tayang. Laporkan: artikel tersimpan, situs belum dibangun, sebutkan path berkasnya.
-7. Setelah acc, langsung terbit. Jangan bertanya dua kali; kartu persetujuan sudah menyebut bahwa "acc" berarti tayang.
+6. Kalau `cek_post.py` lolos, terbitkan: deploy folder `kopi-pagi-repo/site/dist` lewat tool publikasi sesi ini. Persetujuan manusia untuk menerbitkan artikel sudah kamu pegang dari Phase 7, jadi tidak perlu bertanya lagi soal deploy. Folder itu terikat ke app "Kopi Pagi"; link tidak berubah.
+7. Sebutkan alamat tayangnya dari `study-blog/publikasi.md`, apa adanya, satu baris. **Jangan mencari URL lewat pencarian web, jangan menebak domain, jangan meminta sharecode ke pengguna, dan jangan menyebut `ngopi-dulu`.** Alamat itu sudah tertulis; membacanya cukup.
+8. Kalau halaman terlihat belum berubah, itu cache browser: minta muat ulang keras (`Ctrl+Shift+R`) atau jendela incognito, tunggu sekitar 10 detik, baru laporkan kalau memang masih belum muncul.
+9. Kalau foldernya tidak ada atau build gagal, **jangan** bilang sudah tayang. Laporkan: artikel tersimpan, situs belum dibangun, sebutkan path berkasnya.
+10. Setelah acc, langsung terbit. Jangan bertanya dua kali; kartu persetujuan sudah menyebut bahwa "acc" berarti tayang.
 
 ## Kalau dipakai orang lain (onboarding)
 

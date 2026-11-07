@@ -18,6 +18,7 @@ study-blog/
 ├── progress.md          # sesi mana yang sudah ditulis
 ├── log.md               # kontinuitas cerita (2-3 fakta per artikel)
 ├── rulebook.md          # salinan rulebook dari paket expert
+├── publikasi.md         # alamat tayang + folder yang tayang (satu-satunya sumber URL)
 ├── cache/               # PDF + hasil konversi
 ├── rangkuman/           # rangkuman per sesi, dasar artikel dan isi email
 ├── draft/               # artikel menunggu persetujuan
