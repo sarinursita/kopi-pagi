@@ -9,6 +9,15 @@ REPO=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 TUJUAN=${KOPIPAGI_PREVIEW_DIR:-/home/saristudio/sites/kopipagi}
 
 python3 "$REPO/site/build.py"
+
+# Jangan deploy kalau artikel terbaru tidak benar-benar ikut terbit.
+if [ "${SKIP_CEK:-0}" != "1" ]; then
+  python3 "$REPO/expert/kopi-pagi/skills/morning-study-blog/scripts/cek_post.py" || {
+    echo "Pemeriksaan gagal. Deploy dibatalkan (pakai SKIP_CEK=1 kalau memang mau memaksa)."
+    exit 1
+  }
+fi
+
 rsync -a --delete "$REPO/site/dist/" "$TUJUAN/"
 
 if docker ps --format '{{.Names}}' | grep -qx kopipagi-site; then
