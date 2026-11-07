@@ -161,7 +161,7 @@ Lalu **berhenti dan tunggu.** Jangan memanggil tool publikasi apa pun sebelum ad
 2. Tulis log audit ke `study-blog/audit/YYYY-MM-DD-sesi-NN.json` (format di bawah), termasuk `konsep_dipakai` dan `konsep_dibuang`.
 3. Perbarui `progress.md` dan `log.md`.
 4. Jalankan `python blog-site/build.py`. Build ini yang memperbarui halaman depan, halaman kategori `/kuliah/<slug>.html`, dan `search.json`. Tanpa langkah ini, artikelnya ada tapi tidak muncul di daftar dan tidak bisa dicari.
-5. Periksa hasil build: artikel baru muncul di halaman depan, di kategori mata kuliahnya, dan bisa ditemukan lewat pencarian.
+5. Jalankan pemeriksaan: `python skills/morning-study-blog/scripts/cek_post.py`. Skrip ini memastikan artikel benar-benar muncul di halaman depan, kategori mata kuliahnya, dan `search.json`, serta menangkap kategori yang pecah gara-gara `mata_kuliah` ditulis beda. Kalau ada yang GAGAL, jangan bilang sudah tayang: sebutkan baris yang gagal apa adanya.
 6. Kalau foldernya tidak ada atau build gagal, **jangan** bilang sudah tayang. Laporkan: artikel tersimpan, situs belum dibangun, sebutkan path berkasnya.
 7. Setelah acc, langsung terbit. Jangan bertanya dua kali; kartu persetujuan sudah menyebut bahwa "acc" berarti tayang.
 
