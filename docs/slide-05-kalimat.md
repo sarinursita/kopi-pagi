@@ -1,25 +1,37 @@
-# Slide 5 — satu kalimat penutup (biar jujur tanpa merendahkan diri)
+# Slide 5 — solusi dulu utuh, status teknis belakangan
 
-Tempatnya: kalimat terakhir slide 5, setelah daftar empat bentuk.
+Koreksi Sari, 7 November: **masalah bisnis dan masalah IT harus dipisah.** Slide solusi menjawab
+"kenapa desain ini pas untuk mahasiswa pekerja", dan jawabannya butuh gambar lengkap: beberapa proses
+dan beberapa artefak yang saling menutup. Kalau slide solusi cuma bilang "artikel dan rangkuman",
+solusinya langsung patah, karena dengan dua bentuk itu mahasiswa tetap harus membaca modul 30 halaman.
 
-## Pilihan
+Roadmap (v1, v2, v3, v4) adalah **tahapan teknis**, bukan definisi solusi. Tempatnya di slide status
+atau slide batas, bukan di slide solusi.
 
-**A (dipakai)**
-> Yang sudah bisa dipakai sekarang baru dua: rangkuman dan artikel. Sisanya masih dalam perjalanan, dan saya lebih suka bilang begitu daripada pura-pura semuanya beres.
+## Kalimat penutup slide 5 (versi koreksi)
 
-**B (lebih pendek)**
-> Dari empat bentuk ini, yang sudah jalan baru dua. Sisanya sedang dikerjakan, dan itu saya sebutkan supaya jelas, bukan supaya kelihatan lengkap.
+> Semua bentuk ini satu paket, karena satu bentuk saja tidak menyelesaikan masalah tadi.
+> Yang sudah berjalan di WorkBuddy sekarang rangkuman dan artikel; sisanya tahap berikutnya.
 
-**C (paling ringan)**
-> Rangkuman dan artikel sudah bisa dipakai hari ini. Yang lain masih di atas kertas, dan saya nggak akan pura-pura sudah.
+Kenapa versi ini:
 
-## Kenapa A
+- kalimat pertama menjaga gambar besar tetap utuh dan menyebut alasan kenapa harus satu paket;
+- kalimat kedua jujur soal status, tanpa mengecilkan solusinya;
+- tidak ada nomor versi di slide solusi, karena nomor versi itu bahasa IT, bukan bahasa masalah.
 
-- Menyebut angka **dua** lebih dulu, jadi jujur di depan, bukan di catatan kaki.
-- "masih dalam perjalanan" memberi ruang untuk slide roadmap, tanpa janji tanggal.
-- "lebih suka bilang begitu daripada pura-pura semuanya beres" menutup kemungkinan juri merasa dibohongi, sekaligus menjelaskan kenapa empat bentuk tetap ditampilkan.
+## Peta artefak ke masalah (bahan slide 5)
 
-## Catatan kecil
+| Artefak | Menjawab masalah apa |
+|---|---|
+| Rangkuman | kerangka sesi, supaya modul 30 halaman tidak perlu dibaca ulang |
+| Mindmap | struktur terlihat sekali pandang, enak untuk mengulang cepat |
+| Artikel berbentuk cerita | jalan masuk pertama, bikin mau baca sampai habis |
+| Unit audio 60 detik + transkrip | menicil belajar di sela: ngantri, makan siang, nunggu printer, tergencet di KRL |
+| Latihan soal terpisah sepanjang hari | memastikan materi nempel, bukan cuma lewat |
 
-- Di daftar slide 5, "rangkuman dan mindmap dikirim lewat email" sebaiknya jadi "rangkuman dikirim lewat email" saja, dan mindmap pindah ke daftar yang menyusul. Kalau tidak, kalimat penutup di atas bertabrakan dengan butir sebelumnya.
-- Slide roadmap (kalau jadi dipakai) cukup satu baris: v1 rangkuman + artikel, lalu mindmap, audio, latihan soal, portal.
+## Catatan penempatan
+
+- Slide solusi: empat bentuk, tanpa nomor versi.
+- Slide status/batas: satu baris jujur, "yang berjalan sekarang rangkuman dan artikel", lalu tahapan
+  berikutnya disebut sebagai rencana teknis.
+- Mindmap digabung di butir rangkuman saat diucapkan itu keputusan penyajian, bukan perubahan desain.
