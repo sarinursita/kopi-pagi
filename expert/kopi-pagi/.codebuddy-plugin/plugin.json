@@ -1,6 +1,6 @@
 {
   "name": "kopi-pagi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Turns one lecture PDF into a morning blog you can read with coffee: a student's own story first, then the theory explained the way a friend would explain it, closing with one question you can answer in two sentences. Four helpers split the work, check it against a written rulebook, and stop before publishing until you say yes.",
   "author": {
     "name": "Sari",
@@ -34,8 +34,8 @@
     "zh": "晨间咖啡"
   },
   "displayDescription": {
-    "en": "Feed it today's lecture PDF and you get a morning blog in casual Indonesian: a student's story first, the theory in plain words, plus a WhatsApp version, a 60-second audio script, and an Instagram caption. Three helpers check it against a written rulebook, and nothing goes live until you approve.",
-    "zh": "给它一节课程的 PDF，换回一篇能配咖啡读完的晨间博客：先讲故事，再讲清理论，附 WhatsApp、音频和 IG 版本。发布前等你点头。"
+    "en": "Feed it today's lecture PDF and you get two things: a 500-word rangkuman sent to your own email, and a morning blog in casual Indonesian that goes live only after you approve it. Four roles check each other against a written rulebook.",
+    "zh": "给它一节课程的 PDF，换回两样东西：发到你邮箱的 500 字课程摘要，以及一篇只有你点头后才上线的晨间博客。四个角色按成文规则互相把关。"
   },
   "avatar": "avatars/team.png",
   "categoryId": "06-ContentCreative",
