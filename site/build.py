@@ -10,6 +10,7 @@ Hasil: blog-site/dist/ (index.html + posts/*.html)
 from __future__ import annotations
 
 import html
+import json
 import re
 from datetime import datetime
 from pathlib import Path
@@ -61,6 +62,20 @@ def parse_front(text: str) -> tuple[dict, str]:
                     meta[k.strip()] = v.strip()
             body = parts[2]
     return meta, body.strip()
+
+
+def slugify(teks: str) -> str:
+    teks = re.sub(r"[^a-z0-9\s-]", "", teks.lower().strip())
+    return re.sub(r"\s+", "-", teks)
+
+
+def meta_baris(post: dict, prefix: str = "") -> str:
+    bits = [f'<span>{html.escape(fmt_date(post["date"]))}</span>']
+    if post.get("course"):
+        slug = slugify(post["course"])
+        sesi = html.escape(str(post.get("session", "")))
+        bits.append(f'<a href="{prefix}kuliah/{slug}.html">{html.escape(post["course"])}</a>, sesi {sesi}')
+    return '<span class="dot">·</span>'.join(bits)
 
 
 def fmt_date(iso: str) -> str:
@@ -221,8 +236,8 @@ header.site p{margin:14px 0 0; color:var(--muted); font-size:17px}
   content:""; position:absolute; left:4px; top:23px; width:13px; height:13px;
   border:1.5px solid #bfae92; border-radius:3px; transform:rotate(-3deg);
 }
-.post-card:hover{text-decoration:none}
-.post-card:hover h2{color:var(--accent)}
+.post-card h2 a{color:inherit; text-decoration:none}
+.post-card:hover h2 a{color:var(--accent)}
 .post-meta{font-size:13px; line-height:20px; color:var(--muted); letter-spacing:.02em; margin-bottom:2px}
 .post-meta .dot{margin:0 7px; opacity:.5}
 .post-card h2{font-family:"Caveat",cursive; font-size:30px; line-height:1.15; margin:0 0 2px; transition:color .15s}
@@ -253,6 +268,20 @@ article strong{font-weight:700}
 footer.site{margin-top:34px; padding-top:16px; border-top:1px dashed rgba(120,100,60,.3); color:var(--muted); font-size:14px}
 footer.site .sign{font-family:"Caveat",cursive; font-size:23px; color:var(--ink)}
 .back{display:inline-block; margin-bottom:14px; font-size:15px}
+
+.search{margin:0 0 16px}
+.search input{
+  width:100%; font:inherit; font-size:16px; color:inherit; padding:7px 12px;
+  background:#fffdf6; border:1px dashed #bfae92; border-radius:4px; outline:none;
+}
+.search input:focus{border-style:solid; border-color:var(--accent); box-shadow:0 0 0 3px rgba(255,233,140,.55)}
+.search .hint{display:block; margin-top:4px; font-size:12px; color:var(--muted)}
+.hasil{list-style:none; margin:0 0 8px; padding:0}
+.hasil li a{display:block; padding:9px 0; border-bottom:1px dashed rgba(120,100,60,.25)}
+.hasil b{font-family:"Caveat",cursive; font-size:24px; font-weight:700; display:block}
+.hasil span{font-size:13px; color:var(--muted)}
+.hasil li.kosong{padding:9px 0; color:var(--muted); font-size:15px}
+.list.nyaring .post-card{display:none}
 
 @media (max-width:640px){
   body{font-size:17px; line-height:30px}
@@ -318,15 +347,11 @@ def main() -> int:
     # ---- index
     cards = []
     for p in posts:
-        meta_bits = [fmt_date(p["date"])]
-        if p["course"]:
-            meta_bits.append(f'{p["course"]}, sesi {p["session"]}')
-        meta_html = '<span class="dot">·</span>'.join(html.escape(b) for b in meta_bits)
         cards.append(
-            f'<a class="post-card" href="posts/{p["slug"]}.html">'
-            f'<div class="post-meta">{meta_html}</div>'
-            f'<h2>{html.escape(p["title"])}</h2>'
-            f'<p>{html.escape(p["excerpt"])}</p></a>'
+            f'<div class="post-card">'
+            f'<div class="post-meta">{meta_baris(p, "")}</div>'
+            f'<h2><a href="posts/{p["slug"]}.html">{html.escape(p["title"])}</a></h2>'
+            f'<p>{html.escape(p["excerpt"])}</p></div>'
         )
 
     about = """<aside class="note">
@@ -364,11 +389,85 @@ def main() -> int:
 {about}
 <main class="list">
 <div class="list-head">Catatan<span>{jumlah}</span></div>
+<div class="search">
+<input id="q" type="search" placeholder="Cari catatan... misal: regresi, ego, hafalan" autocomplete="off" aria-label="Cari catatan">
+<span class="hint">Ketik satu kata. Nyaring judul dan isi, langsung di browser, tanpa server.</span>
+</div>
+<ul class="hasil" id="hasil" hidden></ul>
 {''.join(cards) if cards else '<p style="color:#6f6659">Belum ada artikel.</p>'}
 </main>
-<footer class="site"><span class="sign">Raka</span><br>Ditulis tiap pagi sebelum berangkat kerja.</footer>"""
+<footer class="site"><span class="sign">Raka</span><br>Ditulis tiap pagi sebelum berangkat kerja.</footer>
+<script>
+(function(){{
+  var q=document.getElementById('q'), hasil=document.getElementById('hasil'), daftar=document.querySelector('.list'), idx=null;
+  function tampil(items){{
+    if(!items.length){{ hasil.innerHTML='<li class="kosong">Nggak ketemu. Coba kata lain.</li>'; }}
+    else {{
+      hasil.innerHTML=items.map(function(p){{
+        return '<li><a href="'+p.u+'"><b>'+p.t+'</b><span>'+p.c+' · '+p.d+'</span></a></li>';
+      }}).join('');
+    }}
+    hasil.hidden=false; daftar.classList.add('nyaring');
+  }}
+  q.addEventListener('input', function(){{
+    var t=q.value.trim().toLowerCase();
+    if(!t){{ hasil.hidden=true; hasil.innerHTML=''; daftar.classList.remove('nyaring'); return; }}
+    if(idx){{ tampil(idx.filter(function(p){{ return p.x.indexOf(t)>-1; }}).slice(0,12)); return; }}
+    fetch('search.json').then(function(r){{ return r.json(); }}).then(function(d){{
+      idx=d; tampil(idx.filter(function(p){{ return p.x.indexOf(t)>-1; }}).slice(0,12));
+    }}).catch(function(){{ hasil.innerHTML='<li class="kosong">Indeks pencarian belum siap.</li>'; hasil.hidden=false; }});
+  }});
+}})();
+</script>"""
 
     (DIST / "index.html").write_text(page(SITE_TITLE, SITE_DESC, body), encoding="utf-8")
+
+    # ---- indeks pencarian (statis; disaring di browser, tanpa server)
+    def teks_mentah(md: str) -> str:
+        t = re.sub(r"^#+\s*", "", md, flags=re.M)
+        t = re.sub(r"[*_`>#]", " ", t)
+        return re.sub(r"\s+", " ", t).strip()
+
+    indeks = [
+        {
+            "t": q["title"],
+            "u": f'posts/{q["slug"]}.html',
+            "c": q["course"] or "Catatan",
+            "d": fmt_date(q["date"]),
+            "x": (q["title"] + " " + q["course"] + " " + teks_mentah(q["body"])).lower(),
+        }
+        for q in posts
+    ]
+    (DIST / "search.json").write_text(json.dumps(indeks, ensure_ascii=False), encoding="utf-8")
+
+    # ---- halaman kategori per mata kuliah
+    kategori: dict[str, dict] = {}
+    for q in posts:
+        if not q["course"]:
+            continue
+        s = slugify(q["course"])
+        kategori.setdefault(s, {"nama": q["course"], "posts": []})["posts"].append(q)
+
+    (DIST / "kuliah").mkdir(exist_ok=True)
+    for s, k in kategori.items():
+        kartu = "".join(
+            f'<div class="post-card">'
+            f'<div class="post-meta">{meta_baris(q, "../")}</div>'
+            f'<h2><a href="../posts/{q["slug"]}.html">{html.escape(q["title"])}</a></h2>'
+            f'<p>{html.escape(q["excerpt"])}</p></div>'
+            for q in k["posts"]
+        )
+        isi = f"""<a class="back" href="../index.html">&larr; Semua catatan</a>
+<header class="site">
+<div class="kicker">mata kuliah</div>
+<h1>{html.escape(k["nama"])}</h1>
+<p>{len(k["posts"])} catatan dari mata kuliah ini.</p>
+</header>
+<main class="list">{kartu}</main>
+<footer class="site"><span class="sign">Raka</span></footer>"""
+        (DIST / "kuliah" / f"{s}.html").write_text(
+            page(f'{k["nama"]}: catatan', f'Catatan {k["nama"]}', isi, root="../"), encoding="utf-8"
+        )
 
     # ---- posts
     for i, p in enumerate(posts):
@@ -385,16 +484,11 @@ def main() -> int:
         )
         pager += "</div>"
 
-        meta_bits = [fmt_date(p["date"])]
-        if p["course"]:
-            meta_bits.append(f'{p["course"]}, sesi {p["session"]}')
-        meta_html = '<span class="dot">·</span>'.join(html.escape(b) for b in meta_bits)
-
         topic = f'<p class="lede">{html.escape(p["topic"])}</p>' if p["topic"] else ""
 
         content = f"""<a class="back" href="../index.html">&larr; Semua tulisan</a>
 <article>
-<div class="post-meta">{meta_html}</div>
+<div class="post-meta">{meta_baris(p, "../")}</div>
 <h1>{html.escape(p["title"])}</h1>
 {topic}
 {md_to_html(p["body"])}
