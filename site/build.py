@@ -37,6 +37,8 @@ def pilih_sumber() -> Path:
 
 SRC = pilih_sumber()
 DIST = ROOT / "dist"
+PAGES = ROOT / "pages"
+DIAGRAM = ROOT.parent / "docs" / "diagram" / "arsitektur-mvp.svg"
 
 SITE_TITLE = "Kopi Pagi"
 SITE_TAGLINE = "Ngopi dulu, baru kuliah. Catatan pagi seorang mahasiswa yang kuliah sambil kerja: satu sesi, satu cerita, satu kopi."
@@ -228,6 +230,41 @@ header.site p{margin:14px 0 0; color:var(--muted); font-size:17px}
 .note ul.cast li:last-child{border-bottom:0}
 .note ul.cast strong{color:var(--ink)}
 
+/* tombol */
+.tombol{
+  display:inline-block; padding:10px 20px; margin:4px 8px 4px 0;
+  background:var(--accent); color:#fff; border-radius:4px; text-decoration:none;
+  font-size:15px; font-weight:700; line-height:22px;
+  box-shadow:0 6px 14px rgba(90,50,30,.18); transition:background .12s, transform .12s;
+}
+.tombol:hover{background:#8f3a22; text-decoration:none; transform:translateY(-1px)}
+.tombol.kedua{background:#fffdf6; color:var(--accent); border:1.5px dashed #bfae92; box-shadow:none}
+.tombol.kedua:hover{background:var(--high); color:var(--ink)}
+.tautan{display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 10px}
+.tautan .tombol{margin:0}
+
+/* halaman hackathon */
+.halaman .hero{padding:0 0 8px}
+.halaman .hero .kicker{
+  display:block; font-size:11.5px; line-height:20px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); font-weight:700; margin-bottom:6px;
+}
+.halaman .chips{display:flex; flex-wrap:wrap; gap:8px; margin:2px 0 0}
+.halaman .chips span{
+  font-size:12.5px; line-height:20px; padding:2px 11px; border-radius:999px;
+  background:rgba(255,249,201,.85); border:1px solid #e3d9bd; color:#5c5347;
+}
+.halaman h2{scroll-margin-top:20px}
+figure.gambar{margin:26px 0; padding:10px 10px 6px; background:#fff; border:1px dashed #bfae92; border-radius:4px}
+figure.gambar a{display:block}
+figure.gambar img{display:block; width:100%; height:auto}
+figure.gambar figcaption{font-size:13px; line-height:20px; color:var(--muted); margin:10px 0 2px; text-align:center}
+ul.peran{list-style:none; margin:0 0 18px; padding:0}
+ul.peran li{line-height:32px; margin:0; padding:2px 0}
+ul.peran li + li{border-top:1px dashed rgba(120,100,60,.25)}
+ul.peran strong{color:var(--ink)}
+
+
 .list{padding:0}
 .list-head{font-family:"Caveat",cursive; font-size:29px; margin:0 0 2px; line-height:1.2}
 .list-head span{font-family:"Nunito",sans-serif; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-left:8px}
@@ -378,6 +415,10 @@ def main() -> int:
 
 <h2>Soal nama</h2>
 <p>Semua nama di sini samaran, termasuk nama gue. Nama kampus dan nama dosen juga nggak gue tulis. Isi materinya tetap sesuai modul, cuma cara nyampeinnya yang gue bikin kayak ngobrol.</p>
+
+<h2>WorkBuddy &times; Tencent Cloud Hackathon</h2>
+<p>Blog ini dibuat dengan expert WorkBuddy untuk submisi Tencent Cloud Hackathon Indonesia 2026, track Agen Kreator. <a href="hackathon.html">Klik di sini untuk mempelajari cara kerjanya</a>.</p>
+<a class="tombol" href="hackathon.html">Landing page tim Kopi Pagi &rarr;</a>
 </aside>"""
 
     jumlah = f"{len(posts)} catatan" if posts else "belum ada"
@@ -421,6 +462,23 @@ def main() -> int:
 </script>"""
 
     (DIST / "index.html").write_text(page(SITE_TITLE, SITE_DESC, body), encoding="utf-8")
+
+    # ---- halaman tetap: WorkBuddy x Tencent Cloud Hackathon (isi di site/pages/)
+    halaman = PAGES / "hackathon.html"
+    if halaman.exists():
+        if DIAGRAM.exists():
+            (DIST / "arsitektur-mvp.svg").write_text(
+                DIAGRAM.read_text(encoding="utf-8"), encoding="utf-8"
+            )
+        (DIST / "hackathon.html").write_text(
+            page(
+                "Cara blog ini dibuat · Kopi Pagi x WorkBuddy",
+                "Blog Kopi Pagi dibuat dengan expert WorkBuddy untuk submission Tencent Cloud Hackathon Indonesia 2026, track C.",
+                halaman.read_text(encoding="utf-8"),
+            ),
+            encoding="utf-8",
+        )
+        print("    hackathon.html (halaman submission, diagram ikut disalin)")
 
     # ---- indeks pencarian (statis; disaring di browser, tanpa server)
     def teks_mentah(md: str) -> str:
