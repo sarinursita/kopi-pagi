@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="660" viewBox="0 0 1040 660" font-family="Nunito, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6f6459"/>
+    </marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b04a2b"/>
+    </marker>
+  </defs>
+
+  <rect width="1040" height="660" fill="#fdfaf2"/>
+  <text x="40" y="42" font-size="26" font-weight="700" fill="#2b2620">Arsitektur MVP · Kopi Pagi</text>
+  <text x="40" y="66" font-size="14" fill="#6f6459">siapa bicara dengan siapa, apa yang menyeberang batas, dan di mana manusia memutuskan</text>
+
+  <!-- aktor -->
+  <rect x="40" y="150" width="120" height="74" rx="10" fill="#fff9c9" stroke="#bfae92"/>
+  <text x="100" y="180" font-size="16" font-weight="700" text-anchor="middle" fill="#2b2620">Sari</text>
+  <text x="100" y="199" font-size="11" text-anchor="middle" fill="#6f6459">mahasiswa pekerja</text>
+  <text x="100" y="214" font-size="11" text-anchor="middle" fill="#6f6459">belajar 05.00</text>
+
+  <!-- container WorkBuddy -->
+  <rect x="196" y="96" width="580" height="500" rx="14" fill="#ffffff" stroke="#cfc3ae" stroke-dasharray="7 5"/>
+  <text x="214" y="122" font-size="13" font-weight="700" fill="#b04a2b">WorkBuddy · desktop</text>
+  <text x="214" y="140" font-size="11" fill="#6f6459">hanya hidup saat mesin menyala</text>
+
+
+  <rect x="230" y="160" width="150" height="96" rx="10" fill="#f6efe3" stroke="#bfae92"/>
+  <text x="305" y="188" font-size="15" font-weight="700" text-anchor="middle" fill="#2b2620">Kiki</text>
+  <text x="305" y="207" font-size="11" text-anchor="middle" fill="#6f6459">team lead</text>
+  <text x="305" y="224" font-size="11" text-anchor="middle" fill="#6f6459">mengatur urutan</text>
+  <text x="305" y="240" font-size="11" text-anchor="middle" fill="#6f6459">memegang gerbang</text>
+
+  <rect x="410" y="96" width="150" height="86" rx="10" fill="#f6efe3" stroke="#bfae92"/>
+  <text x="485" y="122" font-size="15" font-weight="700" text-anchor="middle" fill="#2b2620">Susi</text>
+  <text x="485" y="141" font-size="11" text-anchor="middle" fill="#6f6459">planner</text>
+  <text x="485" y="158" font-size="11" text-anchor="middle" fill="#6f6459">brief + konsep dipakai / dibuang</text>
+
+  <rect x="410" y="208" width="150" height="86" rx="10" fill="#f6efe3" stroke="#bfae92"/>
+  <text x="485" y="234" font-size="15" font-weight="700" text-anchor="middle" fill="#2b2620">Wena</text>
+  <text x="485" y="253" font-size="11" text-anchor="middle" fill="#6f6459">writer</text>
+  <text x="485" y="270" font-size="11" text-anchor="middle" fill="#6f6459">rangkuman dulu</text>
+  <text x="485" y="286" font-size="11" text-anchor="middle" fill="#6f6459">lalu artikel dari rangkuman</text>
+
+  <rect x="600" y="152" width="150" height="96" rx="10" fill="#f6efe3" stroke="#bfae92"/>
+  <text x="675" y="180" font-size="15" font-weight="700" text-anchor="middle" fill="#2b2620">Yani</text>
+  <text x="675" y="199" font-size="11" text-anchor="middle" fill="#6f6459">reviewer</text>
+  <text x="675" y="216" font-size="11" text-anchor="middle" fill="#6f6459">menolak pakai ID aturan</text>
+  <text x="675" y="232" font-size="11" text-anchor="middle" fill="#6f6459">R12 cakupan · R2 R4 R9 R11</text>
+
+  <!-- gerbang -->
+  <rect x="600" y="346" width="150" height="86" rx="10" fill="#fff9c9" stroke="#b04a2b" stroke-width="1.6"/>
+  <text x="675" y="372" font-size="14" font-weight="700" text-anchor="middle" fill="#b04a2b">Gerbang manusia</text>
+  <text x="675" y="391" font-size="11" text-anchor="middle" fill="#6f6459">baca artikel utuh</text>
+  <text x="675" y="407" font-size="11" text-anchor="middle" fill="#6f6459">acc = tayang</text>
+
+  <!-- alur tim -->
+  <path d="M380 208 L410 178" stroke="#6f6459" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M380 208 L410 240" stroke="#6f6459" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M560 152 L600 172" stroke="#6f6459" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M560 240 L600 200" stroke="#6f6459" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M675 248 L675 346" stroke="#6f6459" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M600 389 L380 250" stroke="#6f6459" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/>
+  <text x="470" y="330" font-size="11" fill="#6f6459">REJECT → revisi (maks 3)</text>
+
+
+  <rect x="230" y="300" width="150" height="76" rx="10" fill="#eef4ec" stroke="#8fae87"/>
+  <text x="305" y="326" font-size="14" font-weight="700" text-anchor="middle" fill="#2b2620">Rangkuman</text>
+  <text x="305" y="345" font-size="11" text-anchor="middle" fill="#6f6459">maks 500 kata · dicek R12</text>
+  <text x="305" y="361" font-size="11" text-anchor="middle" fill="#6f6459">privat</text>
+
+  <rect x="230" y="410" width="150" height="76" rx="10" fill="#eef4ec" stroke="#8fae87"/>
+  <text x="305" y="436" font-size="14" font-weight="700" text-anchor="middle" fill="#2b2620">Artikel</text>
+  <text x="305" y="455" font-size="11" text-anchor="middle" fill="#6f6459">1000–1500 kata</text>
+  <text x="305" y="471" font-size="11" text-anchor="middle" fill="#6f6459">dari rangkuman, bukan PDF</text>
+
+  <rect x="230" y="520" width="150" height="60" rx="10" fill="#f6efe3" stroke="#bfae92"/>
+  <text x="305" y="545" font-size="12" font-weight="700" text-anchor="middle" fill="#2b2620">log audit</text>
+  <text x="305" y="562" font-size="11" text-anchor="middle" fill="#6f6459">putaran · konsep · acc</text>
+
+  <path d="M480 294 L430 330" stroke="#b04a2b" stroke-width="1.6" fill="none" marker-end="url(#ap)"/>
+  <path d="M480 294 L430 440" stroke="#b04a2b" stroke-width="1.6" fill="none" marker-end="url(#ap)"/>
+  <path d="M305 376 L305 410" stroke="#6f6459" stroke-width="1.4" fill="none" marker-end="url(#a)"/>
+  <text x="317" y="398" font-size="11" fill="#6f6459">jadi bahan artikel</text>
+
+  <!-- batas keluar -->
+  <rect x="816" y="120" width="190" height="96" rx="10" fill="#fff" stroke="#cfc3ae"/>
+  <text x="911" y="146" font-size="14" font-weight="700" text-anchor="middle" fill="#2b2620">Email pribadi</text>
+  <text x="911" y="165" font-size="11" text-anchor="middle" fill="#6f6459">subjek baku per sesi</text>
+  <text x="911" y="181" font-size="11" text-anchor="middle" fill="#6f6459">bisa dicari · privat</text>
+  <text x="911" y="202" font-size="11" text-anchor="middle" fill="#b04a2b">keluar tanpa approval</text>
+
+  <rect x="816" y="260" width="190" height="96" rx="10" fill="#fff" stroke="#cfc3ae"/>
+  <text x="911" y="286" font-size="14" font-weight="700" text-anchor="middle" fill="#2b2620">Blog publik</text>
+  <text x="911" y="305" font-size="11" text-anchor="middle" fill="#6f6459">artikel saja</text>
+  <text x="911" y="321" font-size="11" text-anchor="middle" fill="#6f6459">ekspresi baru</text>
+  <text x="911" y="342" font-size="11" text-anchor="middle" fill="#b04a2b">keluar lewat acc</text>
+
+  <path d="M380 338 L816 168" stroke="#b04a2b" stroke-width="1.8" fill="none" marker-end="url(#ap)"/>
+  <path d="M380 448 L816 308" stroke="#6f6459" stroke-width="1.8" fill="none" marker-end="url(#a)"/>
+  <text x="600" y="420" font-size="11" fill="#6f6459">hanya setelah acc</text>
+
+  <path d="M160 187 L196 190" stroke="#6f6459" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+  <path d="M750 389 L816 316" stroke="#b04a2b" stroke-width="1.6" fill="none" marker-end="url(#ap)"/>
+  <text x="770" y="360" font-size="11" fill="#b04a2b">acc</text>
+
+  <text x="40" y="636" font-size="12" fill="#6f6459">garis cokelat = keluar/penting · putus-putus = ulasan · semua berkas di study-blog/ · cek akhir: cek_post.py</text>
+
+</svg>
