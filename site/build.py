@@ -42,6 +42,8 @@ def pilih_sumber() -> Path:
 
 SRC = pilih_sumber()
 DIST = ROOT / "dist"
+PAGES = ROOT / "pages"
+DIAGRAM = ROOT.parent / "docs" / "diagram" / "arsitektur-mvp.svg"
 
 SITE_TITLE = "Kopi Pagi"
 SITE_TAGLINE = "Ngopi dulu, baru kuliah. Catatan pagi seorang mahasiswa yang kuliah sambil kerja: satu sesi, satu cerita, satu kopi."
@@ -105,7 +107,8 @@ def inline(s: str) -> str:
 def md_to_html(md: str) -> str:
     out: list[str] = []
     buf: list[str] = []
-    in_list = False
+    list_tag: str | None = None
+    lines = md.splitlines()
 
     def flush_para() -> None:
         if buf:
@@ -113,13 +116,22 @@ def md_to_html(md: str) -> str:
             buf.clear()
 
     def close_list() -> None:
-        nonlocal in_list
-        if in_list:
-            out.append("</ul>")
-            in_list = False
+        nonlocal list_tag
+        if list_tag:
+            out.append(f"</{list_tag}>")
+            list_tag = None
 
-    for raw in md.splitlines():
-        line = raw.rstrip()
+    def open_list(tag: str, kelas: str = "") -> None:
+        nonlocal list_tag
+        if list_tag != tag:
+            close_list()
+            out.append(f'<{tag}{f" class={chr(34)}{kelas}{chr(34)}" if kelas else ""}>')
+            list_tag = tag
+
+    i = 0
+    while i < len(lines):
+        line = lines[i].rstrip()
+        i += 1
         if not line.strip():
             flush_para()
             close_list()
@@ -127,6 +139,59 @@ def md_to_html(md: str) -> str:
         if line.startswith("# "):
             flush_para(); close_list()
             continue  # judul sudah dipakai di header halaman
+        gambar = re.match(r"^!\[([^\]]*)\]\(([^)\s]+)\)\s*$", line)
+        if gambar:  # gambar; baris berikutnya diawali _..._ jadi keterangan
+            flush_para(); close_list()
+            alt, src = gambar.group(1), gambar.group(2)
+            ket = ""
+            if i < len(lines):
+                cocok = re.match(r"^_(.+)_$", lines[i].strip())
+                if cocok:
+                    ket = cocok.group(1)
+                    i += 1
+            out.append(
+                f'<figure class="gambar"><a href="{src}" target="_blank" rel="noopener">'
+                f'<img src="{src}" alt="{html.escape(alt)}"></a>'
+                + (f"<figcaption>{inline(ket)}</figcaption>" if ket else "")
+                + "</figure>"
+            )
+            continue
+        if line.startswith("```"):
+            flush_para(); close_list()
+            isi: list[str] = []
+            while i < len(lines) and not lines[i].startswith("```"):
+                isi.append(lines[i])
+                i += 1
+            i += 1  # lewati penutup fence
+            out.append('<pre class="alur"><code>' + html.escape("\n".join(isi)) + "</code></pre>")
+            continue
+        if line.lstrip().startswith("|") and i < len(lines) and re.match(r"^\s*\|[\s:\-|]+\|\s*$", lines[i]):
+            flush_para(); close_list()
+
+            def sel(row: str) -> list[str]:
+                r = row.strip()
+                if r.startswith("|"):
+                    r = r[1:]
+                if r.endswith("|"):
+                    r = r[:-1]
+                return [c.strip() for c in r.split("|")]
+
+            kepala = sel(line)
+            i += 1  # lewati baris pemisah |---|---|
+            badan: list[list[str]] = []
+            while i < len(lines) and lines[i].lstrip().startswith("|"):
+                badan.append(sel(lines[i]))
+                i += 1
+            th = "".join(f"<th>{inline(c)}</th>" for c in kepala)
+            trs = "".join(
+                "<tr>" + "".join(f"<td>{inline(c)}</td>" for c in baris) + "</tr>"
+                for baris in badan
+            )
+            out.append(
+                '<div class="tabel-bungkus"><table class="tabel">'
+                f"<thead><tr>{th}</tr></thead><tbody>{trs}</tbody></table></div>"
+            )
+            continue
         if line.startswith("### "):
             flush_para(); close_list()
             out.append("<h3>" + inline(line[4:]) + "</h3>")
@@ -136,11 +201,11 @@ def md_to_html(md: str) -> str:
         elif line.startswith("> "):
             flush_para(); close_list()
             out.append("<blockquote>" + inline(line[2:]) + "</blockquote>")
+        elif re.match(r"^\d+\.\s", line):
+            flush_para(); open_list("ol", "langkah")
+            out.append("<li>" + inline(re.sub(r"^\d+\.\s+", "", line)) + "</li>")
         elif re.match(r"^[-*] ", line):
-            flush_para()
-            if not in_list:
-                out.append("<ul>")
-                in_list = True
+            flush_para(); open_list("ul")
             out.append("<li>" + inline(line[2:]) + "</li>")
         elif line.strip() in ("---", "***"):
             flush_para(); close_list()
@@ -232,6 +297,57 @@ header.site p{margin:14px 0 0; color:var(--muted); font-size:17px}
 .note ul.cast li{padding:3px 0; border-bottom:1px dashed rgba(120,100,60,.25)}
 .note ul.cast li:last-child{border-bottom:0}
 .note ul.cast strong{color:var(--ink)}
+
+/* tombol */
+.tombol{
+  display:inline-block; padding:10px 20px; margin:4px 8px 4px 0;
+  background:var(--accent); color:#fff; border-radius:4px; text-decoration:none;
+  font-size:15px; font-weight:700; line-height:22px;
+  box-shadow:0 6px 14px rgba(90,50,30,.18); transition:background .12s, transform .12s;
+}
+.tombol:hover{background:#8f3a22; text-decoration:none; transform:translateY(-1px)}
+.tombol.kedua{background:#fffdf6; color:var(--accent); border:1.5px dashed #bfae92; box-shadow:none}
+.tombol.kedua:hover{background:var(--high); color:var(--ink)}
+.tautan{display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 10px}
+.tautan .tombol{margin:0}
+
+/* halaman hackathon */
+.halaman .hero{padding:0 0 8px}
+.halaman .hero .kicker{
+  display:block; font-size:11.5px; line-height:20px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); font-weight:700; margin-bottom:6px;
+}
+.halaman .chips{display:flex; flex-wrap:wrap; gap:8px; margin:2px 0 0}
+.halaman .chips span{
+  font-size:12.5px; line-height:20px; padding:2px 11px; border-radius:999px;
+  background:rgba(255,249,201,.85); border:1px solid #e3d9bd; color:#5c5347;
+}
+.halaman h2{scroll-margin-top:20px}
+figure.gambar{margin:26px 0; padding:10px 10px 6px; background:#fff; border:1px dashed #bfae92; border-radius:4px}
+figure.gambar a{display:block}
+figure.gambar img{display:block; width:100%; height:auto}
+figure.gambar figcaption{font-size:13px; line-height:20px; color:var(--muted); margin:10px 0 2px; text-align:center}
+.tabel-bungkus{margin:22px 0; overflow-x:auto}
+table.tabel{width:100%; border-collapse:collapse; font-size:15px; line-height:23px}
+table.tabel th{text-align:left; font-weight:700; color:var(--ink); padding:8px 10px; border-bottom:2px solid var(--rule)}
+table.tabel td{padding:8px 10px; border-bottom:1px dashed rgba(120,100,60,.35); vertical-align:top}
+table.tabel tr:last-child td{border-bottom:1px solid var(--rule)}
+pre.alur{margin:20px 0; padding:14px 16px; background:#fff; border:1px dashed #bfae92; border-radius:4px; overflow-x:auto}
+pre.alur code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13.5px; line-height:24px; background:none; padding:0; white-space:pre}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.9em; background:#fff8e6; padding:1px 4px; border-radius:3px}
+ul.peran{list-style:none; margin:0 0 18px; padding:0}
+ul.peran li{line-height:32px; margin:0; padding:2px 0}
+ul.peran li + li{border-top:1px dashed rgba(120,100,60,.25)}
+ul.peran strong{color:var(--ink)}
+ol.langkah{counter-reset:l; list-style:none; margin:0 0 18px; padding:0}
+ol.langkah li{counter-increment:l; position:relative; padding:12px 0 12px 54px; line-height:30px; margin:0}
+ol.langkah li + li{border-top:1px dashed rgba(120,100,60,.25)}
+ol.langkah li::before{
+  content:counter(l); position:absolute; left:6px; top:10px;
+  font-family:"Caveat",cursive; font-size:36px; line-height:1; color:var(--accent); opacity:.85;
+}
+ol.langkah b{display:block; font-size:17.5px; line-height:26px; margin-bottom:2px}
+
 
 .list{padding:0}
 .list-head{font-family:"Caveat",cursive; font-size:29px; margin:0 0 2px; line-height:1.2}
@@ -383,6 +499,10 @@ def main() -> int:
 
 <h2>Soal nama</h2>
 <p>Semua nama di sini samaran, termasuk nama gue. Nama kampus dan nama dosen juga nggak gue tulis. Isi materinya tetap sesuai modul, cuma cara nyampeinnya yang gue bikin kayak ngobrol.</p>
+
+<h2>WorkBuddy &times; Tencent Cloud Hackathon</h2>
+<p>Blog ini dibuat dengan expert WorkBuddy untuk submisi Tencent Cloud Hackathon Indonesia 2026, track Agen Kreator. <a href="hackathon.html">Klik di sini untuk mempelajari cara kerjanya</a>.</p>
+<a class="tombol" href="hackathon.html">Landing page tim Kopi Pagi &rarr;</a>
 </aside>"""
 
     jumlah = f"{len(posts)} catatan" if posts else "belum ada"
@@ -426,6 +546,51 @@ def main() -> int:
 </script>"""
 
     (DIST / "index.html").write_text(page(SITE_TITLE, SITE_DESC, body), encoding="utf-8")
+
+    # ---- halaman tetap: kopi dari site/pages/hackathon.md (teks bisa diedit tanpa sentuh kode)
+    halaman = PAGES / "hackathon.md"
+    if halaman.exists():
+        meta, isi = parse_front(halaman.read_text(encoding="utf-8"))
+        if DIAGRAM.exists():
+            (DIST / "arsitektur-mvp.svg").write_text(
+                DIAGRAM.read_text(encoding="utf-8"), encoding="utf-8"
+            )
+
+        def tombol(kunci: str, kelas: str = "") -> str:
+            nilai = meta.get(kunci, "")
+            if "|" not in nilai:
+                return ""
+            label, url = (x.strip() for x in nilai.split("|", 1))
+            cls = ("tombol " + kelas).strip()
+            return f'<a class="{cls}" href="{html.escape(url)}">{html.escape(label)}</a>'
+
+        chip = "".join(
+            f"<span>{inline(meta[k])}</span>" for k in ("chip1", "chip2", "chip3") if meta.get(k)
+        )
+        bawah = tombol("tombol1", "kedua") + tombol("tombol2", "kedua") + tombol("tombol3", "kedua")
+        badan = f"""<a class="back" href="index.html">&larr; Semua catatan</a>
+<article class="halaman">
+<div class="hero">
+<div class="kicker">{inline(meta.get("kicker", ""))}</div>
+<h1>{html.escape(meta.get("judul", "Kopi Pagi"))}</h1>
+<p class="lede">{inline(meta.get("lede", ""))}</p>
+<div class="chips">{chip}</div>
+</div>
+{md_to_html(isi)}
+<div class="tautan">{bawah}</div>
+<footer class="site">{inline(meta.get("footer", ""))}</footer>
+</article>"""
+
+        judul = meta.get("judul", "Kopi Pagi")
+        (DIST / "hackathon.html").write_text(
+            page(
+                f"{judul} · WorkBuddy x Tencent Cloud Hackathon",
+                plain(meta.get("lede", ""), 180) or f"Halaman submission {judul}.",
+                badan,
+            ),
+            encoding="utf-8",
+        )
+        print("    hackathon.html (dari site/pages/hackathon.md, diagram ikut disalin)")
 
     # ---- indeks pencarian (statis; disaring di browser, tanpa server)
     def teks_mentah(md: str) -> str:
