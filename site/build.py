@@ -151,6 +151,42 @@ def md_to_html(md: str) -> str:
                 + "</figure>"
             )
             continue
+        if line.startswith("```"):
+            flush_para(); close_list()
+            isi: list[str] = []
+            while i < len(lines) and not lines[i].startswith("```"):
+                isi.append(lines[i])
+                i += 1
+            i += 1  # lewati penutup fence
+            out.append('<pre class="alur"><code>' + html.escape("\n".join(isi)) + "</code></pre>")
+            continue
+        if line.lstrip().startswith("|") and i < len(lines) and re.match(r"^\s*\|[\s:\-|]+\|\s*$", lines[i]):
+            flush_para(); close_list()
+
+            def sel(row: str) -> list[str]:
+                r = row.strip()
+                if r.startswith("|"):
+                    r = r[1:]
+                if r.endswith("|"):
+                    r = r[:-1]
+                return [c.strip() for c in r.split("|")]
+
+            kepala = sel(line)
+            i += 1  # lewati baris pemisah |---|---|
+            badan: list[list[str]] = []
+            while i < len(lines) and lines[i].lstrip().startswith("|"):
+                badan.append(sel(lines[i]))
+                i += 1
+            th = "".join(f"<th>{inline(c)}</th>" for c in kepala)
+            trs = "".join(
+                "<tr>" + "".join(f"<td>{inline(c)}</td>" for c in baris) + "</tr>"
+                for baris in badan
+            )
+            out.append(
+                '<div class="tabel-bungkus"><table class="tabel">'
+                f"<thead><tr>{th}</tr></thead><tbody>{trs}</tbody></table></div>"
+            )
+            continue
         if line.startswith("### "):
             flush_para(); close_list()
             out.append("<h3>" + inline(line[4:]) + "</h3>")
@@ -286,6 +322,14 @@ figure.gambar{margin:26px 0; padding:10px 10px 6px; background:#fff; border:1px 
 figure.gambar a{display:block}
 figure.gambar img{display:block; width:100%; height:auto}
 figure.gambar figcaption{font-size:13px; line-height:20px; color:var(--muted); margin:10px 0 2px; text-align:center}
+.tabel-bungkus{margin:22px 0; overflow-x:auto}
+table.tabel{width:100%; border-collapse:collapse; font-size:15px; line-height:23px}
+table.tabel th{text-align:left; font-weight:700; color:var(--ink); padding:8px 10px; border-bottom:2px solid var(--rule)}
+table.tabel td{padding:8px 10px; border-bottom:1px dashed rgba(120,100,60,.35); vertical-align:top}
+table.tabel tr:last-child td{border-bottom:1px solid var(--rule)}
+pre.alur{margin:20px 0; padding:14px 16px; background:#fff; border:1px dashed #bfae92; border-radius:4px; overflow-x:auto}
+pre.alur code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13.5px; line-height:24px; background:none; padding:0; white-space:pre}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.9em; background:#fff8e6; padding:1px 4px; border-radius:3px}
 ul.peran{list-style:none; margin:0 0 18px; padding:0}
 ul.peran li{line-height:32px; margin:0; padding:2px 0}
 ul.peran li + li{border-top:1px dashed rgba(120,100,60,.25)}
@@ -526,7 +570,6 @@ def main() -> int:
 <h1>{html.escape(meta.get("judul", "Kopi Pagi"))}</h1>
 <p class="lede">{inline(meta.get("lede", ""))}</p>
 <div class="chips">{chip}</div>
-<div class="tautan">{tombol("tombol1")}{tombol("tombol2", "kedua")}</div>
 </div>
 {md_to_html(isi)}
 <div class="tautan">{bawah}</div>

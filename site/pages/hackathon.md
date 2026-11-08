@@ -280,7 +280,7 @@ Rulebook-nya bisa disalin. Yang sulit disalin adalah 68 butir itu, karena setiap
 
 Halaman yang sedang kamu baca ini salah satu keluarannya. Enam catatan di blog ini ditulis lewat alur yang sama, dari PDF materi Psikologi Anak sampai tayang.
 
-Keluaran satunya, rangkuman, tidak tayang di sini karena dikirim ke email saya: satu subjek satu sesi, dan penerimanya pembaca sendiri. Jadi yang bisa diperiksa dari halaman ini baru separuh hasilnya, dan itu memang batasnya.
+Keluaran satunya, rangkuman, tidak tayang di sini karena dikirim ke email saya.
 
 Sisanya bisa dibuka:
 
