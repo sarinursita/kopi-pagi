@@ -5,9 +5,8 @@ lede: Modul kuliah itu kelas yang berjalan tanpa guru. Kelas butuh ritual pembuk
 chip1: Tim Kopi Pagi
 chip2: Sari Nursita
 chip3: Disubmit 7 November 2026
-tombol1: Coba expert-nya | https://kopi-pagi.apps.workbuddy.host/?sharecode=XBU6KHSD7J
-tombol2: Video demo 6 menit | https://drive.google.com/drive/folders/1akO0JoqMwFBn8TqwpcN3sFZiAcEPm5aS?usp=sharing
-tombol3: Baca catatannya | index.html
+tombol1: Video demo 6 menit | https://drive.google.com/drive/folders/1akO0JoqMwFBn8TqwpcN3sFZiAcEPm5aS?usp=sharing
+tombol2: Lihat blog hasilnya | index.html
 footer: Halaman ini bagian dari submission AI CAN DO IT, Tencent Cloud Hackathon Indonesia 2026, track C. Blognya ditulis dengan nama pena Raka.
 ---
 
@@ -282,7 +281,7 @@ Halaman yang sedang kamu baca ini salah satu keluarannya. Enam catatan di blog i
 
 Keluaran satunya, rangkuman, tidak tayang di sini karena dikirim ke email saya.
 
-Sisanya bisa dibuka:
+Sisanya:
 
 - Pencarian per kata dan daftar per mata kuliah, supaya catatan lama masih ketemu.
 - Log audit JSON per sesi: putaran, konsep, vonis, persetujuan.
